@@ -2,6 +2,7 @@ module group_scan_mem_reg_if(
     // Input signals
     input clk,
     input rst_n,
+    
    
     // Inputs & outputs to the group_mux
     input static_wen_group_mux,
