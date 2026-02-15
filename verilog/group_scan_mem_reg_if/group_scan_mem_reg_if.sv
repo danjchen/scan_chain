@@ -2,7 +2,7 @@ module group_scan_mem_reg_if(
     // Input signals
     input clk,
     input rst_n,
-    
+
    
     // Inputs & outputs to the group_mux
     input static_wen_group_mux,
@@ -16,7 +16,7 @@ module group_scan_mem_reg_if(
     // To SRAM
     output reg sram_ren,
     output reg sram_wen,
-    output reg [15:0] sram_addr,
+    output reg [10:0] sram_addr,
     output reg [31:0] sram_wdata,
     input [31:0] sram_rdata,
     input sram_ready,
@@ -27,7 +27,10 @@ module group_scan_mem_reg_if(
     output reg [16:0] cr_wdata,
     input      [16:0] cr_rdata,
     input      [14:0] sr_rdata,
-    input reg_ready
+    input reg_ready,
+
+    output reg [3:0] seg_id, 
+    output reg id_sel
 );
 
     // mem_reg_mux
@@ -79,7 +82,9 @@ module group_scan_mem_reg_if(
         .cr_wdata(cr_wdata),    // Connect cr_wdata to top level
         .cr_rdata(cr_rdata),    // Connect cr_rdata from top level
         .sr_rdata(sr_rdata),    // Connect sr_rdata from top level
-        .reg_ready(reg_ready)
+        .reg_ready(reg_ready), 
+        .seg_id(seg_id),
+        .id_sel(id_sel)
     );
 
     syn_pulse_gen syn_pulse_gen_inst(
