@@ -1,0 +1,193 @@
+verdiSetActWin -dock widgetDock_<Decl._Tree>
+sidCmdLineBehaviorAnalysisOpt -incr -clockSkew 0 -loopUnroll 0 -bboxEmptyModule 0  -cellModel 0 -bboxIgnoreProtected 0 
+debImport "-sverilog" "-2012" "+define_FSDB_DUMP" "../verilog/test/sys_defs.vh" \
+          "../verilog/group_scan_mem_reg_if/rwctr.sv" \
+          "../verilog/group_scan_mem_reg_if/mem_reg_mux.sv" \
+          "../verilog/group_scan_mem_reg_if/syn_pulse_gen.sv" \
+          "../verilog/group_scan_mem_reg_if/group_scan_mem_reg_if.sv" \
+          "../verilog/block_scan.sv" "../verilog/group_mux.sv" \
+          "../verilog/scan_for_test.sv" "../verilog/reg/ctr_reg.sv" \
+          "../verilog/sram/spram.sv" "../verilog/test/test_scan.sv" \
+          "../verilog/test/CLK_GEN.sv" "./tb_test_scan.sv" "-top" \
+          "tb_test_scan" -autoalias
+debLoadSimResult \
+           /afs/umich.edu/group/e/ece598to/w26/tutorial/A_Team_Scan_Chain/vsim/tb_test_scan.fsdb
+wvCreateWindow
+verdiWindowResize -win $_Verdi_1 "500" "182" "900" "700"
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcHBSelect "tb_test_scan.s1" -win $_nTrace1
+srcSetScope "tb_test_scan.s1" -delim "." -win $_nTrace1
+srcHBSelect "tb_test_scan.s1" -win $_nTrace1
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+srcDeselectAll -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcHBSelect "tb_test_scan.dut" -win $_nTrace1
+srcSetScope "tb_test_scan.dut" -delim "." -win $_nTrace1
+srcHBSelect "tb_test_scan.dut" -win $_nTrace1
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+srcHBSelect "tb_test_scan.ctr1" -win $_nTrace1
+srcSetScope "tb_test_scan.ctr1" -delim "." -win $_nTrace1
+srcHBSelect "tb_test_scan.ctr1" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "ctr_wen" -line 6 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "ctr_ren" -line 7 -pos 1 -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+wvAddSignal -win $_nWave2 "/tb_test_scan/ctr1/ctr_ren"
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvSetPosition -win $_nWave2 {("G1" 1)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "ctr_wen" -line 6 -pos 1 -win $_nTrace1
+srcSelect -win $_nTrace1 -range {6 31 4 1 4 1}
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "ctr_wen" -line 6 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvAddSignal -win $_nWave2 "/tb_test_scan/ctr1/ctr_wen"
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvSetCursor -win $_nWave2 2001397313391.497070 -snap {("G2" 0)}
+verdiSetActWin -win $_nWave2
+srcDeselectAll -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+wvSelectSignal -win $_nWave2 {( "G1" 2 )} 
+verdiSetActWin -win $_nWave2
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G1" 0)}
+srcHBSelect "tb_test_scan.dut.group_scan_mem_reg_if_B" -win $_nTrace1
+srcSetScope "tb_test_scan.dut.group_scan_mem_reg_if_B" -delim "." -win $_nTrace1
+srcHBSelect "tb_test_scan.dut.group_scan_mem_reg_if_B" -win $_nTrace1
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+srcHBSelect "tb_test_scan.dut" -win $_nTrace1
+srcSetScope "tb_test_scan.dut" -delim "." -win $_nTrace1
+srcHBSelect "tb_test_scan.dut" -win $_nTrace1
+srcHBSelect "tb_test_scan" -win $_nTrace1
+srcSetScope "tb_test_scan" -delim "." -win $_nTrace1
+srcHBSelect "tb_test_scan" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sram_ren_B" -line 43 -pos 1 -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvAddSignal -win $_nWave2 "/tb_test_scan/sram_ren_B"
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+verdiSetActWin -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sram_wen_B" -line 44 -pos 1 -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvAddSignal -win $_nWave2 "/tb_test_scan/sram_wen_B"
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 2)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "ctr_ren_A" -line 32 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 2)}
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G2" 2)}
+wvAddSignal -win $_nWave2 "/tb_test_scan/ctr_ren_A"
+wvSetPosition -win $_nWave2 {("G2" 2)}
+wvSetPosition -win $_nWave2 {("G2" 3)}
+srcDeselectAll -win $_nTrace1
+srcHBSelect "tb_test_scan.dut.group_mux_inst" -win $_nTrace1
+srcSetScope "tb_test_scan.dut.group_mux_inst" -delim "." -win $_nTrace1
+srcHBSelect "tb_test_scan.dut.group_mux_inst" -win $_nTrace1
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+srcHBSelect "tb_test_scan.dut.group_mux_inst" -win $_nTrace1
+srcSetScope "tb_test_scan.dut.group_mux_inst" -delim "." -win $_nTrace1
+srcHBSelect "tb_test_scan.dut.group_mux_inst" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sel_A" -line 80 -pos 1 -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 2)}
+wvSetPosition -win $_nWave2 {("G2" 3)}
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvAddSignal -win $_nWave2 "/tb_test_scan/dut/group_mux_inst/sel_A"
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G3" 1)}
+wvSetPosition -win $_nWave2 {("G3" 1)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sel_B" -line 81 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "sel_B" -line 81 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "static_addr\[19:18\]" -line 79 -pos 1 -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "static_addr" -line 6 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G2" 2)}
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G4" 0)}
+wvAddSignal -win $_nWave2 "/tb_test_scan/dut/group_mux_inst/static_addr\[19:0\]"
+wvSetPosition -win $_nWave2 {("G4" 0)}
+wvSetPosition -win $_nWave2 {("G4" 1)}
+wvSetPosition -win $_nWave2 {("G4" 1)}
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+verdiSetActWin -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+srcDeselectAll -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "static_addr" -line 6 -pos 1 -win $_nTrace1
+srcHBSelect "tb_test_scan.dut.block_scan_inst" -win $_nTrace1
+verdiSetActWin -dock widgetDock_<Inst._Tree>
+srcHBSelect "tb_test_scan.dut.group_mux_inst" -win $_nTrace1
+srcHBSelect "tb_test_scan.dut.block_scan_inst" -win $_nTrace1
+srcSetScope "tb_test_scan.dut.block_scan_inst" -delim "." -win $_nTrace1
+srcHBSelect "tb_test_scan.dut.block_scan_inst" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "static_addr" -line 29 -pos 1 -win $_nTrace1
+verdiSetActWin -dock widgetDock_MTB_SOURCE_TAB_1
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 2)}
+wvSetPosition -win $_nWave2 {("G2" 3)}
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G3" 1)}
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G4" 0)}
+wvAddSignal -win $_nWave2 "/tb_test_scan/dut/block_scan_inst/static_addr\[19:0\]"
+wvSetPosition -win $_nWave2 {("G4" 0)}
+wvSetPosition -win $_nWave2 {("G4" 1)}
+wvSetCursor -win $_nWave2 885685599541.022095 -snap {("G3" 0)}
+verdiSetActWin -win $_nWave2
+wvSetCursor -win $_nWave2 878514056224.900513 -snap {("G1" 0)}
+debExit

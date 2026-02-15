@@ -1,0 +1,67 @@
+Magic 271485
+Revision Verdi_V-2023.12-SP2-1
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 25 1920 388 218 206
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/afs/umich.edu/group/e/ece598to/w26/tutorial/A_Team_Scan_Chain/vsim/tb_test_scan.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+windowTimeUnit 1us
+
+; waveform viewport range
+zoom 0.000000 5968.536863 1u
+cursor 2766.620000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 6
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/afs/umich.edu/group/e/ece598to/w26/tutorial/A_Team_Scan_Chain/vsim/tb_test_scan.fsdb"
+addSignal -h 15 -UNSIGNED -HEX /tb_test_scan/dut/group_mux_inst/static_addr[19:0]
+addSignal -h 15 -holdScope sel_A
+addSignal -h 15 -holdScope sel_B
+addSignal -h 15 /tb_test_scan/sram_wen_A
+addSignal -h 15 -holdScope sram_ren_A
+addSignal -h 15 -holdScope ctr_wen_A
+addSignal -h 15 -holdScope ctr_ren_A
+addSignal -h 15 -holdScope sram_ren_B
+addSignal -h 15 -holdScope sram_wen_B
+addSignal -h 15 -holdScope ctr_ren_B
+addSignal -h 15 -holdScope ctr_wen_B
+addGroup "G2"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+

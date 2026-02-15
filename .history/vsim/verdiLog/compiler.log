@@ -1,0 +1,38 @@
+*design* DebussyLib (btIdent Verdi_V-2023.12-SP2-1)
+Command arguments:
+    +define+verilog
+    -sverilog
+    -2012
+    +define_FSDB_DUMP
+    ../verilog/test/sys_defs.vh
+    ../verilog/group_scan_mem_reg_if/rwctr.sv
+    ../verilog/group_scan_mem_reg_if/mem_reg_mux.sv
+    ../verilog/group_scan_mem_reg_if/syn_pulse_gen.sv
+    ../verilog/group_scan_mem_reg_if/group_scan_mem_reg_if.sv
+    ../verilog/block_scan.sv
+    ../verilog/group_mux.sv
+    ../verilog/scan_for_test.sv
+    ../verilog/reg/ctr_reg.sv
+    ../verilog/sram/spram.sv
+    ../verilog/test/test_scan.sv
+    ../verilog/test/CLK_GEN.sv
+    ./tb_test_scan.sv
+    -top
+    tb_test_scan
+
+
+*Warning* incompatible range declaration of scan_id_A
+"../verilog/group_mux.sv", 71: 
+
+*Warning* incompatible range declaration of scan_id_B
+"../verilog/group_mux.sv", 72: 
+
+*Warning* incompatible range declaration of scan_id_C
+"../verilog/group_mux.sv", 73: 
+
+*Warning* macro RESET_CYCLE redefined from (18.3) to (10)
+"../verilog/test/CLK_GEN.sv", 4: 
+Highest level modules:
+tb_test_scan
+
+Total	0 error(s),   4 warning(s)

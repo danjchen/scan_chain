@@ -1,0 +1,56 @@
+Thread 2 (Thread 0x7fc0264ea700 (LWP 14601)):
+#0  0x00007fc0285fa9fd in nanosleep () at /lib64/libc.so.6
+#1  0x00007fc0285fa894 in sleep () at /lib64/libc.so.6
+#2  0x0000000009b96a76 in LicenseCheckUtility ()
+#3  0x000000000c8d2989 in sdp_wrap_start_routine ()
+#4  0x00007fc02f4e3ea5 in start_thread () at /lib64/libpthread.so.0
+#5  0x00007fc028633b0d in clone () at /lib64/libc.so.6
+Thread 1 (Thread 0x7fc031975140 (LWP 14563)):
+#0  0x00007fc0285a5223 in _IO_proc_close@@GLIBC_2.2.5 () at /lib64/libc.so.6
+#1  0x00007fc0285b026c in __GI__IO_file_close_it () at /lib64/libc.so.6
+#2  0x00007fc0285a3288 in fclose@@GLIBC_2.2.5 () at /lib64/libc.so.6
+#3  0x000000000c9ab059 in _sys_pclose ()
+#4  0x000000000c94b257 in system ()
+#5  0x000000000c937f1f in sysiCrash ()
+#6  0x000000000c938458 in actUnexpectAction ()
+#7  0x000000000c9384c2 in catchSignalCB ()
+#8  0x00007fc02856b400 in <signal handler called> () at /lib64/libc.so.6
+#9  0x00007fc031895fa0 in _dl_lookup_symbol_x () at /lib64/ld-linux-x86-64.so.2
+#10 0x00007fc03189adee in _dl_fixup () at /lib64/ld-linux-x86-64.so.2
+#11 0x00007fc0318a2aaa in _dl_runtime_resolve_xsavec () at /lib64/ld-linux-x86-64.so.2
+#12 0x0000000009960de1 in snps::onesearch::SearchEngine::waitpidInternal(bool) ()
+#13 0x00000000099618d3 in snps::onesearch::SearchEngine::~SearchEngine() ()
+#14 0x0000000009961bd1 in snps::onesearch::SearchEngine::~SearchEngine() ()
+#15 0x000000000995274c in snps::onesearch::OneSearchFW::collectDataLoop(bool, unsigned int) ()
+#16 0x0000000009953fcb in snps::onesearch::OneSearchFW::registerLoop() ()
+#17 0x0000000009954b16 in snps::onesearch::OneSearchFW::init[abi:cxx11](bool) ()
+#18 0x00000000092e18f5 in OneSearchHdl_C::OneSearchHdl_C(char const*, int, std::vector<vbt_string_t, std::allocator<vbt_string_t> >&) ()
+#19 0x00000000092d692a in LogHdl_V::s_create(char const*, char const*, char const*, int, std::vector<vbt_string_t, std::allocator<vbt_string_t> >&, slhMDBLogInfo_S*, smlLogHdlType_E) ()
+#20 0x000000000474ed7c in vgif_viewer_db_t::init(char const*, char const*, char const*, int, std::vector<vbt_string_t, std::allocator<vbt_string_t> >&, char const*, slhMDBLogInfo_S*) ()
+#21 0x000000000474f4a7 in vgif_viewer_db_t::vgif_viewer_db_t(Allocator_R&, char const*, char const*, int, std::vector<vbt_string_t, std::allocator<vbt_string_t> >&, char const*, vgif_output_form_t*, vgif_tab_page_t*, char const*, slhMDBLogInfo_S*) ()
+#22 0x0000000004734d79 in vgif_tab_page_t::vgif_tab_page_t(Allocator_R&, char const*, char const*, vgif_output_form_t*, char const*, int, std::vector<vbt_string_t, std::allocator<vbt_string_t> >&, int, char const*, char, qBaseJob_C*, slhMDBLogInfo_S*) ()
+#23 0x00000000049fdda4 in vgif_ones_tab_t::vgif_ones_tab_t(Allocator_R&, char const*, char const*, vgif_output_form_t*, char const*, int, std::vector<vbt_string_t, std::allocator<vbt_string_t> >&, int) ()
+#24 0x00000000047354c5 in vgif_tab_facty_t::create_tab_page(Allocator_R&, char const*, char const*, vgif_output_form_t*, char const*, int, std::vector<vbt_string_t, std::allocator<vbt_string_t> >&, char const*, char, char, char, slhMDBLogInfo_S*) ()
+#25 0x00000000046be307 in vgif_output_form_t::add_empty_page(char const*, char) ()
+#26 0x00000000049f778a in vgif_ones_form_t::ones_add_tab(int&) ()
+#27 0x00000000049fbce2 in vgif_ones_form_t::add_new_tab() ()
+#28 0x00000000049fc23f in vgif_ones_form_t::init(char const*) ()
+#29 0x00000000049c3e4d in vgif_output_form_mgr_t::create_form(vgif_output_form_type_e) ()
+#30 0x00000000049c6c13 in vgif_output_form_mgr_t::find_or_create_form_by_windowType(vgif_output_form_type_e, char) ()
+#31 0x00000000049c6c89 in vgif_output_form_mgr_t::get_or_create_form_by_windowType(void*) ()
+#32 0x000000000469c687 in npi_open_output_form(void*) ()
+#33 0x00000000046b15da in vgif_ones_driver_t::onCreateWindow() ()
+#34 0x00000000046a0dca in npi_one_search_open() ()
+#35 0x00000000046a0e50 in g_DoOneSearchCmd() ()
+#36 0x00000000046a0e76 in g_InitOneSearch() ()
+#37 0x000000000352b485 in debMain(prodMainStruct*, int, char**) ()
+#38 0x000000000353014b in main ()
+---------------
+branchName=Verdi_V-2023.12-SP2-1 cnlDate=-- Mon Jul 15 02:51:00 PDT 2024 cnlEnv=Linux.0/64bit
+uname(Linux vlsipool-k12 3.10.0-1160.102.1.el7.x86_64 #1 SMP Mon Sep 25 05:00:52 EDT 2023 x86_64)
+---------------
+Process Size: 809566208 bytes
+verdi detected abnormal termination.
+Log information written to
+/afs/umich.edu/group/e/ece598to/w26/tutorial/A_Team_Scan_Chain/vsim/verdiLog/sysinfo_Feb12_2142.tar.
+Please send this file to customer support.

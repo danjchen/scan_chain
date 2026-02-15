@@ -1,0 +1,616 @@
+Warning: DC is only available in Tcl and XG mode. The -tcl_mode and -xg_mode options are no longer required.
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version S-2021.06-SP1 for linux64 - Jul 13, 2021 
+
+                    Copyright (c) 1988 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+# TCL script for Design Compiler
+# Load common variables, artisan standard cells
+source -verbose "common.tcl"
+. /afs/umich.edu/class/eecs427/tsmc65/stdcells/tcbn65lp_220a/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lp_220a ./../lib
+* tcbn65lpbc.db  dw_foundation.sldb
+tcbn65lpbc.db
+tcbn65lpbc.db
+# Set top level name
+set top_level "group_scan_mem_reg_if"
+group_scan_mem_reg_if
+# Read system verilog files
+read_sverilog "  ../verilog/group_scan_mem_reg_if/group_scan_mem_reg_if.sv                ../verilog/group_scan_mem_reg_if/mem_reg_mux.sv                ../verilog/group_scan_mem_reg_if/rwctr.sv                ../verilog/group_scan_mem_reg_if/syn_pulse_gen.sv"
+Loading db file '/afs/umich.edu/class/eecs427/tsmc65/stdcells/tcbn65lp_220a/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lp_220a/tcbn65lpbc.db'
+Loading db file '/usr/caen/synopsys-synth-2021.06-SP1/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/caen/synopsys-synth-2021.06-SP1/libraries/syn/gtech.db'
+Loading db file '/usr/caen/synopsys-synth-2021.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'tcbn65lpbc'
+  Loading link library 'gtech'
+Loading sverilog files: '/afs/umich.edu/group/e/ece598to/w26/tutorial/A_Team_Scan_Chain/verilog/group_scan_mem_reg_if/group_scan_mem_reg_if.sv' '/afs/umich.edu/group/e/ece598to/w26/tutorial/A_Team_Scan_Chain/verilog/group_scan_mem_reg_if/mem_reg_mux.sv' '/afs/umich.edu/group/e/ece598to/w26/tutorial/A_Team_Scan_Chain/verilog/group_scan_mem_reg_if/rwctr.sv' '/afs/umich.edu/group/e/ece598to/w26/tutorial/A_Team_Scan_Chain/verilog/group_scan_mem_reg_if/syn_pulse_gen.sv' 
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /afs/umich.edu/group/e/ece598to/w26/tutorial/A_Team_Scan_Chain/verilog/group_scan_mem_reg_if/group_scan_mem_reg_if.sv
+Compiling source file /afs/umich.edu/group/e/ece598to/w26/tutorial/A_Team_Scan_Chain/verilog/group_scan_mem_reg_if/mem_reg_mux.sv
+Compiling source file /afs/umich.edu/group/e/ece598to/w26/tutorial/A_Team_Scan_Chain/verilog/group_scan_mem_reg_if/rwctr.sv
+Compiling source file /afs/umich.edu/group/e/ece598to/w26/tutorial/A_Team_Scan_Chain/verilog/group_scan_mem_reg_if/syn_pulse_gen.sv
+
+Inferred memory devices in process
+	in routine rwctr line 74 in file
+		'/afs/umich.edu/group/e/ece598to/w26/tutorial/A_Team_Scan_Chain/verilog/group_scan_mem_reg_if/rwctr.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  static_rdata_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     holding_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    scan_wen_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    scan_ren_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    scan_addr_reg    | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   scan_wdata_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  static_ready_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine syn_pulse_gen line 17 in file
+		'/afs/umich.edu/group/e/ece598to/w26/tutorial/A_Team_Scan_Chain/verilog/group_scan_mem_reg_if/syn_pulse_gen.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     id_hold_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    scan_id_d_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   scan_id_2d_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/afs/umich.edu/group/e/ece598to/w26/tutorial/A_Team_Scan_Chain/verilog/group_scan_mem_reg_if/group_scan_mem_reg_if.db:group_scan_mem_reg_if'
+Loaded 4 designs.
+Current design is 'group_scan_mem_reg_if'.
+group_scan_mem_reg_if mem_reg_mux rwctr syn_pulse_gen
+list_designs
+group_scan_mem_reg_if (*)       rwctr
+mem_reg_mux                     syn_pulse_gen
+1
+current_design $top_level
+Current design is 'group_scan_mem_reg_if'.
+{group_scan_mem_reg_if}
+# Read timing constrints
+# Set clock names, ports
+source -verbose "timing.tcl"
+2
+0.2
+0.2
+clk
+clk
+1
+1
+1
+1
+1
+1
+0.150
+0.100
+0.010
+0.010
+source -verbose "scan_chain.tcl"
+1
+1
+1
+1
+1
+1
+1
+1
+1
+set_ideal_network rst_n
+1
+set_fix_multiple_port_nets -all
+1
+# Link the design
+link
+
+  Linking design 'group_scan_mem_reg_if'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (4 designs)               /afs/umich.edu/group/e/ece598to/w26/tutorial/A_Team_Scan_Chain/verilog/group_scan_mem_reg_if/group_scan_mem_reg_if.db, etc
+  tcbn65lpbc (library)        /afs/umich.edu/class/eecs427/tsmc65/stdcells/tcbn65lp_220a/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lp_220a/tcbn65lpbc.db
+  dw_foundation.sldb (library) /usr/caen/synopsys-synth-2021.06-SP1/libraries/syn/dw_foundation.sldb
+
+1
+# Set maximum fanout of gates
+set_max_fanout 8 $top_level 
+1
+# Configure the clock network
+set_fix_hold [all_clocks] 
+1
+set_dont_touch_network [get_ports clk]
+1
+# Set delays: Input, Output
+# set_driving_cell -lib_cell INVX1TR [all_inputs] -library typical
+set_input_delay $typical_input_delay [all_inputs] -clock $clk_name 
+1
+remove_input_delay -clock $clk_name [find port $clk_port]
+1
+set_output_delay $typical_output_delay [all_outputs] -clock $clk_name 
+1
+# Set loading of outputs (unit: pF)
+set_load $typical_wire_load [all_outputs] 
+1
+# Verify the design
+check_design
+ 
+****************************************
+check_design summary:
+Version:     S-2021.06-SP1
+Date:        Thu Feb 12 21:29:31 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      8
+    Unconnected ports (LINT-28)                                     8
+--------------------------------------------------------------------------------
+
+Warning: In design 'group_scan_mem_reg_if', port 'static_addr_group_mux[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'group_scan_mem_reg_if', port 'static_addr_group_mux[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'group_scan_mem_reg_if', port 'static_addr_group_mux[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'group_scan_mem_reg_if', port 'static_addr_group_mux[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'group_scan_mem_reg_if', port 'static_addr_group_mux[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'group_scan_mem_reg_if', port 'static_addr_group_mux[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'group_scan_mem_reg_if', port 'static_addr_group_mux[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'group_scan_mem_reg_if', port 'static_addr_group_mux[12]' is not connected to any nets. (LINT-28)
+1
+# Uniquify repeated modules
+uniquify
+1
+# Avoid feedthrough
+# set_fix_multiple_port_nets -feedthroughs -buffer_constants
+# Synthesize the design
+compile -map_effort medium
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | S-2021.06-DWBB_202106.1 |     *     |
+| Licensed DW Building Blocks        | S-2021.06-DWBB_202106.1 |     *     |
+============================================================================
+
+
+Information: There are 8 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'syn_pulse_gen'
+  Processing 'mem_reg_mux'
+  Processing 'rwctr'
+  Processing 'group_scan_mem_reg_if'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:02    1783.4      0.00       0.0       0.0                                0.00  
+    0:00:03    1783.4      0.00       0.0       0.0                                0.00  
+    0:00:03    1783.4      0.00       0.0       0.0                                0.00  
+    0:00:03    1783.4      0.00       0.0       0.0                                0.00  
+    0:00:03    1783.4      0.00       0.0       0.0                                0.00  
+    0:00:03    1146.2      0.00       0.0       0.0                                0.00  
+    0:00:03    1146.2      0.00       0.0       0.0                                0.00  
+    0:00:03    1146.2      0.00       0.0       0.0                                0.00  
+    0:00:03    1146.2      0.00       0.0       0.0                                0.00  
+    0:00:03    1146.2      0.00       0.0       0.0                                0.00  
+    0:00:03    1146.2      0.00       0.0       0.0                                0.00  
+    0:00:03    1146.2      0.00       0.0       0.0                                0.00  
+    0:00:03    1146.2      0.00       0.0       0.0                                0.00  
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:03    1146.2      0.00       0.0       0.0                                0.00  
+    0:00:03    1146.2      0.00       0.0       0.0                                0.00  
+    0:00:03    1146.2      0.00       0.0       0.0                                0.00  
+
+
+  Beginning Design Rule Fixing  (min_path)
+  ----------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:03    1146.2      0.00       0.0       0.0                               -0.30  
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                                  
+   ELAPSED            WORST NEG   SETUP    DESIGN                              MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT             COST    
+  --------- --------- --------- --------- --------- ------------------------- -----------
+    0:00:03    1146.2      0.00       0.0       0.0                               -0.30  
+    0:00:03    1146.2      0.00       0.0       0.0                               -0.30  
+    0:00:03    1143.4      0.00       0.0       0.0                               -0.30  
+    0:00:03    1142.3      0.00       0.0       0.0                               -0.30  
+    0:00:03    1141.2      0.00       0.0       0.0                               -0.30  
+    0:00:03    1140.1      0.00       0.0       0.0                               -0.30  
+    0:00:03    1139.0      0.00       0.0       0.0                               -0.30  
+    0:00:03    1139.0      0.00       0.0       0.0                               -0.30  
+    0:00:03    1139.0      0.00       0.0       0.0                               -0.30  
+    0:00:03    1139.0      0.00       0.0       0.0                               -0.30  
+    0:00:03    1139.0      0.00       0.0       0.0                               -0.30  
+    0:00:03    1139.0      0.00       0.0       0.0                               -0.30  
+    0:00:03    1139.0      0.00       0.0       0.0                               -0.30  
+    0:00:03    1139.0      0.00       0.0       0.0                               -0.30  
+    0:00:03    1195.2      0.00       0.0       0.0                                0.00  
+Loading db file '/afs/umich.edu/class/eecs427/tsmc65/stdcells/tcbn65lp_220a/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lp_220a/tcbn65lpbc.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+# Rename modules, signals according to the naming rules
+# Used for tool exchange
+source -verbose "namingrules.tcl"
+1
+1
+
+Design          Type    Object                  New Name
+--------------------------------------------------------------------------------
+Warning: The specified replacement character (_) is conflicting with the specified allowed or restricted character.   (UCN-4)
+group_scan_mem_reg_if net scan_addr[11]         scan_addr_11_
+group_scan_mem_reg_if net scan_addr[10]         scan_addr_10_
+group_scan_mem_reg_if net scan_addr[9]          scan_addr_9_
+group_scan_mem_reg_if net scan_addr[8]          scan_addr_8_
+group_scan_mem_reg_if net scan_addr[7]          scan_addr_7_
+group_scan_mem_reg_if net scan_addr[6]          scan_addr_6_
+group_scan_mem_reg_if net scan_addr[5]          scan_addr_5_
+group_scan_mem_reg_if net scan_addr[4]          scan_addr_4_
+group_scan_mem_reg_if net scan_addr[3]          scan_addr_3_
+group_scan_mem_reg_if net scan_addr[2]          scan_addr_2_
+group_scan_mem_reg_if net scan_addr[1]          scan_addr_1_
+group_scan_mem_reg_if net scan_addr[0]          scan_addr_0_
+group_scan_mem_reg_if net scan_wdata[31]        scan_wdata_31_
+group_scan_mem_reg_if net scan_wdata[30]        scan_wdata_30_
+group_scan_mem_reg_if net scan_wdata[29]        scan_wdata_29_
+group_scan_mem_reg_if net scan_wdata[28]        scan_wdata_28_
+group_scan_mem_reg_if net scan_wdata[27]        scan_wdata_27_
+group_scan_mem_reg_if net scan_wdata[26]        scan_wdata_26_
+group_scan_mem_reg_if net scan_wdata[25]        scan_wdata_25_
+group_scan_mem_reg_if net scan_wdata[24]        scan_wdata_24_
+group_scan_mem_reg_if net scan_wdata[23]        scan_wdata_23_
+group_scan_mem_reg_if net scan_wdata[22]        scan_wdata_22_
+group_scan_mem_reg_if net scan_wdata[21]        scan_wdata_21_
+group_scan_mem_reg_if net scan_wdata[20]        scan_wdata_20_
+group_scan_mem_reg_if net scan_wdata[19]        scan_wdata_19_
+group_scan_mem_reg_if net scan_wdata[18]        scan_wdata_18_
+group_scan_mem_reg_if net scan_wdata[17]        scan_wdata_17_
+group_scan_mem_reg_if net scan_wdata[16]        scan_wdata_16_
+group_scan_mem_reg_if net scan_wdata[15]        scan_wdata_15_
+group_scan_mem_reg_if net scan_wdata[14]        scan_wdata_14_
+group_scan_mem_reg_if net scan_wdata[13]        scan_wdata_13_
+group_scan_mem_reg_if net scan_wdata[12]        scan_wdata_12_
+group_scan_mem_reg_if net scan_wdata[11]        scan_wdata_11_
+group_scan_mem_reg_if net scan_wdata[10]        scan_wdata_10_
+group_scan_mem_reg_if net scan_wdata[9]         scan_wdata_9_
+group_scan_mem_reg_if net scan_wdata[8]         scan_wdata_8_
+group_scan_mem_reg_if net scan_wdata[7]         scan_wdata_7_
+group_scan_mem_reg_if net scan_wdata[6]         scan_wdata_6_
+group_scan_mem_reg_if net scan_wdata[5]         scan_wdata_5_
+group_scan_mem_reg_if net scan_wdata[4]         scan_wdata_4_
+group_scan_mem_reg_if net scan_wdata[3]         scan_wdata_3_
+group_scan_mem_reg_if net scan_wdata[2]         scan_wdata_2_
+group_scan_mem_reg_if net scan_wdata[1]         scan_wdata_1_
+group_scan_mem_reg_if net scan_wdata[0]         scan_wdata_0_
+group_scan_mem_reg_if net scan_rdata[31]        scan_rdata_31_
+group_scan_mem_reg_if net scan_rdata[30]        scan_rdata_30_
+group_scan_mem_reg_if net scan_rdata[29]        scan_rdata_29_
+group_scan_mem_reg_if net scan_rdata[28]        scan_rdata_28_
+group_scan_mem_reg_if net scan_rdata[27]        scan_rdata_27_
+group_scan_mem_reg_if net scan_rdata[26]        scan_rdata_26_
+group_scan_mem_reg_if net scan_rdata[25]        scan_rdata_25_
+group_scan_mem_reg_if net scan_rdata[24]        scan_rdata_24_
+group_scan_mem_reg_if net scan_rdata[23]        scan_rdata_23_
+group_scan_mem_reg_if net scan_rdata[22]        scan_rdata_22_
+group_scan_mem_reg_if net scan_rdata[21]        scan_rdata_21_
+group_scan_mem_reg_if net scan_rdata[20]        scan_rdata_20_
+group_scan_mem_reg_if net scan_rdata[19]        scan_rdata_19_
+group_scan_mem_reg_if net scan_rdata[18]        scan_rdata_18_
+group_scan_mem_reg_if net scan_rdata[17]        scan_rdata_17_
+group_scan_mem_reg_if net scan_rdata[16]        scan_rdata_16_
+group_scan_mem_reg_if net scan_rdata[15]        scan_rdata_15_
+group_scan_mem_reg_if net scan_rdata[14]        scan_rdata_14_
+group_scan_mem_reg_if net scan_rdata[13]        scan_rdata_13_
+group_scan_mem_reg_if net scan_rdata[12]        scan_rdata_12_
+group_scan_mem_reg_if net scan_rdata[11]        scan_rdata_11_
+group_scan_mem_reg_if net scan_rdata[10]        scan_rdata_10_
+group_scan_mem_reg_if net scan_rdata[9]         scan_rdata_9_
+group_scan_mem_reg_if net scan_rdata[8]         scan_rdata_8_
+group_scan_mem_reg_if net scan_rdata[7]         scan_rdata_7_
+group_scan_mem_reg_if net scan_rdata[6]         scan_rdata_6_
+group_scan_mem_reg_if net scan_rdata[5]         scan_rdata_5_
+group_scan_mem_reg_if net scan_rdata[4]         scan_rdata_4_
+group_scan_mem_reg_if net scan_rdata[3]         scan_rdata_3_
+group_scan_mem_reg_if net scan_rdata[2]         scan_rdata_2_
+group_scan_mem_reg_if net scan_rdata[1]         scan_rdata_1_
+group_scan_mem_reg_if net scan_rdata[0]         scan_rdata_0_
+rwctr           cell    static_rdata_reg[9]     static_rdata_reg_9_
+rwctr           cell    static_rdata_reg[8]     static_rdata_reg_8_
+rwctr           cell    static_rdata_reg[7]     static_rdata_reg_7_
+rwctr           cell    static_rdata_reg[6]     static_rdata_reg_6_
+rwctr           cell    static_rdata_reg[5]     static_rdata_reg_5_
+rwctr           cell    static_rdata_reg[4]     static_rdata_reg_4_
+rwctr           cell    static_rdata_reg[3]     static_rdata_reg_3_
+rwctr           cell    static_rdata_reg[31]    static_rdata_reg_31_
+rwctr           cell    static_rdata_reg[30]    static_rdata_reg_30_
+rwctr           cell    static_rdata_reg[2]     static_rdata_reg_2_
+rwctr           cell    static_rdata_reg[29]    static_rdata_reg_29_
+rwctr           cell    static_rdata_reg[28]    static_rdata_reg_28_
+rwctr           cell    static_rdata_reg[27]    static_rdata_reg_27_
+rwctr           cell    static_rdata_reg[26]    static_rdata_reg_26_
+rwctr           cell    static_rdata_reg[25]    static_rdata_reg_25_
+rwctr           cell    static_rdata_reg[24]    static_rdata_reg_24_
+rwctr           cell    static_rdata_reg[23]    static_rdata_reg_23_
+rwctr           cell    static_rdata_reg[22]    static_rdata_reg_22_
+rwctr           cell    static_rdata_reg[21]    static_rdata_reg_21_
+rwctr           cell    static_rdata_reg[20]    static_rdata_reg_20_
+rwctr           cell    static_rdata_reg[1]     static_rdata_reg_1_
+rwctr           cell    static_rdata_reg[19]    static_rdata_reg_19_
+rwctr           cell    static_rdata_reg[18]    static_rdata_reg_18_
+rwctr           cell    static_rdata_reg[17]    static_rdata_reg_17_
+rwctr           cell    static_rdata_reg[16]    static_rdata_reg_16_
+rwctr           cell    static_rdata_reg[15]    static_rdata_reg_15_
+rwctr           cell    static_rdata_reg[14]    static_rdata_reg_14_
+rwctr           cell    static_rdata_reg[13]    static_rdata_reg_13_
+rwctr           cell    static_rdata_reg[12]    static_rdata_reg_12_
+rwctr           cell    static_rdata_reg[11]    static_rdata_reg_11_
+rwctr           cell    static_rdata_reg[10]    static_rdata_reg_10_
+rwctr           cell    static_rdata_reg[0]     static_rdata_reg_0_
+rwctr           cell    scan_addr_reg[11]       scan_addr_reg_11_
+rwctr           cell    scan_addr_reg[10]       scan_addr_reg_10_
+rwctr           cell    scan_addr_reg[9]        scan_addr_reg_9_
+rwctr           cell    scan_addr_reg[8]        scan_addr_reg_8_
+rwctr           cell    scan_addr_reg[7]        scan_addr_reg_7_
+rwctr           cell    scan_addr_reg[6]        scan_addr_reg_6_
+rwctr           cell    scan_addr_reg[5]        scan_addr_reg_5_
+rwctr           cell    scan_addr_reg[4]        scan_addr_reg_4_
+rwctr           cell    scan_addr_reg[3]        scan_addr_reg_3_
+rwctr           cell    scan_addr_reg[2]        scan_addr_reg_2_
+rwctr           cell    scan_addr_reg[1]        scan_addr_reg_1_
+rwctr           cell    scan_addr_reg[0]        scan_addr_reg_0_
+rwctr           cell    scan_wdata_reg[31]      scan_wdata_reg_31_
+rwctr           cell    scan_wdata_reg[30]      scan_wdata_reg_30_
+rwctr           cell    scan_wdata_reg[29]      scan_wdata_reg_29_
+rwctr           cell    scan_wdata_reg[28]      scan_wdata_reg_28_
+rwctr           cell    scan_wdata_reg[27]      scan_wdata_reg_27_
+rwctr           cell    scan_wdata_reg[26]      scan_wdata_reg_26_
+rwctr           cell    scan_wdata_reg[25]      scan_wdata_reg_25_
+rwctr           cell    scan_wdata_reg[24]      scan_wdata_reg_24_
+rwctr           cell    scan_wdata_reg[23]      scan_wdata_reg_23_
+rwctr           cell    scan_wdata_reg[22]      scan_wdata_reg_22_
+rwctr           cell    scan_wdata_reg[21]      scan_wdata_reg_21_
+rwctr           cell    scan_wdata_reg[20]      scan_wdata_reg_20_
+rwctr           cell    scan_wdata_reg[19]      scan_wdata_reg_19_
+rwctr           cell    scan_wdata_reg[18]      scan_wdata_reg_18_
+rwctr           cell    scan_wdata_reg[17]      scan_wdata_reg_17_
+rwctr           cell    scan_wdata_reg[16]      scan_wdata_reg_16_
+rwctr           cell    scan_wdata_reg[15]      scan_wdata_reg_15_
+rwctr           cell    scan_wdata_reg[14]      scan_wdata_reg_14_
+rwctr           cell    scan_wdata_reg[13]      scan_wdata_reg_13_
+rwctr           cell    scan_wdata_reg[12]      scan_wdata_reg_12_
+rwctr           cell    scan_wdata_reg[11]      scan_wdata_reg_11_
+rwctr           cell    scan_wdata_reg[10]      scan_wdata_reg_10_
+rwctr           cell    scan_wdata_reg[9]       scan_wdata_reg_9_
+rwctr           cell    scan_wdata_reg[8]       scan_wdata_reg_8_
+rwctr           cell    scan_wdata_reg[7]       scan_wdata_reg_7_
+rwctr           cell    scan_wdata_reg[6]       scan_wdata_reg_6_
+rwctr           cell    scan_wdata_reg[5]       scan_wdata_reg_5_
+rwctr           cell    scan_wdata_reg[4]       scan_wdata_reg_4_
+rwctr           cell    scan_wdata_reg[3]       scan_wdata_reg_3_
+rwctr           cell    scan_wdata_reg[2]       scan_wdata_reg_2_
+rwctr           cell    scan_wdata_reg[1]       scan_wdata_reg_1_
+rwctr           cell    scan_wdata_reg[0]       scan_wdata_reg_0_
+rwctr           net     scan_addr_w[11]         scan_addr_w_11_
+rwctr           net     scan_addr_w[10]         scan_addr_w_10_
+rwctr           net     scan_addr_w[9]          scan_addr_w_9_
+rwctr           net     scan_addr_w[8]          scan_addr_w_8_
+rwctr           net     scan_addr_w[7]          scan_addr_w_7_
+rwctr           net     scan_addr_w[6]          scan_addr_w_6_
+rwctr           net     scan_addr_w[5]          scan_addr_w_5_
+rwctr           net     scan_addr_w[4]          scan_addr_w_4_
+rwctr           net     scan_addr_w[3]          scan_addr_w_3_
+rwctr           net     scan_addr_w[2]          scan_addr_w_2_
+rwctr           net     scan_addr_w[1]          scan_addr_w_1_
+rwctr           net     scan_addr_w[0]          scan_addr_w_0_
+rwctr           net     scan_wdata_w[31]        scan_wdata_w_31_
+rwctr           net     scan_wdata_w[30]        scan_wdata_w_30_
+rwctr           net     scan_wdata_w[29]        scan_wdata_w_29_
+rwctr           net     scan_wdata_w[28]        scan_wdata_w_28_
+rwctr           net     scan_wdata_w[27]        scan_wdata_w_27_
+rwctr           net     scan_wdata_w[26]        scan_wdata_w_26_
+rwctr           net     scan_wdata_w[25]        scan_wdata_w_25_
+rwctr           net     scan_wdata_w[24]        scan_wdata_w_24_
+rwctr           net     scan_wdata_w[23]        scan_wdata_w_23_
+rwctr           net     scan_wdata_w[22]        scan_wdata_w_22_
+rwctr           net     scan_wdata_w[21]        scan_wdata_w_21_
+rwctr           net     scan_wdata_w[20]        scan_wdata_w_20_
+rwctr           net     scan_wdata_w[19]        scan_wdata_w_19_
+rwctr           net     scan_wdata_w[18]        scan_wdata_w_18_
+rwctr           net     scan_wdata_w[17]        scan_wdata_w_17_
+rwctr           net     scan_wdata_w[16]        scan_wdata_w_16_
+rwctr           net     scan_wdata_w[15]        scan_wdata_w_15_
+rwctr           net     scan_wdata_w[14]        scan_wdata_w_14_
+rwctr           net     scan_wdata_w[13]        scan_wdata_w_13_
+rwctr           net     scan_wdata_w[12]        scan_wdata_w_12_
+rwctr           net     scan_wdata_w[11]        scan_wdata_w_11_
+rwctr           net     scan_wdata_w[10]        scan_wdata_w_10_
+rwctr           net     scan_wdata_w[9]         scan_wdata_w_9_
+rwctr           net     scan_wdata_w[8]         scan_wdata_w_8_
+rwctr           net     scan_wdata_w[7]         scan_wdata_w_7_
+rwctr           net     scan_wdata_w[6]         scan_wdata_w_6_
+rwctr           net     scan_wdata_w[5]         scan_wdata_w_5_
+rwctr           net     scan_wdata_w[4]         scan_wdata_w_4_
+rwctr           net     scan_wdata_w[3]         scan_wdata_w_3_
+rwctr           net     scan_wdata_w[2]         scan_wdata_w_2_
+rwctr           net     scan_wdata_w[1]         scan_wdata_w_1_
+rwctr           net     scan_wdata_w[0]         scan_wdata_w_0_
+1
+
+Design          Type    Object                  New Name
+--------------------------------------------------------------------------------
+group_scan_mem_reg_if net scan_addr_11_         scan_addr_11_0
+group_scan_mem_reg_if net scan_addr_10_         scan_addr_10_0
+group_scan_mem_reg_if net scan_addr_9_          scan_addr_9_0
+group_scan_mem_reg_if net scan_addr_8_          scan_addr_8_0
+group_scan_mem_reg_if net scan_addr_7_          scan_addr_7_0
+group_scan_mem_reg_if net scan_addr_6_          scan_addr_6_0
+group_scan_mem_reg_if net scan_addr_5_          scan_addr_5_0
+group_scan_mem_reg_if net scan_addr_4_          scan_addr_4_0
+group_scan_mem_reg_if net scan_addr_3_          scan_addr_3_0
+group_scan_mem_reg_if net scan_addr_2_          scan_addr_2_0
+group_scan_mem_reg_if net scan_addr_1_          scan_addr_1_0
+group_scan_mem_reg_if net scan_addr_0_          scan_addr_0_0
+group_scan_mem_reg_if net scan_wdata_31_        scan_wdata_31_0
+group_scan_mem_reg_if net scan_wdata_30_        scan_wdata_30_0
+group_scan_mem_reg_if net scan_wdata_29_        scan_wdata_29_0
+group_scan_mem_reg_if net scan_wdata_28_        scan_wdata_28_0
+group_scan_mem_reg_if net scan_wdata_27_        scan_wdata_27_0
+group_scan_mem_reg_if net scan_wdata_26_        scan_wdata_26_0
+group_scan_mem_reg_if net scan_wdata_25_        scan_wdata_25_0
+group_scan_mem_reg_if net scan_wdata_24_        scan_wdata_24_0
+group_scan_mem_reg_if net scan_wdata_23_        scan_wdata_23_0
+group_scan_mem_reg_if net scan_wdata_22_        scan_wdata_22_0
+group_scan_mem_reg_if net scan_wdata_21_        scan_wdata_21_0
+group_scan_mem_reg_if net scan_wdata_20_        scan_wdata_20_0
+group_scan_mem_reg_if net scan_wdata_19_        scan_wdata_19_0
+group_scan_mem_reg_if net scan_wdata_18_        scan_wdata_18_0
+group_scan_mem_reg_if net scan_wdata_17_        scan_wdata_17_0
+group_scan_mem_reg_if net scan_wdata_16_        scan_wdata_16_0
+group_scan_mem_reg_if net scan_wdata_15_        scan_wdata_15_0
+group_scan_mem_reg_if net scan_wdata_14_        scan_wdata_14_0
+group_scan_mem_reg_if net scan_wdata_13_        scan_wdata_13_0
+group_scan_mem_reg_if net scan_wdata_12_        scan_wdata_12_0
+group_scan_mem_reg_if net scan_wdata_11_        scan_wdata_11_0
+group_scan_mem_reg_if net scan_wdata_10_        scan_wdata_10_0
+group_scan_mem_reg_if net scan_wdata_9_         scan_wdata_9_0
+group_scan_mem_reg_if net scan_wdata_8_         scan_wdata_8_0
+group_scan_mem_reg_if net scan_wdata_7_         scan_wdata_7_0
+group_scan_mem_reg_if net scan_wdata_6_         scan_wdata_6_0
+group_scan_mem_reg_if net scan_wdata_5_         scan_wdata_5_0
+group_scan_mem_reg_if net scan_wdata_4_         scan_wdata_4_0
+group_scan_mem_reg_if net scan_wdata_3_         scan_wdata_3_0
+group_scan_mem_reg_if net scan_wdata_2_         scan_wdata_2_0
+group_scan_mem_reg_if net scan_wdata_1_         scan_wdata_1_0
+group_scan_mem_reg_if net scan_wdata_0_         scan_wdata_0_0
+group_scan_mem_reg_if net scan_rdata_31_        scan_rdata_31_0
+group_scan_mem_reg_if net scan_rdata_30_        scan_rdata_30_0
+group_scan_mem_reg_if net scan_rdata_29_        scan_rdata_29_0
+group_scan_mem_reg_if net scan_rdata_28_        scan_rdata_28_0
+group_scan_mem_reg_if net scan_rdata_27_        scan_rdata_27_0
+group_scan_mem_reg_if net scan_rdata_26_        scan_rdata_26_0
+group_scan_mem_reg_if net scan_rdata_25_        scan_rdata_25_0
+group_scan_mem_reg_if net scan_rdata_24_        scan_rdata_24_0
+group_scan_mem_reg_if net scan_rdata_23_        scan_rdata_23_0
+group_scan_mem_reg_if net scan_rdata_22_        scan_rdata_22_0
+group_scan_mem_reg_if net scan_rdata_21_        scan_rdata_21_0
+group_scan_mem_reg_if net scan_rdata_20_        scan_rdata_20_0
+group_scan_mem_reg_if net scan_rdata_19_        scan_rdata_19_0
+group_scan_mem_reg_if net scan_rdata_18_        scan_rdata_18_0
+group_scan_mem_reg_if net scan_rdata_17_        scan_rdata_17_0
+group_scan_mem_reg_if net scan_rdata_16_        scan_rdata_16_0
+group_scan_mem_reg_if net scan_rdata_15_        scan_rdata_15_0
+group_scan_mem_reg_if net scan_rdata_14_        scan_rdata_14_0
+group_scan_mem_reg_if net scan_rdata_13_        scan_rdata_13_0
+group_scan_mem_reg_if net scan_rdata_12_        scan_rdata_12_0
+group_scan_mem_reg_if net scan_rdata_11_        scan_rdata_11_0
+group_scan_mem_reg_if net scan_rdata_10_        scan_rdata_10_0
+group_scan_mem_reg_if net scan_rdata_9_         scan_rdata_9_0
+group_scan_mem_reg_if net scan_rdata_8_         scan_rdata_8_0
+group_scan_mem_reg_if net scan_rdata_7_         scan_rdata_7_0
+group_scan_mem_reg_if net scan_rdata_6_         scan_rdata_6_0
+group_scan_mem_reg_if net scan_rdata_5_         scan_rdata_5_0
+group_scan_mem_reg_if net scan_rdata_4_         scan_rdata_4_0
+group_scan_mem_reg_if net scan_rdata_3_         scan_rdata_3_0
+group_scan_mem_reg_if net scan_rdata_2_         scan_rdata_2_0
+group_scan_mem_reg_if net scan_rdata_1_         scan_rdata_1_0
+group_scan_mem_reg_if net scan_rdata_0_         scan_rdata_0_0
+1
+1
+# Generate structural verilog netlist
+write -hierarchy -format verilog -output "../verilog/group_scan_mem_reg_if/${top_level}.nl.v"
+Writing verilog file '/afs/umich.edu/group/e/ece598to/w26/tutorial/A_Team_Scan_Chain/verilog/group_scan_mem_reg_if/group_scan_mem_reg_if.nl.v'.
+1
+# Generate Standard Delay Format (SDF) file
+write_sdf -context verilog "./${top_level}.syn.sdf"
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/afs/umich.edu/group/e/ece598to/w26/tutorial/A_Team_Scan_Chain/syn/group_scan_mem_reg_if.syn.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+1
+# Correct the SDF with the artisan provided postprocessor
+#exec ${ARTISAN}/synopsys/dc_postprocessor.pl -s ./${top_level}.temp.sdf -o ./${top_level}.dc.sdf
+# Write SDC
+write_sdc "./${top_level}.sdc"
+1
+# Generate report file
+set maxpaths 20
+20
+set rpt_file "./${top_level}.dc.rpt"
+./group_scan_mem_reg_if.dc.rpt
+check_design > $rpt_file
+report_area  >> ${rpt_file}
+report_power -hier -analysis_effort medium >> ${rpt_file}
+report_design >> ${rpt_file}
+report_cell >> ${rpt_file}
+report_port -verbose >> ${rpt_file}
+report_compile_options >> ${rpt_file}
+report_constraint -all_violators -verbose >> ${rpt_file}
+report_timing -path full -delay max -max_paths $maxpaths -nworst 100 >> ${rpt_file}
+report_clocks >> ${rpt_file}
+#Exit dc_shell
+quit
+
+Memory usage for this session 443 Mbytes.
+Memory usage for this session including child processes 443 Mbytes.
+CPU usage for this session 8 seconds ( 0.00 hours ).
+Elapsed time for this session 20 seconds ( 0.01 hours ).
+
+Thank you...

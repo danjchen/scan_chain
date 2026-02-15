@@ -1,0 +1,22 @@
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid re-execution or '-suppress=ASLR_DETECTED_INFO' to suppress this message.
+Notice: timing checks disabled with +notimingcheck at compile-time
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version V-2023.12-SP2-1_Full64; Runtime version V-2023.12-SP2-1_Full64;  Jan 27 20:06 2026
+*Verdi* Loading libsscore_vcs202312.so
+FSDB Dumper for VCS, Release Verdi_V-2023.12-SP2-1, Linux x86_64/64bit, 07/15/2024
+(C) 1996 - 2024 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'tb_test_scan.fsdb'
+*Verdi* : Begin traversing the scope (tb_test_scan), layer (0).
+*Verdi* : Enable +struct dumping.
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+$finish called from file "./tb_test_scan.sv", line 166.
+$finish at simulation time       50000000000000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 50000000000000 fs
+CPU Time:      2.940 seconds;       Data structure size:   0.2Mb
+Tue Jan 27 20:06:23 2026

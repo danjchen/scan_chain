@@ -1,0 +1,180 @@
+0
+68
++cli+1
++itf+/usr/caen/vcs-2023.12-SP2-1/linux64/lib/vcsdp_lite.tab
++libext+.v+.vlib+.vh
++memcbk
++memcbk
++multisource_int_delays
++neg_tchk
++noerrorIOPCWM
++notimingcheck
++nowarnTFMPC
++overlap
++plusarg_save
++systemverilogext+sv
++v2k
++vc
++vcs+dumparrays
++vcs+lic+wait
++vcsd1
++vpi
++vpi
+-Mamsrun=
+-Masflags=
+-Mcc=gcc
+-Mcfl= -pipe -fPIC -O -I/usr/caen/vcs-2023.12-SP2-1/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -rdynamic
+-Mobjects= /usr/caen/vcs-2023.12-SP2-1/linux64/lib/libvirsim.so /usr/caen/vcs-2023.12-SP2-1/linux64/lib/liberrorinf.so /usr/caen/vcs-2023.12-SP2-1/linux64/lib/libsnpsmalloc.so /usr/caen/vcs-2023.12-SP2-1/linux64/lib/libvfs.so
+-Mout=simv
+-Msaverestoreobj=/usr/caen/vcs-2023.12-SP2-1/linux64/lib/vcs_save_restore_new.o
+-Msyslibs=/usr/caen/verdi-2023.12-SP2-1/share/PLI/VCS/LINUX64/pli.a -ldl
+-Mupdate
+-Mvcsaceobjs=
+-Mxcflags= -pipe -fPIC -I/usr/caen/vcs-2023.12-SP2-1/include
+-Mxllcflags=
+-P
+-Xcbug=0x1
+-cm_libs
+-debug=1
+-debug_access+all
+-fsdb
+-full64
+-gen_obj
+-lca
+-o simv
+-picarchive
+-sverilog
+-timescale=1ns/1ps
+/usr/caen/vcs-2023.12-SP2-1/linux64/bin/vcs1
+yv+celldefine
+simv
+/usr/caen/verdi-2023.12-SP2-1/share/PLI/VCS/LINUX64/verdi.tab
+../verilog/test/sys_defs.vh
+../verilog/group_scan_mem_reg_if/rwctr.sv
+../verilog/group_scan_mem_reg_if/mem_reg_mux.sv
+../verilog/group_scan_mem_reg_if/syn_pulse_gen.sv
+../verilog/group_scan_mem_reg_if/group_scan_mem_reg_if.sv
+../verilog/block_scan.sv
+../verilog/group_mux.sv
+../verilog/scan_for_test.sv
+../verilog/reg/ctr_reg.sv
+../verilog/sram/spram.sv
+../verilog/test/test_scan.sv
+../verilog/test/CLK_GEN.sv
+./tb_test_scan.sv
+83
+_LMFILES_=/usr/caen/misc/modules/matlab/2022a:/usr/caen/misc/modules/python/3.6:/usr/caen/misc/modules/calibre/2017.2_16.14:/usr/caen/misc/modules/cadence-icadv/20.1.500.2200:/usr/caen/misc/modules/verdi/2023.12-SP2-1:/usr/caen/misc/modules/synopsys-synth/2021.06-SP1:/usr/caen/misc/modules/innovus/21.14.000:/usr/caen/misc/modules/vcs/2023.12-SP2-1:/usr/caen/misc/modules/vscode/1.70.2:/usr/caen/misc/modules/spectre/21.10.415
+XLIB_SKIP_ARGB_VISUALS=1
+XDG_SESSION_ID=195
+XDG_RUNTIME_DIR=/run/user/114277435
+XDG_MENU_PREFIX=gnome-
+XDG_DATA_DIRS=/n/brevort/z/yunfa/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+XDG_CURRENT_DESKTOP=GNOME
+VTE_VERSION=5204
+VSCODE_GIT_IPC_HANDLE=/run/user/114277435/vscode-git-e46319a35a.sock
+VSCODE_GIT_ASKPASS_NODE=/afs/eecs.umich.edu/soft/um/vscode-1.70.2/code/code
+VSCODE_GIT_ASKPASS_MAIN=/afs/eecs.umich.edu/soft/um/vscode-1.70.2/code/resources/app/extensions/git/dist/askpass-main.js
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=--ms-enable-electron-run-as-node
+VNCDESKTOP=vlsipool-k13:1 (yunfa)
+VMR_MODE_FLAG=64
+VERDI_HOME=/usr/caen/verdi-2023.12-SP2-1
+VCS_PYTHON3=/usr/caen/vcs-2023.12-SP2-1/linux64/bin/Python-3.6.1/bin/python3
+VCS_PATHMAP_PRELOAD_DONE=1
+VCS_MX_HOME_INTERNAL=1
+VCS_MODE_FLAG=64
+VCS_LCAMSG_PRINT_OFF=1
+VCS_HOME=/usr/caen/vcs-2023.12-SP2-1
+VCS_EXEC_DONE=1
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH=linux64
+UNAME=/bin/uname
+TOOL_HOME=/usr/caen/vcs-2023.12-SP2-1/linux64
+TERM_PROGRAM_VERSION=1.70.2
+TERM_PROGRAM=vscode
+SYNOPSYS=/usr/caen/synopsys-synth-2021.06-SP1
+SW_MMSIM=21.10.415
+SSH_TTY=/dev/pts/0
+SSH_CONNECTION=10.161.2.51 59712 10.161.2.52 22
+SSH_CLIENT=10.161.2.51 59712 22
+SSH_AUTH_SOCK=/run/user/114277435/keyring/ssh
+SSH_AGENT_PID=45893
+SNPS_VCS_PYTHON3=/usr/caen/vcs-2023.12-SP2-1/linux64/bin/Python-3.6.1/bin/python3
+SNPS_VCS_CLANG_PATH=/usr/caen/vcs-2023.12-SP2-1/linux64/clang
+SNPS_INTERNAL_VCS_LINUX_OS=linux
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/45781,unix/unix:/tmp/.ICE-unix/45781
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+QT_IM_MODULE=ibus
+QT_GRAPHICSSYSTEM_CHECKED=1
+OVA_UUM=0
+ORIGINAL_XDG_CURRENT_DESKTOP=GNOME
+NO_AT_BRIDGE=1
+NOVAS_HOME=/usr/caen/verdi-2023.12-SP2-1
+NLTK_DATA=/usr/um/python-3.6/share/nltk_data
+MODULESHOME=/usr/share/Modules
+MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/caen/misc/modules:/afs/umich.edu/class/coe/modules
+MGLS_LICENSE_FILE=/usr/caen/calibre-2017.2_16.14/license.dat
+MGC_HOME=/usr/caen/calibre-2017.2_16.14
+MFLAGS=
+MAKELEVEL=1
+MAKEFLAGS=
+LOADEDMODULES=matlab/2022a:python/3.6:calibre/2017.2_16.14:cadence-icadv/20.1.500.2200:verdi/2023.12-SP2-1:synopsys-synth/2021.06-SP1:innovus/21.14.000:vcs/2023.12-SP2-1:vscode/1.70.2:spectre/21.10.415
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+IMSETTINGS_MODULE=none
+IMSETTINGS_INTEGRATE_DESKTOP=yes
+HISTCONTROL=ignoredups
+GNOME_TERMINAL_SERVICE=:1.102
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/1eece732_8465_4e54_b8e2_a8f3dd23831e
+GNOME_SHELL_SESSION_MODE=classic
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GIT_ASKPASS=/afs/eecs.umich.edu/soft/um/vscode-1.70.2/code/resources/app/extensions/git/dist/askpass.sh
+GDK_BACKEND=x11
+DD_DONT_DO_OS_LOCKS=SET
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-1v0YAum0SF,guid=bfd2f78947f8a3e57b008c876977d9fb
+COLORTERM=truecolor
+CLS_CDSD_COMPATIBILITY_LOCKING=NO
+CHROME_DESKTOP=code-url-handler.desktop
+CDS_VERSION=IC6
+CDS_Netlisting_Mode=Analog
+CDS_LIC_FILE=/usr/caen/FLEXlm/data/license.dat.cadence
+CDS_INSTALL_DIR=/usr/caen/icadv-20.1.500.2200/tools/dfII
+CDS_AUTO_64BIT=ALL
+CDSHOME=/usr/caen/icadv-20.1.500.2200
+CDS=/usr/caen/icadv-20.1.500.2200
+CALIBRE_HOME=/usr/caen/calibre-2017.2_16.14
+BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`_}
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL=true
+0
+0
+16
+1769561883 ./tb_test_scan.sv
+1768943381 ../verilog/test/CLK_GEN.sv
+1769562377 ../verilog/test/test_scan.sv
+1768694640 ../verilog/sram/spram.sv
+1768939106 ../verilog/reg/ctr_reg.sv
+1769561361 ../verilog/scan_for_test.sv
+1769561789 ../verilog/group_mux.sv
+1769562146 ../verilog/block_scan.sv
+1769561764 ../verilog/group_scan_mem_reg_if/group_scan_mem_reg_if.sv
+1768677913 ../verilog/group_scan_mem_reg_if/syn_pulse_gen.sv
+1768939117 ../verilog/group_scan_mem_reg_if/mem_reg_mux.sv
+1769554743 ../verilog/group_scan_mem_reg_if/rwctr.sv
+1705870759 ../verilog/test/sys_defs.vh
+1721617545 /usr/caen/vcs-2023.12-SP2-1/include/cm_vcsd.tab
+1721037471 /usr/caen/verdi-2023.12-SP2-1/share/PLI/VCS/LINUX64/verdi.tab
+1721617572 /usr/caen/vcs-2023.12-SP2-1/linux64/lib/vcsdp_lite.tab
+4
+1721620112 /usr/caen/vcs-2023.12-SP2-1/linux64/lib/libvirsim.so
+1721618558 /usr/caen/vcs-2023.12-SP2-1/linux64/lib/liberrorinf.so
+1721618482 /usr/caen/vcs-2023.12-SP2-1/linux64/lib/libsnpsmalloc.so
+1721618554 /usr/caen/vcs-2023.12-SP2-1/linux64/lib/libvfs.so
+1769562380 simv.daidir
+-1 partitionlib

@@ -1,0 +1,2840 @@
+ 
+****************************************
+check_design summary:
+Version:     S-2021.06-SP1
+Date:        Thu Feb 12 21:29:36 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      8
+    Unconnected ports (LINT-28)                                     8
+--------------------------------------------------------------------------------
+
+Warning: In design 'group_scan_mem_reg_if', port 'static_addr_group_mux[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'group_scan_mem_reg_if', port 'static_addr_group_mux[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'group_scan_mem_reg_if', port 'static_addr_group_mux[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'group_scan_mem_reg_if', port 'static_addr_group_mux[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'group_scan_mem_reg_if', port 'static_addr_group_mux[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'group_scan_mem_reg_if', port 'static_addr_group_mux[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'group_scan_mem_reg_if', port 'static_addr_group_mux[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'group_scan_mem_reg_if', port 'static_addr_group_mux[12]' is not connected to any nets. (LINT-28)
+1
+ 
+****************************************
+Report : area
+Design : group_scan_mem_reg_if
+Version: S-2021.06-SP1
+Date   : Thu Feb 12 21:29:36 2026
+****************************************
+
+Library(s) Used:
+
+    tcbn65lpbc (File: /afs/umich.edu/class/eecs427/tsmc65/stdcells/tcbn65lp_220a/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lp_220a/tcbn65lpbc.db)
+
+Number of ports:                          594
+Number of nets:                           812
+Number of cells:                          326
+Number of combinational cells:            240
+Number of sequential cells:                83
+Number of macros/black boxes:               0
+Number of buf/inv:                         91
+Number of references:                       3
+
+Combinational area:                445.680017
+Buf/Inv area:                      127.440005
+Noncombinational area:             749.520010
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                  1195.200027
+Total area:                 undefined
+1
+Loading db file '/afs/umich.edu/class/eecs427/tsmc65/stdcells/tcbn65lp_220a/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lp_220a/tcbn65lpbc.db'
+Information: Propagating switching activity (medium effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort medium
+Design : group_scan_mem_reg_if
+Version: S-2021.06-SP1
+Date   : Thu Feb 12 21:29:38 2026
+****************************************
+
+
+Library(s) Used:
+
+    tcbn65lpbc (File: /afs/umich.edu/class/eecs427/tsmc65/stdcells/tcbn65lp_220a/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lp_220a/tcbn65lpbc.db)
+
+
+Operating Conditions: BCCOM   Library: tcbn65lpbc
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+group_scan_mem_reg_if  TSMC16K_Lowk_Conservative
+                                         tcbn65lpbc
+rwctr                  TSMC8K_Lowk_Conservative
+                                         tcbn65lpbc
+mem_reg_mux            TSMC8K_Lowk_Conservative
+                                         tcbn65lpbc
+syn_pulse_gen          TSMC8K_Lowk_Conservative
+                                         tcbn65lpbc
+
+
+Global Operating Voltage = 1.32 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+group_scan_mem_reg_if                  6.31e-02    0.616  337.376    0.679 100.0
+  syn_pulse_gen_inst (syn_pulse_gen)   7.17e-04 2.43e-02   11.037 2.50e-02   3.7
+  mem_reg_mux_inst (mem_reg_mux)       2.96e-02 2.13e-02  101.837 5.10e-02   7.5
+  rwctr_inst (rwctr)                   3.28e-02    0.570  224.501    0.603  88.8
+1
+ 
+****************************************
+Report : design
+Design : group_scan_mem_reg_if
+Version: S-2021.06-SP1
+Date   : Thu Feb 12 21:29:38 2026
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    tcbn65lpbc (File: /afs/umich.edu/class/eecs427/tsmc65/stdcells/tcbn65lp_220a/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65lp_220a/tcbn65lpbc.db)
+
+Local Link Library:
+
+    {tcbn65lpbc.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : BCCOM
+    Library : tcbn65lpbc
+    Process :   1.00
+    Temperature :   0.00
+    Voltage :   1.32
+    Interconnect Model : balanced_tree
+
+Wire Loading Model:
+
+    Selected manually by the user.
+
+Name           :   TSMC16K_Lowk_Conservative
+Location       :   tcbn65lpbc
+Resistance     :   1e-05
+Capacitance    :   1
+Area           :   0
+Slope          :   0.0011
+Fanout   Length   Points Average Cap Std Deviation
+--------------------------------------------------------------
+     1     0.00
+     2     0.00
+     3     0.00
+     4     0.00
+     5     0.01
+     6     0.01
+     7     0.01
+     8     0.01
+     9     0.01
+    10     0.01
+
+
+
+Wire Loading Model Mode: segmented.
+
+
+Wire Loading Model Selection Group: WireAreaLowkCon.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    None Required
+
+Design Parameters:
+
+    None specified.
+1
+ 
+****************************************
+Report : cell
+Design : group_scan_mem_reg_if
+Version: S-2021.06-SP1
+Date   : Thu Feb 12 21:29:38 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+mem_reg_mux_inst          mem_reg_mux                     303.840012
+                                                                    h
+rwctr_inst                rwctr                           855.360015
+                                                                    h, n
+syn_pulse_gen_inst        syn_pulse_gen                   36.000000 h, n
+--------------------------------------------------------------------------------
+Total 3 cells                                             1195.200027
+1
+ 
+****************************************
+Report : port
+        -verbose
+Design : group_scan_mem_reg_if
+Version: S-2021.06-SP1
+Date   : Thu Feb 12 21:29:38 2026
+****************************************
+
+
+
+Attributes:
+    d - dont_touch_network
+    i - ideal_network
+
+                       Pin      Wire     Max     Max     Connection
+Port           Dir     Load     Load     Trans   Cap     Class      Attrs
+--------------------------------------------------------------------------------
+clk            in      0.0000   0.0000   --      --      --         d
+cr_rdata[0]    in      0.0000   0.0000   --      --      --         
+cr_rdata[1]    in      0.0000   0.0000   --      --      --         
+cr_rdata[2]    in      0.0000   0.0000   --      --      --         
+cr_rdata[3]    in      0.0000   0.0000   --      --      --         
+cr_rdata[4]    in      0.0000   0.0000   --      --      --         
+cr_rdata[5]    in      0.0000   0.0000   --      --      --         
+cr_rdata[6]    in      0.0000   0.0000   --      --      --         
+cr_rdata[7]    in      0.0000   0.0000   --      --      --         
+cr_rdata[8]    in      0.0000   0.0000   --      --      --         
+cr_rdata[9]    in      0.0000   0.0000   --      --      --         
+cr_rdata[10]   in      0.0000   0.0000   --      --      --         
+cr_rdata[11]   in      0.0000   0.0000   --      --      --         
+cr_rdata[12]   in      0.0000   0.0000   --      --      --         
+cr_rdata[13]   in      0.0000   0.0000   --      --      --         
+cr_rdata[14]   in      0.0000   0.0000   --      --      --         
+cr_rdata[15]   in      0.0000   0.0000   --      --      --         
+cr_rdata[16]   in      0.0000   0.0000   --      --      --         
+reg_ready      in      0.0000   0.0000   --      --      --         
+rst_n          in      0.0000   0.0000   --      --      --         i
+scan_id_group_mux
+               in      0.0000   0.0000   --      --      --         
+sr_rdata[0]    in      0.0000   0.0000   --      --      --         
+sr_rdata[1]    in      0.0000   0.0000   --      --      --         
+sr_rdata[2]    in      0.0000   0.0000   --      --      --         
+sr_rdata[3]    in      0.0000   0.0000   --      --      --         
+sr_rdata[4]    in      0.0000   0.0000   --      --      --         
+sr_rdata[5]    in      0.0000   0.0000   --      --      --         
+sr_rdata[6]    in      0.0000   0.0000   --      --      --         
+sr_rdata[7]    in      0.0000   0.0000   --      --      --         
+sr_rdata[8]    in      0.0000   0.0000   --      --      --         
+sr_rdata[9]    in      0.0000   0.0000   --      --      --         
+sr_rdata[10]   in      0.0000   0.0000   --      --      --         
+sr_rdata[11]   in      0.0000   0.0000   --      --      --         
+sr_rdata[12]   in      0.0000   0.0000   --      --      --         
+sr_rdata[13]   in      0.0000   0.0000   --      --      --         
+sr_rdata[14]   in      0.0000   0.0000   --      --      --         
+sram_rdata[0]  in      0.0000   0.0000   --      --      --         
+sram_rdata[1]  in      0.0000   0.0000   --      --      --         
+sram_rdata[2]  in      0.0000   0.0000   --      --      --         
+sram_rdata[3]  in      0.0000   0.0000   --      --      --         
+sram_rdata[4]  in      0.0000   0.0000   --      --      --         
+sram_rdata[5]  in      0.0000   0.0000   --      --      --         
+sram_rdata[6]  in      0.0000   0.0000   --      --      --         
+sram_rdata[7]  in      0.0000   0.0000   --      --      --         
+sram_rdata[8]  in      0.0000   0.0000   --      --      --         
+sram_rdata[9]  in      0.0000   0.0000   --      --      --         
+sram_rdata[10] in      0.0000   0.0000   --      --      --         
+sram_rdata[11] in      0.0000   0.0000   --      --      --         
+sram_rdata[12] in      0.0000   0.0000   --      --      --         
+sram_rdata[13] in      0.0000   0.0000   --      --      --         
+sram_rdata[14] in      0.0000   0.0000   --      --      --         
+sram_rdata[15] in      0.0000   0.0000   --      --      --         
+sram_rdata[16] in      0.0000   0.0000   --      --      --         
+sram_rdata[17] in      0.0000   0.0000   --      --      --         
+sram_rdata[18] in      0.0000   0.0000   --      --      --         
+sram_rdata[19] in      0.0000   0.0000   --      --      --         
+sram_rdata[20] in      0.0000   0.0000   --      --      --         
+sram_rdata[21] in      0.0000   0.0000   --      --      --         
+sram_rdata[22] in      0.0000   0.0000   --      --      --         
+sram_rdata[23] in      0.0000   0.0000   --      --      --         
+sram_rdata[24] in      0.0000   0.0000   --      --      --         
+sram_rdata[25] in      0.0000   0.0000   --      --      --         
+sram_rdata[26] in      0.0000   0.0000   --      --      --         
+sram_rdata[27] in      0.0000   0.0000   --      --      --         
+sram_rdata[28] in      0.0000   0.0000   --      --      --         
+sram_rdata[29] in      0.0000   0.0000   --      --      --         
+sram_rdata[30] in      0.0000   0.0000   --      --      --         
+sram_rdata[31] in      0.0000   0.0000   --      --      --         
+sram_ready     in      0.0000   0.0000   --      --      --         
+static_addr_group_mux[0]
+               in      0.0000   0.0000   --      --      --         
+static_addr_group_mux[1]
+               in      0.0000   0.0000   --      --      --         
+static_addr_group_mux[2]
+               in      0.0000   0.0000   --      --      --         
+static_addr_group_mux[3]
+               in      0.0000   0.0000   --      --      --         
+static_addr_group_mux[4]
+               in      0.0000   0.0000   --      --      --         
+static_addr_group_mux[5]
+               in      0.0000   0.0000   --      --      --         
+static_addr_group_mux[6]
+               in      0.0000   0.0000   --      --      --         
+static_addr_group_mux[7]
+               in      0.0000   0.0000   --      --      --         
+static_addr_group_mux[8]
+               in      0.0000   0.0000   --      --      --         
+static_addr_group_mux[9]
+               in      0.0000   0.0000   --      --      --         
+static_addr_group_mux[10]
+               in      0.0000   0.0000   --      --      --         
+static_addr_group_mux[11]
+               in      0.0000   0.0000   --      --      --         
+static_addr_group_mux[12]
+               in      0.0000   0.0000   --      --      --         
+static_addr_group_mux[13]
+               in      0.0000   0.0000   --      --      --         
+static_addr_group_mux[14]
+               in      0.0000   0.0000   --      --      --         
+static_addr_group_mux[15]
+               in      0.0000   0.0000   --      --      --         
+static_addr_group_mux[16]
+               in      0.0000   0.0000   --      --      --         
+static_addr_group_mux[17]
+               in      0.0000   0.0000   --      --      --         
+static_addr_group_mux[18]
+               in      0.0000   0.0000   --      --      --         
+static_addr_group_mux[19]
+               in      0.0000   0.0000   --      --      --         
+static_ren_group_mux
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[0]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[1]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[2]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[3]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[4]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[5]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[6]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[7]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[8]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[9]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[10]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[11]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[12]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[13]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[14]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[15]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[16]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[17]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[18]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[19]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[20]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[21]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[22]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[23]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[24]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[25]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[26]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[27]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[28]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[29]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[30]
+               in      0.0000   0.0000   --      --      --         
+static_wdata_group_mux[31]
+               in      0.0000   0.0000   --      --      --         
+static_wen_group_mux
+               in      0.0000   0.0000   --      --      --         
+cr_wdata[0]    out     0.0100   0.0000   --      --      --         
+cr_wdata[1]    out     0.0100   0.0000   --      --      --         
+cr_wdata[2]    out     0.0100   0.0000   --      --      --         
+cr_wdata[3]    out     0.0100   0.0000   --      --      --         
+cr_wdata[4]    out     0.0100   0.0000   --      --      --         
+cr_wdata[5]    out     0.0100   0.0000   --      --      --         
+cr_wdata[6]    out     0.0100   0.0000   --      --      --         
+cr_wdata[7]    out     0.0100   0.0000   --      --      --         
+cr_wdata[8]    out     0.0100   0.0000   --      --      --         
+cr_wdata[9]    out     0.0100   0.0000   --      --      --         
+cr_wdata[10]   out     0.0100   0.0000   --      --      --         
+cr_wdata[11]   out     0.0100   0.0000   --      --      --         
+cr_wdata[12]   out     0.0100   0.0000   --      --      --         
+cr_wdata[13]   out     0.0100   0.0000   --      --      --         
+cr_wdata[14]   out     0.0100   0.0000   --      --      --         
+cr_wdata[15]   out     0.0100   0.0000   --      --      --         
+cr_wdata[16]   out     0.0100   0.0000   --      --      --         
+reg_ren        out     0.0100   0.0000   --      --      --         
+reg_wen        out     0.0100   0.0000   --      --      --         
+sram_addr[0]   out     0.0100   0.0000   --      --      --         
+sram_addr[1]   out     0.0100   0.0000   --      --      --         
+sram_addr[2]   out     0.0100   0.0000   --      --      --         
+sram_addr[3]   out     0.0100   0.0000   --      --      --         
+sram_addr[4]   out     0.0100   0.0000   --      --      --         
+sram_addr[5]   out     0.0100   0.0000   --      --      --         
+sram_addr[6]   out     0.0100   0.0000   --      --      --         
+sram_addr[7]   out     0.0100   0.0000   --      --      --         
+sram_addr[8]   out     0.0100   0.0000   --      --      --         
+sram_addr[9]   out     0.0100   0.0000   --      --      --         
+sram_addr[10]  out     0.0100   0.0000   --      --      --         
+sram_ren       out     0.0100   0.0000   --      --      --         
+sram_wdata[0]  out     0.0100   0.0000   --      --      --         
+sram_wdata[1]  out     0.0100   0.0000   --      --      --         
+sram_wdata[2]  out     0.0100   0.0000   --      --      --         
+sram_wdata[3]  out     0.0100   0.0000   --      --      --         
+sram_wdata[4]  out     0.0100   0.0000   --      --      --         
+sram_wdata[5]  out     0.0100   0.0000   --      --      --         
+sram_wdata[6]  out     0.0100   0.0000   --      --      --         
+sram_wdata[7]  out     0.0100   0.0000   --      --      --         
+sram_wdata[8]  out     0.0100   0.0000   --      --      --         
+sram_wdata[9]  out     0.0100   0.0000   --      --      --         
+sram_wdata[10] out     0.0100   0.0000   --      --      --         
+sram_wdata[11] out     0.0100   0.0000   --      --      --         
+sram_wdata[12] out     0.0100   0.0000   --      --      --         
+sram_wdata[13] out     0.0100   0.0000   --      --      --         
+sram_wdata[14] out     0.0100   0.0000   --      --      --         
+sram_wdata[15] out     0.0100   0.0000   --      --      --         
+sram_wdata[16] out     0.0100   0.0000   --      --      --         
+sram_wdata[17] out     0.0100   0.0000   --      --      --         
+sram_wdata[18] out     0.0100   0.0000   --      --      --         
+sram_wdata[19] out     0.0100   0.0000   --      --      --         
+sram_wdata[20] out     0.0100   0.0000   --      --      --         
+sram_wdata[21] out     0.0100   0.0000   --      --      --         
+sram_wdata[22] out     0.0100   0.0000   --      --      --         
+sram_wdata[23] out     0.0100   0.0000   --      --      --         
+sram_wdata[24] out     0.0100   0.0000   --      --      --         
+sram_wdata[25] out     0.0100   0.0000   --      --      --         
+sram_wdata[26] out     0.0100   0.0000   --      --      --         
+sram_wdata[27] out     0.0100   0.0000   --      --      --         
+sram_wdata[28] out     0.0100   0.0000   --      --      --         
+sram_wdata[29] out     0.0100   0.0000   --      --      --         
+sram_wdata[30] out     0.0100   0.0000   --      --      --         
+sram_wdata[31] out     0.0100   0.0000   --      --      --         
+sram_wen       out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[0]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[1]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[2]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[3]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[4]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[5]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[6]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[7]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[8]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[9]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[10]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[11]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[12]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[13]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[14]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[15]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[16]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[17]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[18]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[19]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[20]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[21]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[22]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[23]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[24]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[25]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[26]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[27]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[28]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[29]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[30]
+               out     0.0100   0.0000   --      --      --         
+static_rdata_group_mux[31]
+               out     0.0100   0.0000   --      --      --         
+static_ready_group_mux
+               out     0.0100   0.0000   --      --      --         
+
+
+              External  Max             Min                Min       Min
+              Number    Wireload        Wireload           Pin       Wire
+Port          Points    Model           Model              Load      Load
+--------------------------------------------------------------------------------
+clk                1      --              --              --        -- 
+cr_rdata[0]        1      --              --              --        -- 
+cr_rdata[1]        1      --              --              --        -- 
+cr_rdata[2]        1      --              --              --        -- 
+cr_rdata[3]        1      --              --              --        -- 
+cr_rdata[4]        1      --              --              --        -- 
+cr_rdata[5]        1      --              --              --        -- 
+cr_rdata[6]        1      --              --              --        -- 
+cr_rdata[7]        1      --              --              --        -- 
+cr_rdata[8]        1      --              --              --        -- 
+cr_rdata[9]        1      --              --              --        -- 
+cr_rdata[10]       1      --              --              --        -- 
+cr_rdata[11]       1      --              --              --        -- 
+cr_rdata[12]       1      --              --              --        -- 
+cr_rdata[13]       1      --              --              --        -- 
+cr_rdata[14]       1      --              --              --        -- 
+cr_rdata[15]       1      --              --              --        -- 
+cr_rdata[16]       1      --              --              --        -- 
+reg_ready          1      --              --              --        -- 
+rst_n              1      --              --              --        -- 
+scan_id_group_mux
+                   1      --              --              --        -- 
+sr_rdata[0]        1      --              --              --        -- 
+sr_rdata[1]        1      --              --              --        -- 
+sr_rdata[2]        1      --              --              --        -- 
+sr_rdata[3]        1      --              --              --        -- 
+sr_rdata[4]        1      --              --              --        -- 
+sr_rdata[5]        1      --              --              --        -- 
+sr_rdata[6]        1      --              --              --        -- 
+sr_rdata[7]        1      --              --              --        -- 
+sr_rdata[8]        1      --              --              --        -- 
+sr_rdata[9]        1      --              --              --        -- 
+sr_rdata[10]       1      --              --              --        -- 
+sr_rdata[11]       1      --              --              --        -- 
+sr_rdata[12]       1      --              --              --        -- 
+sr_rdata[13]       1      --              --              --        -- 
+sr_rdata[14]       1      --              --              --        -- 
+sram_rdata[0]      1      --              --              --        -- 
+sram_rdata[1]      1      --              --              --        -- 
+sram_rdata[2]      1      --              --              --        -- 
+sram_rdata[3]      1      --              --              --        -- 
+sram_rdata[4]      1      --              --              --        -- 
+sram_rdata[5]      1      --              --              --        -- 
+sram_rdata[6]      1      --              --              --        -- 
+sram_rdata[7]      1      --              --              --        -- 
+sram_rdata[8]      1      --              --              --        -- 
+sram_rdata[9]      1      --              --              --        -- 
+sram_rdata[10]
+                   1      --              --              --        -- 
+sram_rdata[11]
+                   1      --              --              --        -- 
+sram_rdata[12]
+                   1      --              --              --        -- 
+sram_rdata[13]
+                   1      --              --              --        -- 
+sram_rdata[14]
+                   1      --              --              --        -- 
+sram_rdata[15]
+                   1      --              --              --        -- 
+sram_rdata[16]
+                   1      --              --              --        -- 
+sram_rdata[17]
+                   1      --              --              --        -- 
+sram_rdata[18]
+                   1      --              --              --        -- 
+sram_rdata[19]
+                   1      --              --              --        -- 
+sram_rdata[20]
+                   1      --              --              --        -- 
+sram_rdata[21]
+                   1      --              --              --        -- 
+sram_rdata[22]
+                   1      --              --              --        -- 
+sram_rdata[23]
+                   1      --              --              --        -- 
+sram_rdata[24]
+                   1      --              --              --        -- 
+sram_rdata[25]
+                   1      --              --              --        -- 
+sram_rdata[26]
+                   1      --              --              --        -- 
+sram_rdata[27]
+                   1      --              --              --        -- 
+sram_rdata[28]
+                   1      --              --              --        -- 
+sram_rdata[29]
+                   1      --              --              --        -- 
+sram_rdata[30]
+                   1      --              --              --        -- 
+sram_rdata[31]
+                   1      --              --              --        -- 
+sram_ready         1      --              --              --        -- 
+static_addr_group_mux[0]
+                   1      --              --              --        -- 
+static_addr_group_mux[1]
+                   1      --              --              --        -- 
+static_addr_group_mux[2]
+                   1      --              --              --        -- 
+static_addr_group_mux[3]
+                   1      --              --              --        -- 
+static_addr_group_mux[4]
+                   1      --              --              --        -- 
+static_addr_group_mux[5]
+                   1      --              --              --        -- 
+static_addr_group_mux[6]
+                   1      --              --              --        -- 
+static_addr_group_mux[7]
+                   1      --              --              --        -- 
+static_addr_group_mux[8]
+                   1      --              --              --        -- 
+static_addr_group_mux[9]
+                   1      --              --              --        -- 
+static_addr_group_mux[10]
+                   1      --              --              --        -- 
+static_addr_group_mux[11]
+                   1      --              --              --        -- 
+static_addr_group_mux[12]
+                   1      --              --              --        -- 
+static_addr_group_mux[13]
+                   1      --              --              --        -- 
+static_addr_group_mux[14]
+                   1      --              --              --        -- 
+static_addr_group_mux[15]
+                   1      --              --              --        -- 
+static_addr_group_mux[16]
+                   1      --              --              --        -- 
+static_addr_group_mux[17]
+                   1      --              --              --        -- 
+static_addr_group_mux[18]
+                   1      --              --              --        -- 
+static_addr_group_mux[19]
+                   1      --              --              --        -- 
+static_ren_group_mux
+                   1      --              --              --        -- 
+static_wdata_group_mux[0]
+                   1      --              --              --        -- 
+static_wdata_group_mux[1]
+                   1      --              --              --        -- 
+static_wdata_group_mux[2]
+                   1      --              --              --        -- 
+static_wdata_group_mux[3]
+                   1      --              --              --        -- 
+static_wdata_group_mux[4]
+                   1      --              --              --        -- 
+static_wdata_group_mux[5]
+                   1      --              --              --        -- 
+static_wdata_group_mux[6]
+                   1      --              --              --        -- 
+static_wdata_group_mux[7]
+                   1      --              --              --        -- 
+static_wdata_group_mux[8]
+                   1      --              --              --        -- 
+static_wdata_group_mux[9]
+                   1      --              --              --        -- 
+static_wdata_group_mux[10]
+                   1      --              --              --        -- 
+static_wdata_group_mux[11]
+                   1      --              --              --        -- 
+static_wdata_group_mux[12]
+                   1      --              --              --        -- 
+static_wdata_group_mux[13]
+                   1      --              --              --        -- 
+static_wdata_group_mux[14]
+                   1      --              --              --        -- 
+static_wdata_group_mux[15]
+                   1      --              --              --        -- 
+static_wdata_group_mux[16]
+                   1      --              --              --        -- 
+static_wdata_group_mux[17]
+                   1      --              --              --        -- 
+static_wdata_group_mux[18]
+                   1      --              --              --        -- 
+static_wdata_group_mux[19]
+                   1      --              --              --        -- 
+static_wdata_group_mux[20]
+                   1      --              --              --        -- 
+static_wdata_group_mux[21]
+                   1      --              --              --        -- 
+static_wdata_group_mux[22]
+                   1      --              --              --        -- 
+static_wdata_group_mux[23]
+                   1      --              --              --        -- 
+static_wdata_group_mux[24]
+                   1      --              --              --        -- 
+static_wdata_group_mux[25]
+                   1      --              --              --        -- 
+static_wdata_group_mux[26]
+                   1      --              --              --        -- 
+static_wdata_group_mux[27]
+                   1      --              --              --        -- 
+static_wdata_group_mux[28]
+                   1      --              --              --        -- 
+static_wdata_group_mux[29]
+                   1      --              --              --        -- 
+static_wdata_group_mux[30]
+                   1      --              --              --        -- 
+static_wdata_group_mux[31]
+                   1      --              --              --        -- 
+static_wen_group_mux
+                   1      --              --              --        -- 
+cr_wdata[0]        1      --              --              --        -- 
+cr_wdata[1]        1      --              --              --        -- 
+cr_wdata[2]        1      --              --              --        -- 
+cr_wdata[3]        1      --              --              --        -- 
+cr_wdata[4]        1      --              --              --        -- 
+cr_wdata[5]        1      --              --              --        -- 
+cr_wdata[6]        1      --              --              --        -- 
+cr_wdata[7]        1      --              --              --        -- 
+cr_wdata[8]        1      --              --              --        -- 
+cr_wdata[9]        1      --              --              --        -- 
+cr_wdata[10]       1      --              --              --        -- 
+cr_wdata[11]       1      --              --              --        -- 
+cr_wdata[12]       1      --              --              --        -- 
+cr_wdata[13]       1      --              --              --        -- 
+cr_wdata[14]       1      --              --              --        -- 
+cr_wdata[15]       1      --              --              --        -- 
+cr_wdata[16]       1      --              --              --        -- 
+reg_ren            1      --              --              --        -- 
+reg_wen            1      --              --              --        -- 
+sram_addr[0]       1      --              --              --        -- 
+sram_addr[1]       1      --              --              --        -- 
+sram_addr[2]       1      --              --              --        -- 
+sram_addr[3]       1      --              --              --        -- 
+sram_addr[4]       1      --              --              --        -- 
+sram_addr[5]       1      --              --              --        -- 
+sram_addr[6]       1      --              --              --        -- 
+sram_addr[7]       1      --              --              --        -- 
+sram_addr[8]       1      --              --              --        -- 
+sram_addr[9]       1      --              --              --        -- 
+sram_addr[10]      1      --              --              --        -- 
+sram_ren           1      --              --              --        -- 
+sram_wdata[0]      1      --              --              --        -- 
+sram_wdata[1]      1      --              --              --        -- 
+sram_wdata[2]      1      --              --              --        -- 
+sram_wdata[3]      1      --              --              --        -- 
+sram_wdata[4]      1      --              --              --        -- 
+sram_wdata[5]      1      --              --              --        -- 
+sram_wdata[6]      1      --              --              --        -- 
+sram_wdata[7]      1      --              --              --        -- 
+sram_wdata[8]      1      --              --              --        -- 
+sram_wdata[9]      1      --              --              --        -- 
+sram_wdata[10]
+                   1      --              --              --        -- 
+sram_wdata[11]
+                   1      --              --              --        -- 
+sram_wdata[12]
+                   1      --              --              --        -- 
+sram_wdata[13]
+                   1      --              --              --        -- 
+sram_wdata[14]
+                   1      --              --              --        -- 
+sram_wdata[15]
+                   1      --              --              --        -- 
+sram_wdata[16]
+                   1      --              --              --        -- 
+sram_wdata[17]
+                   1      --              --              --        -- 
+sram_wdata[18]
+                   1      --              --              --        -- 
+sram_wdata[19]
+                   1      --              --              --        -- 
+sram_wdata[20]
+                   1      --              --              --        -- 
+sram_wdata[21]
+                   1      --              --              --        -- 
+sram_wdata[22]
+                   1      --              --              --        -- 
+sram_wdata[23]
+                   1      --              --              --        -- 
+sram_wdata[24]
+                   1      --              --              --        -- 
+sram_wdata[25]
+                   1      --              --              --        -- 
+sram_wdata[26]
+                   1      --              --              --        -- 
+sram_wdata[27]
+                   1      --              --              --        -- 
+sram_wdata[28]
+                   1      --              --              --        -- 
+sram_wdata[29]
+                   1      --              --              --        -- 
+sram_wdata[30]
+                   1      --              --              --        -- 
+sram_wdata[31]
+                   1      --              --              --        -- 
+sram_wen           1      --              --              --        -- 
+static_rdata_group_mux[0]
+                   1      --              --              --        -- 
+static_rdata_group_mux[1]
+                   1      --              --              --        -- 
+static_rdata_group_mux[2]
+                   1      --              --              --        -- 
+static_rdata_group_mux[3]
+                   1      --              --              --        -- 
+static_rdata_group_mux[4]
+                   1      --              --              --        -- 
+static_rdata_group_mux[5]
+                   1      --              --              --        -- 
+static_rdata_group_mux[6]
+                   1      --              --              --        -- 
+static_rdata_group_mux[7]
+                   1      --              --              --        -- 
+static_rdata_group_mux[8]
+                   1      --              --              --        -- 
+static_rdata_group_mux[9]
+                   1      --              --              --        -- 
+static_rdata_group_mux[10]
+                   1      --              --              --        -- 
+static_rdata_group_mux[11]
+                   1      --              --              --        -- 
+static_rdata_group_mux[12]
+                   1      --              --              --        -- 
+static_rdata_group_mux[13]
+                   1      --              --              --        -- 
+static_rdata_group_mux[14]
+                   1      --              --              --        -- 
+static_rdata_group_mux[15]
+                   1      --              --              --        -- 
+static_rdata_group_mux[16]
+                   1      --              --              --        -- 
+static_rdata_group_mux[17]
+                   1      --              --              --        -- 
+static_rdata_group_mux[18]
+                   1      --              --              --        -- 
+static_rdata_group_mux[19]
+                   1      --              --              --        -- 
+static_rdata_group_mux[20]
+                   1      --              --              --        -- 
+static_rdata_group_mux[21]
+                   1      --              --              --        -- 
+static_rdata_group_mux[22]
+                   1      --              --              --        -- 
+static_rdata_group_mux[23]
+                   1      --              --              --        -- 
+static_rdata_group_mux[24]
+                   1      --              --              --        -- 
+static_rdata_group_mux[25]
+                   1      --              --              --        -- 
+static_rdata_group_mux[26]
+                   1      --              --              --        -- 
+static_rdata_group_mux[27]
+                   1      --              --              --        -- 
+static_rdata_group_mux[28]
+                   1      --              --              --        -- 
+static_rdata_group_mux[29]
+                   1      --              --              --        -- 
+static_rdata_group_mux[30]
+                   1      --              --              --        -- 
+static_rdata_group_mux[31]
+                   1      --              --              --        -- 
+static_ready_group_mux
+                   1      --              --              --        -- 
+
+                    Input Delay
+                  Min             Max       Related   Max
+Input Port    Rise    Fall    Rise    Fall   Clock  Fanout
+--------------------------------------------------------------------------------
+clk           --      --      --      --      --      -- 
+cr_rdata[0]   0.15    0.15    0.15    0.15  clk       --    
+cr_rdata[1]   0.15    0.15    0.15    0.15  clk       --    
+cr_rdata[2]   0.15    0.15    0.15    0.15  clk       --    
+cr_rdata[3]   0.15    0.15    0.15    0.15  clk       --    
+cr_rdata[4]   0.15    0.15    0.15    0.15  clk       --    
+cr_rdata[5]   0.15    0.15    0.15    0.15  clk       --    
+cr_rdata[6]   0.15    0.15    0.15    0.15  clk       --    
+cr_rdata[7]   0.15    0.15    0.15    0.15  clk       --    
+cr_rdata[8]   0.15    0.15    0.15    0.15  clk       --    
+cr_rdata[9]   0.15    0.15    0.15    0.15  clk       --    
+cr_rdata[10]
+              0.15    0.15    0.15    0.15  clk       --    
+cr_rdata[11]
+              0.15    0.15    0.15    0.15  clk       --    
+cr_rdata[12]
+              0.15    0.15    0.15    0.15  clk       --    
+cr_rdata[13]
+              0.15    0.15    0.15    0.15  clk       --    
+cr_rdata[14]
+              0.15    0.15    0.15    0.15  clk       --    
+cr_rdata[15]
+              0.15    0.15    0.15    0.15  clk       --    
+cr_rdata[16]
+              0.15    0.15    0.15    0.15  clk       --    
+reg_ready     0.15    0.15    0.15    0.15  clk       --    
+rst_n         0.15    0.15    0.15    0.15  clk       --    
+scan_id_group_mux
+              0.15    0.15    0.15    0.15  clk       --    
+sr_rdata[0]   0.15    0.15    0.15    0.15  clk       --    
+sr_rdata[1]   0.15    0.15    0.15    0.15  clk       --    
+sr_rdata[2]   0.15    0.15    0.15    0.15  clk       --    
+sr_rdata[3]   0.15    0.15    0.15    0.15  clk       --    
+sr_rdata[4]   0.15    0.15    0.15    0.15  clk       --    
+sr_rdata[5]   0.15    0.15    0.15    0.15  clk       --    
+sr_rdata[6]   0.15    0.15    0.15    0.15  clk       --    
+sr_rdata[7]   0.15    0.15    0.15    0.15  clk       --    
+sr_rdata[8]   0.15    0.15    0.15    0.15  clk       --    
+sr_rdata[9]   0.15    0.15    0.15    0.15  clk       --    
+sr_rdata[10]
+              0.15    0.15    0.15    0.15  clk       --    
+sr_rdata[11]
+              0.15    0.15    0.15    0.15  clk       --    
+sr_rdata[12]
+              0.15    0.15    0.15    0.15  clk       --    
+sr_rdata[13]
+              0.15    0.15    0.15    0.15  clk       --    
+sr_rdata[14]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[0]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[1]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[2]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[3]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[4]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[5]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[6]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[7]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[8]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[9]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[10]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[11]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[12]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[13]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[14]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[15]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[16]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[17]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[18]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[19]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[20]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[21]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[22]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[23]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[24]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[25]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[26]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[27]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[28]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[29]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[30]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_rdata[31]
+              0.15    0.15    0.15    0.15  clk       --    
+sram_ready    0.15    0.15    0.15    0.15  clk       --    
+static_addr_group_mux[0]
+              0.15    0.15    0.15    0.15  clk       --    
+static_addr_group_mux[1]
+              0.15    0.15    0.15    0.15  clk       --    
+static_addr_group_mux[2]
+              0.15    0.15    0.15    0.15  clk       --    
+static_addr_group_mux[3]
+              0.15    0.15    0.15    0.15  clk       --    
+static_addr_group_mux[4]
+              0.15    0.15    0.15    0.15  clk       --    
+static_addr_group_mux[5]
+              0.15    0.15    0.15    0.15  clk       --    
+static_addr_group_mux[6]
+              0.15    0.15    0.15    0.15  clk       --    
+static_addr_group_mux[7]
+              0.15    0.15    0.15    0.15  clk       --    
+static_addr_group_mux[8]
+              0.15    0.15    0.15    0.15  clk       --    
+static_addr_group_mux[9]
+              0.15    0.15    0.15    0.15  clk       --    
+static_addr_group_mux[10]
+              0.15    0.15    0.15    0.15  clk       --    
+static_addr_group_mux[11]
+              0.15    0.15    0.15    0.15  clk       --    
+static_addr_group_mux[12]
+              0.15    0.15    0.15    0.15  clk       --    
+static_addr_group_mux[13]
+              0.15    0.15    0.15    0.15  clk       --    
+static_addr_group_mux[14]
+              0.15    0.15    0.15    0.15  clk       --    
+static_addr_group_mux[15]
+              0.15    0.15    0.15    0.15  clk       --    
+static_addr_group_mux[16]
+              0.15    0.15    0.15    0.15  clk       --    
+static_addr_group_mux[17]
+              0.15    0.15    0.15    0.15  clk       --    
+static_addr_group_mux[18]
+              0.15    0.15    0.15    0.15  clk       --    
+static_addr_group_mux[19]
+              0.15    0.15    0.15    0.15  clk       --    
+static_ren_group_mux
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[0]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[1]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[2]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[3]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[4]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[5]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[6]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[7]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[8]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[9]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[10]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[11]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[12]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[13]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[14]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[15]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[16]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[17]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[18]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[19]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[20]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[21]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[22]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[23]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[24]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[25]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[26]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[27]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[28]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[29]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[30]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wdata_group_mux[31]
+              0.15    0.15    0.15    0.15  clk       --    
+static_wen_group_mux
+              0.15    0.15    0.15    0.15  clk       --    
+
+
+               Max Drive      Min Drive      Resistance    Min    Min       Cell
+Input Port    Rise    Fall   Rise    Fall   Max     Min    Cap    Fanout    Deg
+--------------------------------------------------------------------------------
+clk           --      --     --      --     --      --     --     --        -- 
+cr_rdata[0]   --      --     --      --     --      --     --     --        -- 
+cr_rdata[1]   --      --     --      --     --      --     --     --        -- 
+cr_rdata[2]   --      --     --      --     --      --     --     --        -- 
+cr_rdata[3]   --      --     --      --     --      --     --     --        -- 
+cr_rdata[4]   --      --     --      --     --      --     --     --        -- 
+cr_rdata[5]   --      --     --      --     --      --     --     --        -- 
+cr_rdata[6]   --      --     --      --     --      --     --     --        -- 
+cr_rdata[7]   --      --     --      --     --      --     --     --        -- 
+cr_rdata[8]   --      --     --      --     --      --     --     --        -- 
+cr_rdata[9]   --      --     --      --     --      --     --     --        -- 
+cr_rdata[10]
+              --      --     --      --     --      --     --     --        -- 
+cr_rdata[11]
+              --      --     --      --     --      --     --     --        -- 
+cr_rdata[12]
+              --      --     --      --     --      --     --     --        -- 
+cr_rdata[13]
+              --      --     --      --     --      --     --     --        -- 
+cr_rdata[14]
+              --      --     --      --     --      --     --     --        -- 
+cr_rdata[15]
+              --      --     --      --     --      --     --     --        -- 
+cr_rdata[16]
+              --      --     --      --     --      --     --     --        -- 
+reg_ready     --      --     --      --     --      --     --     --        -- 
+rst_n         --      --     --      --     --      --     --     --        -- 
+scan_id_group_mux
+              --      --     --      --     --      --     --     --        -- 
+sr_rdata[0]   --      --     --      --     --      --     --     --        -- 
+sr_rdata[1]   --      --     --      --     --      --     --     --        -- 
+sr_rdata[2]   --      --     --      --     --      --     --     --        -- 
+sr_rdata[3]   --      --     --      --     --      --     --     --        -- 
+sr_rdata[4]   --      --     --      --     --      --     --     --        -- 
+sr_rdata[5]   --      --     --      --     --      --     --     --        -- 
+sr_rdata[6]   --      --     --      --     --      --     --     --        -- 
+sr_rdata[7]   --      --     --      --     --      --     --     --        -- 
+sr_rdata[8]   --      --     --      --     --      --     --     --        -- 
+sr_rdata[9]   --      --     --      --     --      --     --     --        -- 
+sr_rdata[10]
+              --      --     --      --     --      --     --     --        -- 
+sr_rdata[11]
+              --      --     --      --     --      --     --     --        -- 
+sr_rdata[12]
+              --      --     --      --     --      --     --     --        -- 
+sr_rdata[13]
+              --      --     --      --     --      --     --     --        -- 
+sr_rdata[14]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[0]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[1]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[2]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[3]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[4]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[5]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[6]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[7]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[8]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[9]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[10]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[11]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[12]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[13]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[14]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[15]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[16]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[17]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[18]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[19]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[20]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[21]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[22]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[23]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[24]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[25]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[26]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[27]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[28]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[29]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[30]
+              --      --     --      --     --      --     --     --        -- 
+sram_rdata[31]
+              --      --     --      --     --      --     --     --        -- 
+sram_ready    --      --     --      --     --      --     --     --        -- 
+static_addr_group_mux[0]
+              --      --     --      --     --      --     --     --        -- 
+static_addr_group_mux[1]
+              --      --     --      --     --      --     --     --        -- 
+static_addr_group_mux[2]
+              --      --     --      --     --      --     --     --        -- 
+static_addr_group_mux[3]
+              --      --     --      --     --      --     --     --        -- 
+static_addr_group_mux[4]
+              --      --     --      --     --      --     --     --        -- 
+static_addr_group_mux[5]
+              --      --     --      --     --      --     --     --        -- 
+static_addr_group_mux[6]
+              --      --     --      --     --      --     --     --        -- 
+static_addr_group_mux[7]
+              --      --     --      --     --      --     --     --        -- 
+static_addr_group_mux[8]
+              --      --     --      --     --      --     --     --        -- 
+static_addr_group_mux[9]
+              --      --     --      --     --      --     --     --        -- 
+static_addr_group_mux[10]
+              --      --     --      --     --      --     --     --        -- 
+static_addr_group_mux[11]
+              --      --     --      --     --      --     --     --        -- 
+static_addr_group_mux[12]
+              --      --     --      --     --      --     --     --        -- 
+static_addr_group_mux[13]
+              --      --     --      --     --      --     --     --        -- 
+static_addr_group_mux[14]
+              --      --     --      --     --      --     --     --        -- 
+static_addr_group_mux[15]
+              --      --     --      --     --      --     --     --        -- 
+static_addr_group_mux[16]
+              --      --     --      --     --      --     --     --        -- 
+static_addr_group_mux[17]
+              --      --     --      --     --      --     --     --        -- 
+static_addr_group_mux[18]
+              --      --     --      --     --      --     --     --        -- 
+static_addr_group_mux[19]
+              --      --     --      --     --      --     --     --        -- 
+static_ren_group_mux
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[0]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[1]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[2]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[3]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[4]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[5]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[6]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[7]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[8]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[9]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[10]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[11]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[12]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[13]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[14]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[15]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[16]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[17]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[18]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[19]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[20]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[21]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[22]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[23]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[24]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[25]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[26]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[27]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[28]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[29]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[30]
+              --      --     --      --     --      --     --     --        -- 
+static_wdata_group_mux[31]
+              --      --     --      --     --      --     --     --        -- 
+static_wen_group_mux
+              --      --     --      --     --      --     --     --        -- 
+
+
+               Max Tran        Min Tran
+Input Port    Rise    Fall    Rise    Fall
+--------------------------------------------------------------------------------
+clk           --      --      --      -- 
+cr_rdata[0]   --      --      --      -- 
+cr_rdata[1]   --      --      --      -- 
+cr_rdata[2]   --      --      --      -- 
+cr_rdata[3]   --      --      --      -- 
+cr_rdata[4]   --      --      --      -- 
+cr_rdata[5]   --      --      --      -- 
+cr_rdata[6]   --      --      --      -- 
+cr_rdata[7]   --      --      --      -- 
+cr_rdata[8]   --      --      --      -- 
+cr_rdata[9]   --      --      --      -- 
+cr_rdata[10]
+              --      --      --      -- 
+cr_rdata[11]
+              --      --      --      -- 
+cr_rdata[12]
+              --      --      --      -- 
+cr_rdata[13]
+              --      --      --      -- 
+cr_rdata[14]
+              --      --      --      -- 
+cr_rdata[15]
+              --      --      --      -- 
+cr_rdata[16]
+              --      --      --      -- 
+reg_ready     --      --      --      -- 
+rst_n         --      --      --      -- 
+scan_id_group_mux
+              --      --      --      -- 
+sr_rdata[0]   --      --      --      -- 
+sr_rdata[1]   --      --      --      -- 
+sr_rdata[2]   --      --      --      -- 
+sr_rdata[3]   --      --      --      -- 
+sr_rdata[4]   --      --      --      -- 
+sr_rdata[5]   --      --      --      -- 
+sr_rdata[6]   --      --      --      -- 
+sr_rdata[7]   --      --      --      -- 
+sr_rdata[8]   --      --      --      -- 
+sr_rdata[9]   --      --      --      -- 
+sr_rdata[10]
+              --      --      --      -- 
+sr_rdata[11]
+              --      --      --      -- 
+sr_rdata[12]
+              --      --      --      -- 
+sr_rdata[13]
+              --      --      --      -- 
+sr_rdata[14]
+              --      --      --      -- 
+sram_rdata[0]
+              --      --      --      -- 
+sram_rdata[1]
+              --      --      --      -- 
+sram_rdata[2]
+              --      --      --      -- 
+sram_rdata[3]
+              --      --      --      -- 
+sram_rdata[4]
+              --      --      --      -- 
+sram_rdata[5]
+              --      --      --      -- 
+sram_rdata[6]
+              --      --      --      -- 
+sram_rdata[7]
+              --      --      --      -- 
+sram_rdata[8]
+              --      --      --      -- 
+sram_rdata[9]
+              --      --      --      -- 
+sram_rdata[10]
+              --      --      --      -- 
+sram_rdata[11]
+              --      --      --      -- 
+sram_rdata[12]
+              --      --      --      -- 
+sram_rdata[13]
+              --      --      --      -- 
+sram_rdata[14]
+              --      --      --      -- 
+sram_rdata[15]
+              --      --      --      -- 
+sram_rdata[16]
+              --      --      --      -- 
+sram_rdata[17]
+              --      --      --      -- 
+sram_rdata[18]
+              --      --      --      -- 
+sram_rdata[19]
+              --      --      --      -- 
+sram_rdata[20]
+              --      --      --      -- 
+sram_rdata[21]
+              --      --      --      -- 
+sram_rdata[22]
+              --      --      --      -- 
+sram_rdata[23]
+              --      --      --      -- 
+sram_rdata[24]
+              --      --      --      -- 
+sram_rdata[25]
+              --      --      --      -- 
+sram_rdata[26]
+              --      --      --      -- 
+sram_rdata[27]
+              --      --      --      -- 
+sram_rdata[28]
+              --      --      --      -- 
+sram_rdata[29]
+              --      --      --      -- 
+sram_rdata[30]
+              --      --      --      -- 
+sram_rdata[31]
+              --      --      --      -- 
+sram_ready    --      --      --      -- 
+static_addr_group_mux[0]
+              --      --      --      -- 
+static_addr_group_mux[1]
+              --      --      --      -- 
+static_addr_group_mux[2]
+              --      --      --      -- 
+static_addr_group_mux[3]
+              --      --      --      -- 
+static_addr_group_mux[4]
+              --      --      --      -- 
+static_addr_group_mux[5]
+              --      --      --      -- 
+static_addr_group_mux[6]
+              --      --      --      -- 
+static_addr_group_mux[7]
+              --      --      --      -- 
+static_addr_group_mux[8]
+              --      --      --      -- 
+static_addr_group_mux[9]
+              --      --      --      -- 
+static_addr_group_mux[10]
+              --      --      --      -- 
+static_addr_group_mux[11]
+              --      --      --      -- 
+static_addr_group_mux[12]
+              --      --      --      -- 
+static_addr_group_mux[13]
+              --      --      --      -- 
+static_addr_group_mux[14]
+              --      --      --      -- 
+static_addr_group_mux[15]
+              --      --      --      -- 
+static_addr_group_mux[16]
+              --      --      --      -- 
+static_addr_group_mux[17]
+              --      --      --      -- 
+static_addr_group_mux[18]
+              --      --      --      -- 
+static_addr_group_mux[19]
+              --      --      --      -- 
+static_ren_group_mux
+              --      --      --      -- 
+static_wdata_group_mux[0]
+              --      --      --      -- 
+static_wdata_group_mux[1]
+              --      --      --      -- 
+static_wdata_group_mux[2]
+              --      --      --      -- 
+static_wdata_group_mux[3]
+              --      --      --      -- 
+static_wdata_group_mux[4]
+              --      --      --      -- 
+static_wdata_group_mux[5]
+              --      --      --      -- 
+static_wdata_group_mux[6]
+              --      --      --      -- 
+static_wdata_group_mux[7]
+              --      --      --      -- 
+static_wdata_group_mux[8]
+              --      --      --      -- 
+static_wdata_group_mux[9]
+              --      --      --      -- 
+static_wdata_group_mux[10]
+              --      --      --      -- 
+static_wdata_group_mux[11]
+              --      --      --      -- 
+static_wdata_group_mux[12]
+              --      --      --      -- 
+static_wdata_group_mux[13]
+              --      --      --      -- 
+static_wdata_group_mux[14]
+              --      --      --      -- 
+static_wdata_group_mux[15]
+              --      --      --      -- 
+static_wdata_group_mux[16]
+              --      --      --      -- 
+static_wdata_group_mux[17]
+              --      --      --      -- 
+static_wdata_group_mux[18]
+              --      --      --      -- 
+static_wdata_group_mux[19]
+              --      --      --      -- 
+static_wdata_group_mux[20]
+              --      --      --      -- 
+static_wdata_group_mux[21]
+              --      --      --      -- 
+static_wdata_group_mux[22]
+              --      --      --      -- 
+static_wdata_group_mux[23]
+              --      --      --      -- 
+static_wdata_group_mux[24]
+              --      --      --      -- 
+static_wdata_group_mux[25]
+              --      --      --      -- 
+static_wdata_group_mux[26]
+              --      --      --      -- 
+static_wdata_group_mux[27]
+              --      --      --      -- 
+static_wdata_group_mux[28]
+              --      --      --      -- 
+static_wdata_group_mux[29]
+              --      --      --      -- 
+static_wdata_group_mux[30]
+              --      --      --      -- 
+static_wdata_group_mux[31]
+              --      --      --      -- 
+static_wen_group_mux
+              --      --      --      -- 
+
+
+                    Output Delay
+                  Min             Max      Related  Fanout
+Output Port   Rise    Fall    Rise    Fall  Clock     Load
+--------------------------------------------------------------------------------
+cr_wdata[0]   0.10    0.10    0.10    0.10  clk       0.00  
+cr_wdata[1]   0.10    0.10    0.10    0.10  clk       0.00  
+cr_wdata[2]   0.10    0.10    0.10    0.10  clk       0.00  
+cr_wdata[3]   0.10    0.10    0.10    0.10  clk       0.00  
+cr_wdata[4]   0.10    0.10    0.10    0.10  clk       0.00  
+cr_wdata[5]   0.10    0.10    0.10    0.10  clk       0.00  
+cr_wdata[6]   0.10    0.10    0.10    0.10  clk       0.00  
+cr_wdata[7]   0.10    0.10    0.10    0.10  clk       0.00  
+cr_wdata[8]   0.10    0.10    0.10    0.10  clk       0.00  
+cr_wdata[9]   0.10    0.10    0.10    0.10  clk       0.00  
+cr_wdata[10]
+              0.10    0.10    0.10    0.10  clk       0.00  
+cr_wdata[11]
+              0.10    0.10    0.10    0.10  clk       0.00  
+cr_wdata[12]
+              0.10    0.10    0.10    0.10  clk       0.00  
+cr_wdata[13]
+              0.10    0.10    0.10    0.10  clk       0.00  
+cr_wdata[14]
+              0.10    0.10    0.10    0.10  clk       0.00  
+cr_wdata[15]
+              0.10    0.10    0.10    0.10  clk       0.00  
+cr_wdata[16]
+              0.10    0.10    0.10    0.10  clk       0.00  
+reg_ren       0.10    0.10    0.10    0.10  clk       0.00  
+reg_wen       0.10    0.10    0.10    0.10  clk       0.00  
+sram_addr[0]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_addr[1]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_addr[2]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_addr[3]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_addr[4]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_addr[5]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_addr[6]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_addr[7]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_addr[8]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_addr[9]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_addr[10]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_ren      0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[0]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[1]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[2]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[3]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[4]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[5]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[6]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[7]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[8]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[9]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[10]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[11]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[12]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[13]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[14]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[15]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[16]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[17]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[18]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[19]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[20]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[21]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[22]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[23]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[24]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[25]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[26]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[27]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[28]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[29]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[30]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wdata[31]
+              0.10    0.10    0.10    0.10  clk       0.00  
+sram_wen      0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[0]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[1]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[2]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[3]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[4]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[5]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[6]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[7]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[8]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[9]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[10]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[11]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[12]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[13]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[14]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[15]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[16]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[17]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[18]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[19]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[20]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[21]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[22]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[23]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[24]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[25]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[26]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[27]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[28]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[29]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[30]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_rdata_group_mux[31]
+              0.10    0.10    0.10    0.10  clk       0.00  
+static_ready_group_mux
+              0.10    0.10    0.10    0.10  clk       0.00  
+
+1
+ 
+****************************************
+Report : compile_options
+Design : group_scan_mem_reg_if
+Version: S-2021.06-SP1
+Date   : Thu Feb 12 21:29:38 2026
+****************************************
+
+Design                                   Compile Option         Value
+--------------------------------------------------------------------------------
+group_scan_mem_reg_if                    flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+                                         fix_multiple_port_nets feedthroughs
+                                                                constants
+                                                                outputs
+                                         isolate_port           disabled
+                                         multibit_options
+                                           optimization_mode    non_timing_driven
+                                           minimum_width        2
+                                           exclude_registers_with_timing_exceptions false
+
+rwctr                                    flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+mem_reg_mux                              flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+
+syn_pulse_gen                            flatten                false
+                                         structure              true
+                                         structure_boolean      false
+                                         structure_timing       true
+--------------------------------------------------------------------------------
+1
+ 
+****************************************
+Report : constraint
+        -all_violators
+        -verbose
+Design : group_scan_mem_reg_if
+Version: S-2021.06-SP1
+Date   : Thu Feb 12 21:29:38 2026
+****************************************
+
+
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 100
+        -max_paths 20
+Design : group_scan_mem_reg_if
+Version: S-2021.06-SP1
+Date   : Thu Feb 12 21:29:38 2026
+****************************************
+
+Operating Conditions: BCCOM   Library: tcbn65lpbc
+Wire Load Model Mode: segmented
+
+  Startpoint: syn_pulse_gen_inst/id_hold_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rwctr_inst/static_rdata_reg_9_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  syn_pulse_gen      TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+  group_scan_mem_reg_if
+                     TSMC16K_Lowk_Conservative
+                                           tcbn65lpbc
+  rwctr              TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  syn_pulse_gen_inst/id_hold_reg/CP (DFCNQD1)             0.00       0.00 r
+  syn_pulse_gen_inst/id_hold_reg/Q (DFCNQD1)              0.13       0.13 f
+  syn_pulse_gen_inst/U3/Z (CKXOR2D1)                      0.07       0.20 r
+  syn_pulse_gen_inst/id_valid (syn_pulse_gen)             0.00       0.20 r
+  rwctr_inst/id_valid (rwctr)                             0.00       0.20 r
+  rwctr_inst/U22/ZN (ND2D1)                               0.03       0.23 f
+  rwctr_inst/U14/ZN (INVD1)                               0.04       0.27 r
+  rwctr_inst/U11/Z (CKBD1)                                0.04       0.31 r
+  rwctr_inst/U5/Z (CKBD1)                                 0.08       0.39 r
+  rwctr_inst/U21/ZN (ND2D1)                               0.04       0.43 f
+  rwctr_inst/U20/Z (AN2XD1)                               0.06       0.49 f
+  rwctr_inst/U18/Z (CKBD1)                                0.09       0.58 f
+  rwctr_inst/static_rdata_reg_9_/E (EDFCNQD1)             0.00       0.58 f
+  data arrival time                                                  0.58
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  clock uncertainty                                      -0.20       1.80
+  rwctr_inst/static_rdata_reg_9_/CP (EDFCNQD1)            0.00       1.80 r
+  library setup time                                     -0.06       1.74
+  data required time                                                 1.74
+  --------------------------------------------------------------------------
+  data required time                                                 1.74
+  data arrival time                                                 -0.58
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.16
+
+
+  Startpoint: syn_pulse_gen_inst/id_hold_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rwctr_inst/static_rdata_reg_8_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  syn_pulse_gen      TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+  group_scan_mem_reg_if
+                     TSMC16K_Lowk_Conservative
+                                           tcbn65lpbc
+  rwctr              TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  syn_pulse_gen_inst/id_hold_reg/CP (DFCNQD1)             0.00       0.00 r
+  syn_pulse_gen_inst/id_hold_reg/Q (DFCNQD1)              0.13       0.13 f
+  syn_pulse_gen_inst/U3/Z (CKXOR2D1)                      0.07       0.20 r
+  syn_pulse_gen_inst/id_valid (syn_pulse_gen)             0.00       0.20 r
+  rwctr_inst/id_valid (rwctr)                             0.00       0.20 r
+  rwctr_inst/U22/ZN (ND2D1)                               0.03       0.23 f
+  rwctr_inst/U14/ZN (INVD1)                               0.04       0.27 r
+  rwctr_inst/U11/Z (CKBD1)                                0.04       0.31 r
+  rwctr_inst/U5/Z (CKBD1)                                 0.08       0.39 r
+  rwctr_inst/U21/ZN (ND2D1)                               0.04       0.43 f
+  rwctr_inst/U20/Z (AN2XD1)                               0.06       0.49 f
+  rwctr_inst/U18/Z (CKBD1)                                0.09       0.58 f
+  rwctr_inst/static_rdata_reg_8_/E (EDFCNQD1)             0.00       0.58 f
+  data arrival time                                                  0.58
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  clock uncertainty                                      -0.20       1.80
+  rwctr_inst/static_rdata_reg_8_/CP (EDFCNQD1)            0.00       1.80 r
+  library setup time                                     -0.06       1.74
+  data required time                                                 1.74
+  --------------------------------------------------------------------------
+  data required time                                                 1.74
+  data arrival time                                                 -0.58
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.16
+
+
+  Startpoint: syn_pulse_gen_inst/id_hold_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rwctr_inst/static_rdata_reg_7_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  syn_pulse_gen      TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+  group_scan_mem_reg_if
+                     TSMC16K_Lowk_Conservative
+                                           tcbn65lpbc
+  rwctr              TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  syn_pulse_gen_inst/id_hold_reg/CP (DFCNQD1)             0.00       0.00 r
+  syn_pulse_gen_inst/id_hold_reg/Q (DFCNQD1)              0.13       0.13 f
+  syn_pulse_gen_inst/U3/Z (CKXOR2D1)                      0.07       0.20 r
+  syn_pulse_gen_inst/id_valid (syn_pulse_gen)             0.00       0.20 r
+  rwctr_inst/id_valid (rwctr)                             0.00       0.20 r
+  rwctr_inst/U22/ZN (ND2D1)                               0.03       0.23 f
+  rwctr_inst/U14/ZN (INVD1)                               0.04       0.27 r
+  rwctr_inst/U11/Z (CKBD1)                                0.04       0.31 r
+  rwctr_inst/U5/Z (CKBD1)                                 0.08       0.39 r
+  rwctr_inst/U21/ZN (ND2D1)                               0.04       0.43 f
+  rwctr_inst/U20/Z (AN2XD1)                               0.06       0.49 f
+  rwctr_inst/U18/Z (CKBD1)                                0.09       0.58 f
+  rwctr_inst/static_rdata_reg_7_/E (EDFCNQD1)             0.00       0.58 f
+  data arrival time                                                  0.58
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  clock uncertainty                                      -0.20       1.80
+  rwctr_inst/static_rdata_reg_7_/CP (EDFCNQD1)            0.00       1.80 r
+  library setup time                                     -0.06       1.74
+  data required time                                                 1.74
+  --------------------------------------------------------------------------
+  data required time                                                 1.74
+  data arrival time                                                 -0.58
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.16
+
+
+  Startpoint: syn_pulse_gen_inst/id_hold_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rwctr_inst/static_rdata_reg_6_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  syn_pulse_gen      TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+  group_scan_mem_reg_if
+                     TSMC16K_Lowk_Conservative
+                                           tcbn65lpbc
+  rwctr              TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  syn_pulse_gen_inst/id_hold_reg/CP (DFCNQD1)             0.00       0.00 r
+  syn_pulse_gen_inst/id_hold_reg/Q (DFCNQD1)              0.13       0.13 f
+  syn_pulse_gen_inst/U3/Z (CKXOR2D1)                      0.07       0.20 r
+  syn_pulse_gen_inst/id_valid (syn_pulse_gen)             0.00       0.20 r
+  rwctr_inst/id_valid (rwctr)                             0.00       0.20 r
+  rwctr_inst/U22/ZN (ND2D1)                               0.03       0.23 f
+  rwctr_inst/U14/ZN (INVD1)                               0.04       0.27 r
+  rwctr_inst/U11/Z (CKBD1)                                0.04       0.31 r
+  rwctr_inst/U5/Z (CKBD1)                                 0.08       0.39 r
+  rwctr_inst/U21/ZN (ND2D1)                               0.04       0.43 f
+  rwctr_inst/U20/Z (AN2XD1)                               0.06       0.49 f
+  rwctr_inst/U18/Z (CKBD1)                                0.09       0.58 f
+  rwctr_inst/static_rdata_reg_6_/E (EDFCNQD1)             0.00       0.58 f
+  data arrival time                                                  0.58
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  clock uncertainty                                      -0.20       1.80
+  rwctr_inst/static_rdata_reg_6_/CP (EDFCNQD1)            0.00       1.80 r
+  library setup time                                     -0.06       1.74
+  data required time                                                 1.74
+  --------------------------------------------------------------------------
+  data required time                                                 1.74
+  data arrival time                                                 -0.58
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.16
+
+
+  Startpoint: syn_pulse_gen_inst/id_hold_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rwctr_inst/static_rdata_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  syn_pulse_gen      TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+  group_scan_mem_reg_if
+                     TSMC16K_Lowk_Conservative
+                                           tcbn65lpbc
+  rwctr              TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  syn_pulse_gen_inst/id_hold_reg/CP (DFCNQD1)             0.00       0.00 r
+  syn_pulse_gen_inst/id_hold_reg/Q (DFCNQD1)              0.13       0.13 f
+  syn_pulse_gen_inst/U3/Z (CKXOR2D1)                      0.07       0.20 r
+  syn_pulse_gen_inst/id_valid (syn_pulse_gen)             0.00       0.20 r
+  rwctr_inst/id_valid (rwctr)                             0.00       0.20 r
+  rwctr_inst/U22/ZN (ND2D1)                               0.03       0.23 f
+  rwctr_inst/U14/ZN (INVD1)                               0.04       0.27 r
+  rwctr_inst/U11/Z (CKBD1)                                0.04       0.31 r
+  rwctr_inst/U5/Z (CKBD1)                                 0.08       0.39 r
+  rwctr_inst/U21/ZN (ND2D1)                               0.04       0.43 f
+  rwctr_inst/U20/Z (AN2XD1)                               0.06       0.49 f
+  rwctr_inst/U18/Z (CKBD1)                                0.09       0.58 f
+  rwctr_inst/static_rdata_reg_5_/E (EDFCNQD1)             0.00       0.58 f
+  data arrival time                                                  0.58
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  clock uncertainty                                      -0.20       1.80
+  rwctr_inst/static_rdata_reg_5_/CP (EDFCNQD1)            0.00       1.80 r
+  library setup time                                     -0.06       1.74
+  data required time                                                 1.74
+  --------------------------------------------------------------------------
+  data required time                                                 1.74
+  data arrival time                                                 -0.58
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.16
+
+
+  Startpoint: syn_pulse_gen_inst/id_hold_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rwctr_inst/static_rdata_reg_4_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  syn_pulse_gen      TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+  group_scan_mem_reg_if
+                     TSMC16K_Lowk_Conservative
+                                           tcbn65lpbc
+  rwctr              TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  syn_pulse_gen_inst/id_hold_reg/CP (DFCNQD1)             0.00       0.00 r
+  syn_pulse_gen_inst/id_hold_reg/Q (DFCNQD1)              0.13       0.13 f
+  syn_pulse_gen_inst/U3/Z (CKXOR2D1)                      0.07       0.20 r
+  syn_pulse_gen_inst/id_valid (syn_pulse_gen)             0.00       0.20 r
+  rwctr_inst/id_valid (rwctr)                             0.00       0.20 r
+  rwctr_inst/U22/ZN (ND2D1)                               0.03       0.23 f
+  rwctr_inst/U14/ZN (INVD1)                               0.04       0.27 r
+  rwctr_inst/U11/Z (CKBD1)                                0.04       0.31 r
+  rwctr_inst/U5/Z (CKBD1)                                 0.08       0.39 r
+  rwctr_inst/U21/ZN (ND2D1)                               0.04       0.43 f
+  rwctr_inst/U20/Z (AN2XD1)                               0.06       0.49 f
+  rwctr_inst/U18/Z (CKBD1)                                0.09       0.58 f
+  rwctr_inst/static_rdata_reg_4_/E (EDFCNQD1)             0.00       0.58 f
+  data arrival time                                                  0.58
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  clock uncertainty                                      -0.20       1.80
+  rwctr_inst/static_rdata_reg_4_/CP (EDFCNQD1)            0.00       1.80 r
+  library setup time                                     -0.06       1.74
+  data required time                                                 1.74
+  --------------------------------------------------------------------------
+  data required time                                                 1.74
+  data arrival time                                                 -0.58
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.16
+
+
+  Startpoint: syn_pulse_gen_inst/id_hold_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rwctr_inst/static_rdata_reg_3_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  syn_pulse_gen      TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+  group_scan_mem_reg_if
+                     TSMC16K_Lowk_Conservative
+                                           tcbn65lpbc
+  rwctr              TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  syn_pulse_gen_inst/id_hold_reg/CP (DFCNQD1)             0.00       0.00 r
+  syn_pulse_gen_inst/id_hold_reg/Q (DFCNQD1)              0.13       0.13 f
+  syn_pulse_gen_inst/U3/Z (CKXOR2D1)                      0.07       0.20 r
+  syn_pulse_gen_inst/id_valid (syn_pulse_gen)             0.00       0.20 r
+  rwctr_inst/id_valid (rwctr)                             0.00       0.20 r
+  rwctr_inst/U22/ZN (ND2D1)                               0.03       0.23 f
+  rwctr_inst/U14/ZN (INVD1)                               0.04       0.27 r
+  rwctr_inst/U11/Z (CKBD1)                                0.04       0.31 r
+  rwctr_inst/U5/Z (CKBD1)                                 0.08       0.39 r
+  rwctr_inst/U21/ZN (ND2D1)                               0.04       0.43 f
+  rwctr_inst/U20/Z (AN2XD1)                               0.06       0.49 f
+  rwctr_inst/U18/Z (CKBD1)                                0.09       0.58 f
+  rwctr_inst/static_rdata_reg_3_/E (EDFCNQD1)             0.00       0.58 f
+  data arrival time                                                  0.58
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  clock uncertainty                                      -0.20       1.80
+  rwctr_inst/static_rdata_reg_3_/CP (EDFCNQD1)            0.00       1.80 r
+  library setup time                                     -0.06       1.74
+  data required time                                                 1.74
+  --------------------------------------------------------------------------
+  data required time                                                 1.74
+  data arrival time                                                 -0.58
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.16
+
+
+  Startpoint: syn_pulse_gen_inst/id_hold_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rwctr_inst/static_rdata_reg_2_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  syn_pulse_gen      TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+  group_scan_mem_reg_if
+                     TSMC16K_Lowk_Conservative
+                                           tcbn65lpbc
+  rwctr              TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  syn_pulse_gen_inst/id_hold_reg/CP (DFCNQD1)             0.00       0.00 r
+  syn_pulse_gen_inst/id_hold_reg/Q (DFCNQD1)              0.13       0.13 f
+  syn_pulse_gen_inst/U3/Z (CKXOR2D1)                      0.07       0.20 r
+  syn_pulse_gen_inst/id_valid (syn_pulse_gen)             0.00       0.20 r
+  rwctr_inst/id_valid (rwctr)                             0.00       0.20 r
+  rwctr_inst/U22/ZN (ND2D1)                               0.03       0.23 f
+  rwctr_inst/U14/ZN (INVD1)                               0.04       0.27 r
+  rwctr_inst/U11/Z (CKBD1)                                0.04       0.31 r
+  rwctr_inst/U5/Z (CKBD1)                                 0.08       0.39 r
+  rwctr_inst/U21/ZN (ND2D1)                               0.04       0.43 f
+  rwctr_inst/U20/Z (AN2XD1)                               0.06       0.49 f
+  rwctr_inst/U17/Z (CKBD1)                                0.09       0.58 f
+  rwctr_inst/static_rdata_reg_2_/E (EDFCNQD1)             0.00       0.58 f
+  data arrival time                                                  0.58
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  clock uncertainty                                      -0.20       1.80
+  rwctr_inst/static_rdata_reg_2_/CP (EDFCNQD1)            0.00       1.80 r
+  library setup time                                     -0.06       1.74
+  data required time                                                 1.74
+  --------------------------------------------------------------------------
+  data required time                                                 1.74
+  data arrival time                                                 -0.58
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.16
+
+
+  Startpoint: syn_pulse_gen_inst/id_hold_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rwctr_inst/static_rdata_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  syn_pulse_gen      TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+  group_scan_mem_reg_if
+                     TSMC16K_Lowk_Conservative
+                                           tcbn65lpbc
+  rwctr              TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  syn_pulse_gen_inst/id_hold_reg/CP (DFCNQD1)             0.00       0.00 r
+  syn_pulse_gen_inst/id_hold_reg/Q (DFCNQD1)              0.13       0.13 f
+  syn_pulse_gen_inst/U3/Z (CKXOR2D1)                      0.07       0.20 r
+  syn_pulse_gen_inst/id_valid (syn_pulse_gen)             0.00       0.20 r
+  rwctr_inst/id_valid (rwctr)                             0.00       0.20 r
+  rwctr_inst/U22/ZN (ND2D1)                               0.03       0.23 f
+  rwctr_inst/U14/ZN (INVD1)                               0.04       0.27 r
+  rwctr_inst/U11/Z (CKBD1)                                0.04       0.31 r
+  rwctr_inst/U5/Z (CKBD1)                                 0.08       0.39 r
+  rwctr_inst/U21/ZN (ND2D1)                               0.04       0.43 f
+  rwctr_inst/U20/Z (AN2XD1)                               0.06       0.49 f
+  rwctr_inst/U16/Z (CKBD1)                                0.09       0.58 f
+  rwctr_inst/static_rdata_reg_1_/E (EDFCNQD1)             0.00       0.58 f
+  data arrival time                                                  0.58
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  clock uncertainty                                      -0.20       1.80
+  rwctr_inst/static_rdata_reg_1_/CP (EDFCNQD1)            0.00       1.80 r
+  library setup time                                     -0.06       1.74
+  data required time                                                 1.74
+  --------------------------------------------------------------------------
+  data required time                                                 1.74
+  data arrival time                                                 -0.58
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.16
+
+
+  Startpoint: syn_pulse_gen_inst/id_hold_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rwctr_inst/static_rdata_reg_19_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  syn_pulse_gen      TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+  group_scan_mem_reg_if
+                     TSMC16K_Lowk_Conservative
+                                           tcbn65lpbc
+  rwctr              TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  syn_pulse_gen_inst/id_hold_reg/CP (DFCNQD1)             0.00       0.00 r
+  syn_pulse_gen_inst/id_hold_reg/Q (DFCNQD1)              0.13       0.13 f
+  syn_pulse_gen_inst/U3/Z (CKXOR2D1)                      0.07       0.20 r
+  syn_pulse_gen_inst/id_valid (syn_pulse_gen)             0.00       0.20 r
+  rwctr_inst/id_valid (rwctr)                             0.00       0.20 r
+  rwctr_inst/U22/ZN (ND2D1)                               0.03       0.23 f
+  rwctr_inst/U14/ZN (INVD1)                               0.04       0.27 r
+  rwctr_inst/U11/Z (CKBD1)                                0.04       0.31 r
+  rwctr_inst/U5/Z (CKBD1)                                 0.08       0.39 r
+  rwctr_inst/U21/ZN (ND2D1)                               0.04       0.43 f
+  rwctr_inst/U20/Z (AN2XD1)                               0.06       0.49 f
+  rwctr_inst/U16/Z (CKBD1)                                0.09       0.58 f
+  rwctr_inst/static_rdata_reg_19_/E (EDFCNQD1)            0.00       0.58 f
+  data arrival time                                                  0.58
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  clock uncertainty                                      -0.20       1.80
+  rwctr_inst/static_rdata_reg_19_/CP (EDFCNQD1)           0.00       1.80 r
+  library setup time                                     -0.06       1.74
+  data required time                                                 1.74
+  --------------------------------------------------------------------------
+  data required time                                                 1.74
+  data arrival time                                                 -0.58
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.16
+
+
+  Startpoint: syn_pulse_gen_inst/id_hold_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rwctr_inst/static_rdata_reg_18_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  syn_pulse_gen      TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+  group_scan_mem_reg_if
+                     TSMC16K_Lowk_Conservative
+                                           tcbn65lpbc
+  rwctr              TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  syn_pulse_gen_inst/id_hold_reg/CP (DFCNQD1)             0.00       0.00 r
+  syn_pulse_gen_inst/id_hold_reg/Q (DFCNQD1)              0.13       0.13 f
+  syn_pulse_gen_inst/U3/Z (CKXOR2D1)                      0.07       0.20 r
+  syn_pulse_gen_inst/id_valid (syn_pulse_gen)             0.00       0.20 r
+  rwctr_inst/id_valid (rwctr)                             0.00       0.20 r
+  rwctr_inst/U22/ZN (ND2D1)                               0.03       0.23 f
+  rwctr_inst/U14/ZN (INVD1)                               0.04       0.27 r
+  rwctr_inst/U11/Z (CKBD1)                                0.04       0.31 r
+  rwctr_inst/U5/Z (CKBD1)                                 0.08       0.39 r
+  rwctr_inst/U21/ZN (ND2D1)                               0.04       0.43 f
+  rwctr_inst/U20/Z (AN2XD1)                               0.06       0.49 f
+  rwctr_inst/U16/Z (CKBD1)                                0.09       0.58 f
+  rwctr_inst/static_rdata_reg_18_/E (EDFCNQD1)            0.00       0.58 f
+  data arrival time                                                  0.58
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  clock uncertainty                                      -0.20       1.80
+  rwctr_inst/static_rdata_reg_18_/CP (EDFCNQD1)           0.00       1.80 r
+  library setup time                                     -0.06       1.74
+  data required time                                                 1.74
+  --------------------------------------------------------------------------
+  data required time                                                 1.74
+  data arrival time                                                 -0.58
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.16
+
+
+  Startpoint: syn_pulse_gen_inst/id_hold_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rwctr_inst/static_rdata_reg_17_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  syn_pulse_gen      TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+  group_scan_mem_reg_if
+                     TSMC16K_Lowk_Conservative
+                                           tcbn65lpbc
+  rwctr              TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  syn_pulse_gen_inst/id_hold_reg/CP (DFCNQD1)             0.00       0.00 r
+  syn_pulse_gen_inst/id_hold_reg/Q (DFCNQD1)              0.13       0.13 f
+  syn_pulse_gen_inst/U3/Z (CKXOR2D1)                      0.07       0.20 r
+  syn_pulse_gen_inst/id_valid (syn_pulse_gen)             0.00       0.20 r
+  rwctr_inst/id_valid (rwctr)                             0.00       0.20 r
+  rwctr_inst/U22/ZN (ND2D1)                               0.03       0.23 f
+  rwctr_inst/U14/ZN (INVD1)                               0.04       0.27 r
+  rwctr_inst/U11/Z (CKBD1)                                0.04       0.31 r
+  rwctr_inst/U5/Z (CKBD1)                                 0.08       0.39 r
+  rwctr_inst/U21/ZN (ND2D1)                               0.04       0.43 f
+  rwctr_inst/U20/Z (AN2XD1)                               0.06       0.49 f
+  rwctr_inst/U16/Z (CKBD1)                                0.09       0.58 f
+  rwctr_inst/static_rdata_reg_17_/E (EDFCNQD1)            0.00       0.58 f
+  data arrival time                                                  0.58
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  clock uncertainty                                      -0.20       1.80
+  rwctr_inst/static_rdata_reg_17_/CP (EDFCNQD1)           0.00       1.80 r
+  library setup time                                     -0.06       1.74
+  data required time                                                 1.74
+  --------------------------------------------------------------------------
+  data required time                                                 1.74
+  data arrival time                                                 -0.58
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.16
+
+
+  Startpoint: syn_pulse_gen_inst/id_hold_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rwctr_inst/static_rdata_reg_16_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  syn_pulse_gen      TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+  group_scan_mem_reg_if
+                     TSMC16K_Lowk_Conservative
+                                           tcbn65lpbc
+  rwctr              TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  syn_pulse_gen_inst/id_hold_reg/CP (DFCNQD1)             0.00       0.00 r
+  syn_pulse_gen_inst/id_hold_reg/Q (DFCNQD1)              0.13       0.13 f
+  syn_pulse_gen_inst/U3/Z (CKXOR2D1)                      0.07       0.20 r
+  syn_pulse_gen_inst/id_valid (syn_pulse_gen)             0.00       0.20 r
+  rwctr_inst/id_valid (rwctr)                             0.00       0.20 r
+  rwctr_inst/U22/ZN (ND2D1)                               0.03       0.23 f
+  rwctr_inst/U14/ZN (INVD1)                               0.04       0.27 r
+  rwctr_inst/U11/Z (CKBD1)                                0.04       0.31 r
+  rwctr_inst/U5/Z (CKBD1)                                 0.08       0.39 r
+  rwctr_inst/U21/ZN (ND2D1)                               0.04       0.43 f
+  rwctr_inst/U20/Z (AN2XD1)                               0.06       0.49 f
+  rwctr_inst/U15/Z (CKBD1)                                0.09       0.58 f
+  rwctr_inst/static_rdata_reg_16_/E (EDFCNQD1)            0.00       0.58 f
+  data arrival time                                                  0.58
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  clock uncertainty                                      -0.20       1.80
+  rwctr_inst/static_rdata_reg_16_/CP (EDFCNQD1)           0.00       1.80 r
+  library setup time                                     -0.06       1.74
+  data required time                                                 1.74
+  --------------------------------------------------------------------------
+  data required time                                                 1.74
+  data arrival time                                                 -0.58
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.16
+
+
+  Startpoint: syn_pulse_gen_inst/id_hold_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rwctr_inst/static_rdata_reg_15_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  syn_pulse_gen      TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+  group_scan_mem_reg_if
+                     TSMC16K_Lowk_Conservative
+                                           tcbn65lpbc
+  rwctr              TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  syn_pulse_gen_inst/id_hold_reg/CP (DFCNQD1)             0.00       0.00 r
+  syn_pulse_gen_inst/id_hold_reg/Q (DFCNQD1)              0.13       0.13 f
+  syn_pulse_gen_inst/U3/Z (CKXOR2D1)                      0.07       0.20 r
+  syn_pulse_gen_inst/id_valid (syn_pulse_gen)             0.00       0.20 r
+  rwctr_inst/id_valid (rwctr)                             0.00       0.20 r
+  rwctr_inst/U22/ZN (ND2D1)                               0.03       0.23 f
+  rwctr_inst/U14/ZN (INVD1)                               0.04       0.27 r
+  rwctr_inst/U11/Z (CKBD1)                                0.04       0.31 r
+  rwctr_inst/U5/Z (CKBD1)                                 0.08       0.39 r
+  rwctr_inst/U21/ZN (ND2D1)                               0.04       0.43 f
+  rwctr_inst/U20/Z (AN2XD1)                               0.06       0.49 f
+  rwctr_inst/U15/Z (CKBD1)                                0.09       0.58 f
+  rwctr_inst/static_rdata_reg_15_/E (EDFCNQD1)            0.00       0.58 f
+  data arrival time                                                  0.58
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  clock uncertainty                                      -0.20       1.80
+  rwctr_inst/static_rdata_reg_15_/CP (EDFCNQD1)           0.00       1.80 r
+  library setup time                                     -0.06       1.74
+  data required time                                                 1.74
+  --------------------------------------------------------------------------
+  data required time                                                 1.74
+  data arrival time                                                 -0.58
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.16
+
+
+  Startpoint: syn_pulse_gen_inst/id_hold_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rwctr_inst/static_rdata_reg_14_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  syn_pulse_gen      TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+  group_scan_mem_reg_if
+                     TSMC16K_Lowk_Conservative
+                                           tcbn65lpbc
+  rwctr              TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  syn_pulse_gen_inst/id_hold_reg/CP (DFCNQD1)             0.00       0.00 r
+  syn_pulse_gen_inst/id_hold_reg/Q (DFCNQD1)              0.13       0.13 f
+  syn_pulse_gen_inst/U3/Z (CKXOR2D1)                      0.07       0.20 r
+  syn_pulse_gen_inst/id_valid (syn_pulse_gen)             0.00       0.20 r
+  rwctr_inst/id_valid (rwctr)                             0.00       0.20 r
+  rwctr_inst/U22/ZN (ND2D1)                               0.03       0.23 f
+  rwctr_inst/U14/ZN (INVD1)                               0.04       0.27 r
+  rwctr_inst/U11/Z (CKBD1)                                0.04       0.31 r
+  rwctr_inst/U5/Z (CKBD1)                                 0.08       0.39 r
+  rwctr_inst/U21/ZN (ND2D1)                               0.04       0.43 f
+  rwctr_inst/U20/Z (AN2XD1)                               0.06       0.49 f
+  rwctr_inst/U15/Z (CKBD1)                                0.09       0.58 f
+  rwctr_inst/static_rdata_reg_14_/E (EDFCNQD1)            0.00       0.58 f
+  data arrival time                                                  0.58
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  clock uncertainty                                      -0.20       1.80
+  rwctr_inst/static_rdata_reg_14_/CP (EDFCNQD1)           0.00       1.80 r
+  library setup time                                     -0.06       1.74
+  data required time                                                 1.74
+  --------------------------------------------------------------------------
+  data required time                                                 1.74
+  data arrival time                                                 -0.58
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.16
+
+
+  Startpoint: syn_pulse_gen_inst/id_hold_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rwctr_inst/static_rdata_reg_13_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  syn_pulse_gen      TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+  group_scan_mem_reg_if
+                     TSMC16K_Lowk_Conservative
+                                           tcbn65lpbc
+  rwctr              TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  syn_pulse_gen_inst/id_hold_reg/CP (DFCNQD1)             0.00       0.00 r
+  syn_pulse_gen_inst/id_hold_reg/Q (DFCNQD1)              0.13       0.13 f
+  syn_pulse_gen_inst/U3/Z (CKXOR2D1)                      0.07       0.20 r
+  syn_pulse_gen_inst/id_valid (syn_pulse_gen)             0.00       0.20 r
+  rwctr_inst/id_valid (rwctr)                             0.00       0.20 r
+  rwctr_inst/U22/ZN (ND2D1)                               0.03       0.23 f
+  rwctr_inst/U14/ZN (INVD1)                               0.04       0.27 r
+  rwctr_inst/U11/Z (CKBD1)                                0.04       0.31 r
+  rwctr_inst/U5/Z (CKBD1)                                 0.08       0.39 r
+  rwctr_inst/U21/ZN (ND2D1)                               0.04       0.43 f
+  rwctr_inst/U20/Z (AN2XD1)                               0.06       0.49 f
+  rwctr_inst/U15/Z (CKBD1)                                0.09       0.58 f
+  rwctr_inst/static_rdata_reg_13_/E (EDFCNQD1)            0.00       0.58 f
+  data arrival time                                                  0.58
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  clock uncertainty                                      -0.20       1.80
+  rwctr_inst/static_rdata_reg_13_/CP (EDFCNQD1)           0.00       1.80 r
+  library setup time                                     -0.06       1.74
+  data required time                                                 1.74
+  --------------------------------------------------------------------------
+  data required time                                                 1.74
+  data arrival time                                                 -0.58
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.16
+
+
+  Startpoint: syn_pulse_gen_inst/id_hold_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rwctr_inst/static_rdata_reg_12_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  syn_pulse_gen      TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+  group_scan_mem_reg_if
+                     TSMC16K_Lowk_Conservative
+                                           tcbn65lpbc
+  rwctr              TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  syn_pulse_gen_inst/id_hold_reg/CP (DFCNQD1)             0.00       0.00 r
+  syn_pulse_gen_inst/id_hold_reg/Q (DFCNQD1)              0.13       0.13 f
+  syn_pulse_gen_inst/U3/Z (CKXOR2D1)                      0.07       0.20 r
+  syn_pulse_gen_inst/id_valid (syn_pulse_gen)             0.00       0.20 r
+  rwctr_inst/id_valid (rwctr)                             0.00       0.20 r
+  rwctr_inst/U22/ZN (ND2D1)                               0.03       0.23 f
+  rwctr_inst/U14/ZN (INVD1)                               0.04       0.27 r
+  rwctr_inst/U11/Z (CKBD1)                                0.04       0.31 r
+  rwctr_inst/U5/Z (CKBD1)                                 0.08       0.39 r
+  rwctr_inst/U21/ZN (ND2D1)                               0.04       0.43 f
+  rwctr_inst/U20/Z (AN2XD1)                               0.06       0.49 f
+  rwctr_inst/U15/Z (CKBD1)                                0.09       0.58 f
+  rwctr_inst/static_rdata_reg_12_/E (EDFCNQD1)            0.00       0.58 f
+  data arrival time                                                  0.58
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  clock uncertainty                                      -0.20       1.80
+  rwctr_inst/static_rdata_reg_12_/CP (EDFCNQD1)           0.00       1.80 r
+  library setup time                                     -0.06       1.74
+  data required time                                                 1.74
+  --------------------------------------------------------------------------
+  data required time                                                 1.74
+  data arrival time                                                 -0.58
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.16
+
+
+  Startpoint: syn_pulse_gen_inst/id_hold_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rwctr_inst/static_rdata_reg_11_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  syn_pulse_gen      TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+  group_scan_mem_reg_if
+                     TSMC16K_Lowk_Conservative
+                                           tcbn65lpbc
+  rwctr              TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  syn_pulse_gen_inst/id_hold_reg/CP (DFCNQD1)             0.00       0.00 r
+  syn_pulse_gen_inst/id_hold_reg/Q (DFCNQD1)              0.13       0.13 f
+  syn_pulse_gen_inst/U3/Z (CKXOR2D1)                      0.07       0.20 r
+  syn_pulse_gen_inst/id_valid (syn_pulse_gen)             0.00       0.20 r
+  rwctr_inst/id_valid (rwctr)                             0.00       0.20 r
+  rwctr_inst/U22/ZN (ND2D1)                               0.03       0.23 f
+  rwctr_inst/U14/ZN (INVD1)                               0.04       0.27 r
+  rwctr_inst/U11/Z (CKBD1)                                0.04       0.31 r
+  rwctr_inst/U5/Z (CKBD1)                                 0.08       0.39 r
+  rwctr_inst/U21/ZN (ND2D1)                               0.04       0.43 f
+  rwctr_inst/U20/Z (AN2XD1)                               0.06       0.49 f
+  rwctr_inst/U15/Z (CKBD1)                                0.09       0.58 f
+  rwctr_inst/static_rdata_reg_11_/E (EDFCNQD1)            0.00       0.58 f
+  data arrival time                                                  0.58
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  clock uncertainty                                      -0.20       1.80
+  rwctr_inst/static_rdata_reg_11_/CP (EDFCNQD1)           0.00       1.80 r
+  library setup time                                     -0.06       1.74
+  data required time                                                 1.74
+  --------------------------------------------------------------------------
+  data required time                                                 1.74
+  data arrival time                                                 -0.58
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.16
+
+
+  Startpoint: syn_pulse_gen_inst/id_hold_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rwctr_inst/static_rdata_reg_10_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  syn_pulse_gen      TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+  group_scan_mem_reg_if
+                     TSMC16K_Lowk_Conservative
+                                           tcbn65lpbc
+  rwctr              TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  syn_pulse_gen_inst/id_hold_reg/CP (DFCNQD1)             0.00       0.00 r
+  syn_pulse_gen_inst/id_hold_reg/Q (DFCNQD1)              0.13       0.13 f
+  syn_pulse_gen_inst/U3/Z (CKXOR2D1)                      0.07       0.20 r
+  syn_pulse_gen_inst/id_valid (syn_pulse_gen)             0.00       0.20 r
+  rwctr_inst/id_valid (rwctr)                             0.00       0.20 r
+  rwctr_inst/U22/ZN (ND2D1)                               0.03       0.23 f
+  rwctr_inst/U14/ZN (INVD1)                               0.04       0.27 r
+  rwctr_inst/U11/Z (CKBD1)                                0.04       0.31 r
+  rwctr_inst/U5/Z (CKBD1)                                 0.08       0.39 r
+  rwctr_inst/U21/ZN (ND2D1)                               0.04       0.43 f
+  rwctr_inst/U20/Z (AN2XD1)                               0.06       0.49 f
+  rwctr_inst/U15/Z (CKBD1)                                0.09       0.58 f
+  rwctr_inst/static_rdata_reg_10_/E (EDFCNQD1)            0.00       0.58 f
+  data arrival time                                                  0.58
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  clock uncertainty                                      -0.20       1.80
+  rwctr_inst/static_rdata_reg_10_/CP (EDFCNQD1)           0.00       1.80 r
+  library setup time                                     -0.06       1.74
+  data required time                                                 1.74
+  --------------------------------------------------------------------------
+  data required time                                                 1.74
+  data arrival time                                                 -0.58
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.16
+
+
+  Startpoint: syn_pulse_gen_inst/id_hold_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: rwctr_inst/static_rdata_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  syn_pulse_gen      TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+  group_scan_mem_reg_if
+                     TSMC16K_Lowk_Conservative
+                                           tcbn65lpbc
+  rwctr              TSMC8K_Lowk_Conservative
+                                           tcbn65lpbc
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  syn_pulse_gen_inst/id_hold_reg/CP (DFCNQD1)             0.00       0.00 r
+  syn_pulse_gen_inst/id_hold_reg/Q (DFCNQD1)              0.13       0.13 f
+  syn_pulse_gen_inst/U3/Z (CKXOR2D1)                      0.07       0.20 r
+  syn_pulse_gen_inst/id_valid (syn_pulse_gen)             0.00       0.20 r
+  rwctr_inst/id_valid (rwctr)                             0.00       0.20 r
+  rwctr_inst/U22/ZN (ND2D1)                               0.03       0.23 f
+  rwctr_inst/U14/ZN (INVD1)                               0.04       0.27 r
+  rwctr_inst/U11/Z (CKBD1)                                0.04       0.31 r
+  rwctr_inst/U5/Z (CKBD1)                                 0.08       0.39 r
+  rwctr_inst/U21/ZN (ND2D1)                               0.04       0.43 f
+  rwctr_inst/U20/Z (AN2XD1)                               0.06       0.49 f
+  rwctr_inst/U15/Z (CKBD1)                                0.09       0.58 f
+  rwctr_inst/static_rdata_reg_0_/E (EDFCNQD1)             0.00       0.58 f
+  data arrival time                                                  0.58
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  clock uncertainty                                      -0.20       1.80
+  rwctr_inst/static_rdata_reg_0_/CP (EDFCNQD1)            0.00       1.80 r
+  library setup time                                     -0.06       1.74
+  data required time                                                 1.74
+  --------------------------------------------------------------------------
+  data required time                                                 1.74
+  data arrival time                                                 -0.58
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.16
+
+
+1
+ 
+****************************************
+Report : clocks
+Design : group_scan_mem_reg_if
+Version: S-2021.06-SP1
+Date   : Thu Feb 12 21:29:38 2026
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+clk              2.00   {0 1}               f         {clk}
+--------------------------------------------------------------------------------
+1

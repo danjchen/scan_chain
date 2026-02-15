@@ -1,0 +1,2 @@
+verdiSetActWin -dock widgetDock_<Decl._Tree>
+sidCmdLineBehaviorAnalysisOpt -incr -clockSkew 0 -loopUnroll 0 -bboxEmptyModule 0  -cellModel 0 -bboxIgnoreProtected 0 
