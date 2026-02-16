@@ -31,6 +31,7 @@ module spram
   logic dmem_ren, dmem_wen, imem_ren, imem_wen;
   logic [14:0] imem_addr, dmem_addr; 
   logic [WIDTH - 1 : 0] imem_wdata, imem_rdata, dmem_wdata, dmem_rdata;
+  logic [127:0] dmem_bweb; 
 
   TS1N65LPLL1024X16M16 imem( // imem instantiation
     .BIST(1'b0),
@@ -76,11 +77,36 @@ module spram
     imem_wen = !id_sel ? wen : 1'b0; 
   end 
 
-  always_comb begin 
+  always_comb begin  
     imem_addr = !id_sel ? addr : '0; 
     dmem_addr = id_sel ? addr : '0; 
     imem_wdata = !id_sel ? wdata : '0; 
     dmem_wdata = id_sel ? wdata : '0; // dmem_wdata needs to select segments
+  end 
+
+
+  always_comb begin // dmem select logic 
+    case(seg_id) 
+        2'b00: begin 
+          dmem_bweb = 8'h00111111; 
+        end 
+
+        2'b01: begin 
+          dmem_bweb = 8'h11001111;
+        end 
+
+        2'b10: begin 
+          dmem_bweb = 8'h00110011;          
+        end 
+
+        2'b11: begin  
+          dmem_bweb = 8'h11111100;          
+        end 
+        
+        default: begin 
+          dmem_bweb = 8'h11111111;
+        end 
+    endcase
   end 
 
 
