@@ -45,6 +45,8 @@ module spram
     .CEBM('0),
     .WEBM('0),
     .AM('0),
+    .CEBM('0),
+    .CEBM('0),
     .DM('0),
     .BWEBM('0),
     .Q(imem_rdata), // output data 
@@ -58,8 +60,8 @@ module spram
     .CEB(!cen), 
     .WEB(!dmem_wen)
     .A(dmem_addr),
-    .D(), // todo: figure out how to write in correct data in correct place
-    .BWEB(1'b1);
+    .D(dmem_wdata), 
+    .BWEB(dmem_bweb);
     .CEBM('0),
     .WEBM('0),
     .AM('0),
