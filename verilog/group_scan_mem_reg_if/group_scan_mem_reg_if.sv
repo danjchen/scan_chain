@@ -29,14 +29,14 @@ module group_scan_mem_reg_if(
     input      [14:0] sr_rdata,
     input reg_ready,
 
-    output reg [3:0] seg_id, 
+    output reg [1:0] seg_id, 
     output reg id_sel
 );
 
     // mem_reg_mux
     reg   scan_wen;
     reg   scan_ren;
-    reg [15:0]  scan_addr;
+    reg [14:0]  scan_addr;
     reg [31:0]  scan_wdata;
     reg [31:0]  scan_rdata;
     reg         scan_ready;
@@ -51,7 +51,7 @@ module group_scan_mem_reg_if(
         .id_valid(id_valid),       // Connect scan_id from top level
         .static_wen(static_wen_group_mux), // Connect static_wen from top level
         .static_ren(static_ren_group_mux), // Connect static_ren from top level
-        .static_addr(static_addr_group_mux[11:0]), // Connect static_addr from top level
+        .static_addr(static_addr_group_mux[15:0]), // Connect static_addr from top level - changed to 16 bits
         .static_wdata(static_wdata_group_mux), // Connect static_wdata from top level
         .static_ready(static_ready_group_mux), // Connect static_ready to top level
         .static_rdata(static_rdata_group_mux), // Connect static_rdata to top level

@@ -145,122 +145,168 @@ VCS compile option:
  option[56]: +vpi
  option[57]: -gen_obj
  option[58]: ../verilog/test/sys_defs.vh
- option[59]: ../verilog/group_scan_mem_reg_if/group_scan_mem_reg_if.nl.v
- option[60]: ../verilog/share/block_scan.sv
- option[61]: ../verilog/share/group_mux.sv
- option[62]: ../verilog/scan_for_test.sv
- option[63]: ../verilog/reg/cs_reg.sv
- option[64]: ../verilog/sram/spram.sv
- option[65]: ../verilog/test/test_scan.sv
- option[66]: ../verilog/test/CLK_GEN.sv
- option[67]: /afs/umich.edu/class/eecs427/tsmc65/stdcells/tcbn65lp_220a/TSMCHOME/digital/Front_End/verilog/tcbn65lp_200a/tcbn65lp.v
- option[68]: ./tb_test_scan_syn.sv
- option[69]: -load
- option[70]: /usr/caen/verdi-2023.12-SP2-1/share/PLI/VCS/LINUX64/libnovas.so:FSDBDumpCmd
- option[71]: timescale=1ns/1ps
- option[72]: +noerrorIOPCWM
- option[73]: +vcs+dumparrays
+ option[59]: ../verilog/group_scan_mem_reg_if/rwctr.sv
+ option[60]: ../verilog/group_scan_mem_reg_if/mem_reg_mux.sv
+ option[61]: ../verilog/group_scan_mem_reg_if/syn_pulse_gen.sv
+ option[62]: ../verilog/group_scan_mem_reg_if/group_scan_mem_reg_if.sv
+ option[63]: ../verilog/share/block_scan.sv
+ option[64]: ../verilog/share/group_mux.sv
+ option[65]: ../verilog/scan_for_test.sv
+ option[66]: ../verilog/reg/cs_reg.sv
+ option[67]: ../verilog/sram/spram.sv
+ option[68]: ../verilog/test/test_scan.sv
+ option[69]: ../verilog/test/CLK_GEN.sv
+ option[70]: ./tb_test_scan.sv
+ option[71]: -load
+ option[72]: /usr/caen/verdi-2023.12-SP2-1/share/PLI/VCS/LINUX64/libnovas.so:FSDBDumpCmd
+ option[73]: timescale=1ns/1ps
+ option[74]: +noerrorIOPCWM
+ option[75]: +vcs+dumparrays
 Chronologic Simulation VCS Release V-2023.12-SP2-1_Full64
-Linux 3.10.0-1160.102.1.el7.x86_64 #1 SMP Mon Sep 25 05:00:52 EDT 2023 x86_64
-CPU cores: 16
+Linux 5.14.0-611.16.1.el9_7.x86_64 #1 SMP PREEMPT_DYNAMIC Sun Dec 7 05:52:24 EST 2025 x86_64
+CPU cores: 9
 Limit information:
 ======================================
 cputime		unlimited
 filesize		unlimited
 datasize		unlimited
-stacksize		8193 kbytes
-coredumpsize		0 kbytes
+stacksize		8192 kbytes
+coredumpsize		unlimited
 memoryuse		unlimited
 vmemoryuse		unlimited
-descriptors		4096
-memorylocked		64 kbytes
-maxproc		4096
+descriptors		524288
+memorylocked		8192 kbytes
+maxproc		70620
 ======================================
 (Special)Runtime environment variables:
 
 Runtime environment variables:
-SW_MMSIM=21.10.415
-VNCDESKTOP=vlsipool-k12:1 (yunfa)
-XDG_SESSION_ID=186
-SSH_AGENT_PID=44181
-TERM_PROGRAM=vscode
-HOSTNAME=vlsipool-k12
-IMSETTINGS_INTEGRATE_DESKTOP=yes
-NOVAS_HOME=/usr/caen/verdi-2023.12-SP2-1
-TERM=xterm-256color
-XDG_MENU_PREFIX=gnome-
-VTE_VERSION=5204
 SHELL=/bin/bash
-HISTSIZE=1000
-MAKEFLAGS=
-SSH_CLIENT=141.212.115.57 41538 22
-GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/ad07d3fa_7b7e_4e7d_975e_8eb16fbbcf1b
-TERM_PROGRAM_VERSION=1.70.2
-ORIGINAL_XDG_CURRENT_DESKTOP=GNOME
-SSH_TTY=/dev/pts/0
-IMSETTINGS_MODULE=none
-CLS_CDSD_COMPATIBILITY_LOCKING=NO
-XLIB_SKIP_ARGB_VISUALS=1
-QT_GRAPHICSSYSTEM_CHECKED=1
-CDS_VERSION=IC6
-USER=yunfa
-LD_LIBRARY_PATH=/usr/caen/intel-2017/lib/intel64:/usr/caen/intel-2017/mkl/lib/intel64
-LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:
-GNOME_TERMINAL_SERVICE=:1.1099
-CDS=/usr/caen/icadv-20.1.500.2200
-SSH_AUTH_SOCK=/run/user/114277435/keyring/ssh
-MAKELEVEL=1
-SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/44069,unix/unix:/tmp/.ICE-unix/44069
-SNPSLMD_LICENSE_FILE=/usr/caen/FLEXlm/data/license.dat.synopsys
-MFLAGS=
-GNOME_SHELL_SESSION_MODE=classic
-NLTK_DATA=/usr/um/python-3.6/share/nltk_data
-MAIL=/var/spool/mail/yunfa
-PATH=/usr/caen/spectre-21.10.415/tools/bin:/usr/um/vscode-1.70.2/code/bin:/usr/caen/vcs-2023.12-SP2-1/bin:/usr/caen/innovus-21.14.000/tools/bin:/usr/caen/synopsys-synth-2021.06-SP1/bin:/usr/caen/verdi-2023.12-SP2-1/bin:/usr/caen/icadv-20.1.500.2200/tools/bin:/usr/caen/icadv-20.1.500.2200/tools/dfII/bin:/usr/caen/calibre-2017.2_16.14/bin:/usr/um/python-3.6/bin:/usr/caen/matlab-2022a/bin:/usr/caen/matlab-2022a/bin/glnxa64:/usr/vlsipool/bin:/usr/vlsipool/anaconda2/bin:/usr/um/bin:/usr/caen/bin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
-QT_IM_MODULE=ibus
-_=./simv
-VERDI_HOME=/usr/caen/verdi-2023.12-SP2-1
-CALIBRE_HOME=/usr/caen/calibre-2017.2_16.14
-PWD=/afs/umich.edu/group/e/ece598to/w26/tutorial/A_Team_Scan_Chain/vsim
-_LMFILES_=/usr/caen/misc/modules/matlab/2022a:/usr/caen/misc/modules/python/3.6:/usr/caen/misc/modules/calibre/2017.2_16.14:/usr/caen/misc/modules/cadence-icadv/20.1.500.2200:/usr/caen/misc/modules/verdi/2023.12-SP2-1:/usr/caen/misc/modules/synopsys-synth/2021.06-SP1:/usr/caen/misc/modules/innovus/21.14.000:/usr/caen/misc/modules/vcs/2023.12-SP2-1:/usr/caen/misc/modules/vscode/1.70.2:/usr/caen/misc/modules/spectre/21.10.415
-VCS_HOME=/usr/caen/vcs-2023.12-SP2-1
-LANG=en_US.UTF-8
-GDK_BACKEND=x11
-MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/caen/misc/modules:/afs/umich.edu/class/coe/modules
-LOADEDMODULES=matlab/2022a:python/3.6:calibre/2017.2_16.14:cadence-icadv/20.1.500.2200:verdi/2023.12-SP2-1:synopsys-synth/2021.06-SP1:innovus/21.14.000:vcs/2023.12-SP2-1:vscode/1.70.2:spectre/21.10.415
-CHROME_DESKTOP=code-url-handler.desktop
-VSCODE_GIT_ASKPASS_EXTRA_ARGS=--ms-enable-electron-run-as-node
-CDSHOME=/usr/caen/icadv-20.1.500.2200
-CDS_Netlisting_Mode=Analog
-SYNOPSYS=/usr/caen/synopsys-synth-2021.06-SP1
-LM_LICENSE_FILE=./license.dat:/usr/caen/FLEXlm/data/license.dat.synopsys
-HISTCONTROL=ignoredups
-SHLVL=7
-HOME=/n/brevort/z/yunfa
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL=true
-VSCODE_GIT_ASKPASS_MAIN=/afs/eecs.umich.edu/soft/um/vscode-1.70.2/code/resources/app/extensions/git/dist/askpass-main.js
-MGC_HOME=/usr/caen/calibre-2017.2_16.14
-GNOME_DESKTOP_SESSION_ID=this-is-deprecated
-CDS_AUTO_64BIT=ALL
-LOGNAME=yunfa
-MGLS_LICENSE_FILE=/usr/caen/calibre-2017.2_16.14/license.dat
-VSCODE_GIT_IPC_HANDLE=/run/user/114277435/vscode-git-e46319a35a.sock
-DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-vF0RiQ1juC,guid=40e807c39c4c063112d138936981052a
-SSH_CONNECTION=141.212.115.57 41538 10.161.2.51 22
-XDG_DATA_DIRS=/n/brevort/z/yunfa/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
-CDS_LIC_FILE=/usr/caen/FLEXlm/data/license.dat.cadence
-MODULESHOME=/usr/share/Modules
-LESSOPEN=||/usr/bin/lesspipe.sh %s
-CDS_INSTALL_DIR=/usr/caen/icadv-20.1.500.2200/tools/dfII
-GIT_ASKPASS=/afs/eecs.umich.edu/soft/um/vscode-1.70.2/code/resources/app/extensions/git/dist/askpass.sh
-VSCODE_GIT_ASKPASS_NODE=/afs/eecs.umich.edu/soft/um/vscode-1.70.2/code/code
-DD_DONT_DO_OS_LOCKS=SET
-DISPLAY=:1
-XDG_RUNTIME_DIR=/run/user/114277435
-XDG_CURRENT_DESKTOP=GNOME
-NO_AT_BRIDGE=1
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/2603001,unix/unix:/tmp/.ICE-unix/2603001
 COLORTERM=truecolor
-BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`
+HISTCONTROL=ignoredups
+VCS_TARGET_ARCH=linux64
+XDG_MENU_PREFIX=gnome-
+TERM_PROGRAM_VERSION=1.103.1
+HISTSIZE=1000
+HOSTNAME=caen-vnc-mi17.engin.umich.edu
+VCS_HOME=/usr/caen/vcs-2023.12-SP2-1
+LMOD_CACHED_LOADS=yes
+FPATH=/usr/share/lmod/lmod/init/ksh_funcs
+MAKE_TERMOUT=/dev/pts/3
+_ModuleTable002_=ZCA9ICJmaXhlZCIsCnZhbHVlID0gIjIwMjMuMTItU1AyLTEiLAp9LAp9LAp9LAp9LApmbiA9ICIvdXNyL2NhZW4vbWlzYy9tb2R1bGVzL3Zjcy8yMDIzLjEyLVNQMi0xLmx1YSIsCmZ1bGxOYW1lID0gInZjcy8yMDIzLjEyLVNQMi0xIiwKbG9hZE9yZGVyID0gMywKcHJvcFQgPSB7fSwKc3RhY2tEZXB0aCA9IDAsCnN0YXR1cyA9ICJhY3RpdmUiLAp1c2VyTmFtZSA9ICJ2Y3MvMjAyMy4xMi1TUDItMSIsCndWID0gIjAwMDAwMjAyMy4wMDAwMDAwMTIuKnNwLjAwMDAwMDAwMi4qemZpbmFsLS4wMDAwMDAwMDEuKnpmaW5hbCIsCn0sCnZlcmRpID0gewpmbiA9ICIvdXNyL2NhZW4vbWlzYy9tb2R1bGVzL3ZlcmRpLzIwMjMuMTItU1AyLTEubHVhIiwKZnVsbE5hbWUgPSAidmVyZGkv
+__LMOD_REF_COUNT_MODULEPATH=/etc/scl/modulefiles:1;/etc/modulefiles:1;/usr/share/modulefiles:1;/usr/caen/misc/modules:1;/usr/caen/misc/class/modules:1;/usr/share/modulefiles/Linux:1;/usr/share/modulefiles/Core:1;/usr/share/lmod/lmod/modulefiles/Core:1
+_ModuleTable005_=Y2Flbi9taXNjL2NsYXNzL21vZHVsZXM6L3Vzci9zaGFyZS9tb2R1bGVmaWxlcy9MaW51eDovdXNyL3NoYXJlL21vZHVsZWZpbGVzL0NvcmU6L3Vzci9zaGFyZS9sbW9kL2xtb2QvbW9kdWxlZmlsZXMvQ29yZSIsCn0K
+XMODIFIERS=@im=ibus
+VERDI_HOME=/usr/caen/verdi-2023.12-SP2-1
+DESKTOP_SESSION=gnome
+NO_AT_BRIDGE=1
+LMOD_DIR=/usr/share/lmod/lmod/libexec
+KRB5CCNAME=KEYRING:persistent:114323793
+PWD=/afs/umich.edu/group/e/ece598to/w26/group6/A_Team_Scan_Chain/vsim
+LOGNAME=danjchen
+XDG_SESSION_DESKTOP=gnome
+XDG_SESSION_TYPE=x11
+MODULESHOME=/usr/share/lmod/lmod
+MANPATH=/usr/share/lmod/lmod/share/man:
+_=./simv
+XAUTHORITY=/run/gdm/auth-for-danjchen-41M1K3/database
+VSCODE_GIT_ASKPASS_NODE=/opt/caen/um/vscode-1.103.1/code/code
+GJS_DEBUG_TOPICS=JS ERROR;JS LOG
+GDM_LANG=en_US.UTF-8
+__LMOD_REF_COUNT_PATH=/usr/caen/verdi-2023.12-SP2-1/bin:1;/usr/caen/vcs-2023.12-SP2-1/bin:1;/usr/caen/matlab-2025a/bin:1;/usr/caen/matlab-2025a/bin/glnxa64:1;/usr/um/vscode-1.70.2/code/bin:1;/usr/caen/vcs-2025.06-1/bin:2;/usr/local/bin:1;/usr/local/sbin:1;/usr/bin:1;/usr/sbin:1;/usr/um/bin:1;/usr/caen/bin:1
+HOME=/home/danjchen
+USERNAME=danjchen
+_ModuleTable_Sz_=5
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=GNOME
+LMOD_SETTARG_FULL_SUPPORT=no
+GIT_ASKPASS=/opt/caen/um/vscode-1.103.1/code/resources/app/extensions/git/dist/askpass.sh
+LMOD_VERSION=8.7.65
+CHROME_DESKTOP=code.desktop
+MFLAGS=
+__LMOD_REF_COUNT_LM_LICENSE_FILE=license.dat:1;/usr/caen/FLEXlm/data/license.dat.synopsys:1
+_ModuleTable003_=MjAyMy4xMi1TUDItMSIsCmxvYWRPcmRlciA9IDQsCnByb3BUID0ge30sCnN0YWNrRGVwdGggPSAwLApzdGF0dXMgPSAiYWN0aXZlIiwKdXNlck5hbWUgPSAidmVyZGkvMjAyMy4xMi1TUDItMSIsCndWID0gIjAwMDAwMjAyMy4wMDAwMDAwMTIuKnNwLjAwMDAwMDAwMi4qemZpbmFsLS4wMDAwMDAwMDEuKnpmaW5hbCIsCn0sCnZzY29kZSA9IHsKZm4gPSAiL3Vzci9jYWVuL21pc2MvbW9kdWxlcy92c2NvZGUvMS43MC4yLmx1YSIsCmZ1bGxOYW1lID0gInZzY29kZS8xLjcwLjIiLApsb2FkT3JkZXIgPSAxLApwcm9wVCA9IHt9LApzdGFja0RlcHRoID0gMCwKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gInZzY29kZS8xLjcwLjIiLAp3ViA9ICIwMDAwMDAwMDEuMDAwMDAw
+GJS_DEBUG_OUTPUT=stderr
+MODULEPATH_ROOT=/usr/share/modulefiles
+MLM_LICENSE_FILE=/usr/caen/FLEXlm/data/license.dat.matlab
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+XDG_SESSION_CLASS=user
+MAKEFLAGS=
+LMOD_PKG=/usr/share/lmod/lmod
+SNPSLMD_LICENSE_FILE=/usr/caen/FLEXlm/data/license.dat.synopsys
+TERM=xterm-256color
+__GL_SHADER_DISK_CACHE=0
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+USER=danjchen
+MAKE_TERMERR=/dev/pts/3
+VSCODE_GIT_IPC_HANDLE=/run/user/114323793/vscode-git-63c99479bd.sock
+LOADEDMODULES=vscode/1.70.2:matlab/2025a:vcs/2023.12-SP2-1:verdi/2023.12-SP2-1
+DISPLAY=127.0.0.1:51
+LMOD_ROOT=/usr/share/lmod
+SHLVL=5
+BASH_ENV=/usr/share/lmod/lmod/init/bash
+MAKELEVEL=1
+LMOD_sys=Linux
+QT_IM_MODULE=ibus
+LIBGL_DRIVERS_PATH=/usr/caen/matlab-2025a/local/usr/lib64/dri
+_ModuleTable001_=X01vZHVsZVRhYmxlXyA9IHsKTVR2ZXJzaW9uID0gMywKY19yZWJ1aWxkVGltZSA9IDcyMDAuMCwKY19zaG9ydFRpbWUgPSAwLjAwOTU3NDE3NDg4MDk4MTQsCmRlcHRoVCA9IHt9LApmYW1pbHkgPSB7fSwKbVQgPSB7Cm1hdGxhYiA9IHsKZm4gPSAiL3Vzci9jYWVuL21pc2MvbW9kdWxlcy9tYXRsYWIvMjAyNWEiLApmdWxsTmFtZSA9ICJtYXRsYWIvMjAyNWEiLApsb2FkT3JkZXIgPSAyLApwcm9wVCA9IHt9LApzdGFja0RlcHRoID0gMCwKc3RhdHVzID0gImFjdGl2ZSIsCnVzZXJOYW1lID0gIm1hdGxhYi8yMDI1YSIsCndWID0gIl4wMDAwMjAyNS4qYS4qemZpbmFsIiwKfSwKdmNzID0gewpkZXBUID0gewpkZXBBID0gewp7CnNuID0gInZlcmRpIiwKdmVyc2lvbiA9IHsKa2lu
+LM_LICENSE_FILE=license.dat:/usr/caen/FLEXlm/data/license.dat.synopsys
+XDG_RUNTIME_DIR=/run/user/114323793
+_ModuleTable004_=MDcwLjAwMDAwMDAwMi4qemZpbmFsIiwKfSwKfSwKbXBhdGhBID0gewoiL2V0Yy9zY2wvbW9kdWxlZmlsZXMiLCAiL2V0Yy9tb2R1bGVmaWxlcyIsICIvdXNyL3NoYXJlL21vZHVsZWZpbGVzIiwgIi91c3IvY2Flbi9taXNjL21vZHVsZXMiLCAiL3Vzci9jYWVuL21pc2MvY2xhc3MvbW9kdWxlcyIsICIvdXNyL3NoYXJlL21vZHVsZWZpbGVzL0xpbnV4IiwgIi91c3Ivc2hhcmUvbW9kdWxlZmlsZXMvQ29yZSIsICIvdXNyL3NoYXJlL2xtb2QvbG1vZC9tb2R1bGVmaWxlcy9Db3JlIiwKfSwKc3lzdGVtQmFzZU1QQVRIID0gIi9ldGMvc2NsL21vZHVsZWZpbGVzOi9ldGMvbW9kdWxlZmlsZXM6L3Vzci9zaGFyZS9tb2R1bGVmaWxlczovdXNyL2NhZW4vbWlzYy9tb2R1bGVzOi91c3Iv
+DEBUGINFOD_IMA_CERT_PATH=/etc/keys/ima:
+which_declare=declare -f
+VSCODE_GIT_ASKPASS_MAIN=/opt/caen/um/vscode-1.103.1/code/resources/app/extensions/git/dist/askpass-main.js
+XDG_DATA_DIRS=/home/danjchen/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/share:/usr/local/share:/usr/caen/misc/menus
+GDK_BACKEND=x11
+PATH=/usr/caen/verdi-2023.12-SP2-1/bin:/usr/caen/vcs-2023.12-SP2-1/bin:/usr/caen/matlab-2025a/bin:/usr/caen/matlab-2025a/bin/glnxa64:/usr/um/vscode-1.70.2/code/bin:/usr/caen/vcs-2025.06-1/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/usr/um/bin:/usr/caen/bin
+MODULEPATH=/etc/scl/modulefiles:/etc/modulefiles:/usr/share/modulefiles:/usr/caen/misc/modules:/usr/caen/misc/class/modules:/usr/share/modulefiles/Linux:/usr/share/modulefiles/Core:/usr/share/lmod/lmod/modulefiles/Core
+GDMSESSION=gnome
+_LMFILES_=/usr/caen/misc/modules/vscode/1.70.2.lua:/usr/caen/misc/modules/matlab/2025a:/usr/caen/misc/modules/vcs/2023.12-SP2-1.lua:/usr/caen/misc/modules/verdi/2023.12-SP2-1.lua
+ORIGINAL_XDG_CURRENT_DESKTOP=GNOME
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-ivCNrsEO3Q,guid=c67a7881453090236988631569925962
+LMOD_CMD=/usr/share/lmod/lmod/libexec/lmod
+MAIL=/var/spool/mail/danjchen
+GIO_LAUNCHED_DESKTOP_FILE_PID=2604373
+GIO_LAUNCHED_DESKTOP_FILE=/usr/caen/misc/menus/applications/DEVELOPMENT-VisualStudioCode1.92.2.desktop
+OLDPWD=/afs/umich.edu/group/e/ece598to/w26/group6/A_Team_Scan_Chain
+TERM_PROGRAM=vscode
+BASH_FUNC_ml%%=() {  eval "$($LMOD_DIR/ml_cmd "$@")"
+}
+BASH_FUNC_which%%=() {  ( alias;
+ eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@
+}
+BASH_FUNC_module%%=() {  if [ -z "${LMOD_SH_DBG_ON+x}" ]; then
+ case "$-" in 
+ *v*x*)
+ __lmod_sh_dbg='vx'
+ ;;
+ *v*)
+ __lmod_sh_dbg='v'
+ ;;
+ *x*)
+ __lmod_sh_dbg='x'
+ ;;
+ esac;
+ fi;
+ if [ -n "${__lmod_sh_dbg:-}" ]; then
+ set +$__lmod_sh_dbg;
+ echo "Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output" 1>&2;
+ fi;
+ eval "$($LMOD_CMD shell "$@")" && eval "$(${LMOD_SETTARG_CMD:-:} -s sh)";
+ __lmod_my_status=$?;
+ if [ -n "${__lmod_sh_dbg:-}" ]; then
+ echo "Shell debugging restarted" 1>&2;
+ set -$__lmod_sh_dbg;
+ fi;
+ unset __lmod_sh_dbg;
+ return $__lmod_my_status
+}
+BASH_FUNC_scl%%=() {  if [ "$1" = "load" -o "$1" = "unload" ]; then
+ eval "module $@";
+ else
+ /usr/bin/scl "$@";
+ fi
 }
 VCS_PATHMAP_PRELOAD_DONE=1
 VCS_STACK_EXEC=true
@@ -268,125 +314,125 @@ VCS_EXEC_DONE=1
 LC_ALL=C
 DVE=/usr/caen/vcs-2023.12-SP2-1/gui/dve
 SPECMAN_OUTPUT_TO_TTY=1
-FLEXLM_BORROWFILE=/n/brevort/z/yunfa/.vlsipool-k12-borrow.txt
+FLEXLM_BORROWFILE=/home/danjchen/.caen-vnc-mi17.engin.umich.edu-borrow.txt
 Runtime command line arguments:
 argv[0]=./simv
 argv[1]=+noerrorIOPCWM
 argv[2]=+vcs+dumparrays
-274 profile - 100
-          CPU/Mem usage: 0.080 sys,  0.210 user,  319.34M mem
-275 Elapsed time:    0:00:03    Thu Feb 12 22:18:01 2026
-276 User CPU time used: 0 seconds
-277 System CPU time used: 0 seconds
-278 pliAppInit
-279 [SC]Init: MemoryConsumed=0.00MB ElapsedTime=0hour 0min. 0sec.
-280 FSDB_GATE is set.
-281 FSDB_RTL is set.
-282 FSDB_PACKED_MODE is enabled.
-283 FSDB_GATE_PACKED is enabled.
-284 FSDB_ALIAS_ARRAY_ELEM is set to 4294967295.
-285 Enable Parallel Dumping.
-286 pliAppMiscSet: New Sim Round
-287 pliEntryInit
-288 LIBSSCORE=found /usr/caen/verdi-2023.12-SP2-1/share/PLI/lib/LINUXAMD64/libsscore_vcs202312.so through $NOVAS_HOME setting.
-289 FSDB Dumper for VCS, Release Verdi_V-2023.12-SP2-1, Linux x86_64/64bit, 07/15/2024
-290 (C) 1996 - 2024 by Synopsys, Inc.
-291 sps_call_fsdbDumpfile_main at 0 : ./tb_test_scan_syn.sv(108)
-292 argv[0]: (tb_test_scan_syn.fsdb)
-293 *Verdi* : Create FSDB file 'tb_test_scan_syn.fsdb'
-294 [spi_vcs_vd_ppi_create_root]: no upf option
-295 compile option from '/afs/umich.edu/group/e/ece598to/w26/tutorial/A_Team_Scan_Chain/vsim/simv.daidir/vcs_rebuild'.
-296   "vcs '+v2k' '+vc' '-sverilog' '+systemverilogext+sv' '-timescale=1ns/1ps' '+vcs+lic+wait' '+multisource_int_delays' '+plusarg_save' '+overlap' '-full64' '-Mupdate' '-lca' '+libext+.v+.vlib+.vh' '-cm_libs' 'yv+celldefine' '+neg_tchk' '-debug_access+all' '-debug_pp' '+noerrorIOPCWM' '+nowarnTFMPC' '+notimingcheck' '+vcs+dumparrays' '+memcbk' '../verilog/test/sys_defs.vh' '../verilog/group_scan_mem_reg_if/group_scan_mem_reg_if.nl.v' '../verilog/share/block_scan.sv' '../verilog/share/group_mux.sv' '../verilog/scan_for_test.sv' '../verilog/reg/cs_reg.sv' '../verilog/sram/spram.sv' '../verilog/test/test_scan.sv' '../verilog/test/CLK_GEN.sv' '/afs/umich.edu/class/eecs427/tsmc65/stdcells/tcbn65lp_220a/TSMCHOME/digital/Front_End/verilog/tcbn65lp_200a/tcbn65lp.v' './tb_test_scan_syn.sv' '-o' 'simv' 2>&1"
-297 DVDI_is_vir_unload_enabled is enable
-298 FSDB_VCS_ENABLE_NATIVE_VC is enable
-299 sps_call_fsdbDumpvars_vd_main at 0 : ./tb_test_scan_syn.sv(109)
-300 argv[0]: (0)
-301 argv[1]: (handle) tb_test_scan_syn
-302 argv[2]: (+struct)
-303 *Verdi* : Begin traversing the scope (tb_test_scan_syn), layer (0).
-304 *Verdi* : Enable +struct dumping.
-305 *Verdi* : End of traversing.
-306 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 0.100 sys,  0.270 user,  435.75M mem
-                   incr: 0.010 sys,  0.020 user,  8.75M mem
-                   accu: 0.010 sys,  0.020 user,  8.75M mem
-              accu incr: 0.010 sys,  0.020 user,  8.75M mem
+288 profile - 100
+          CPU/Mem usage: 0.060 sys,  0.190 user,  244.99M mem
+289 Elapsed time:    0:00:01    Sun Feb 15 21:51:29 2026
+290 User CPU time used: 0 seconds
+291 System CPU time used: 0 seconds
+292 pliAppInit
+293 [SC]Init: MemoryConsumed=0.00MB ElapsedTime=0hour 0min. 0sec.
+294 FSDB_GATE is set.
+295 FSDB_RTL is set.
+296 FSDB_PACKED_MODE is enabled.
+297 FSDB_GATE_PACKED is enabled.
+298 FSDB_ALIAS_ARRAY_ELEM is set to 4294967295.
+299 Enable Parallel Dumping.
+300 pliAppMiscSet: New Sim Round
+301 pliEntryInit
+302 LIBSSCORE=found /usr/caen/verdi-2023.12-SP2-1/share/PLI/lib/LINUXAMD64/libsscore_vcs202312.so through $NOVAS_HOME setting.
+303 FSDB Dumper for VCS, Release Verdi_V-2023.12-SP2-1, Linux x86_64/64bit, 07/15/2024
+304 (C) 1996 - 2024 by Synopsys, Inc.
+305 sps_call_fsdbDumpfile_main at 0 : ./tb_test_scan.sv(104)
+306 argv[0]: (tb_test_scan.fsdb)
+307 *Verdi* : Create FSDB file 'tb_test_scan.fsdb'
+308 [spi_vcs_vd_ppi_create_root]: no upf option
+309 compile option from '/afs/umich.edu/group/e/ece598to/w26/group6/A_Team_Scan_Chain/vsim/simv.daidir/vcs_rebuild'.
+310   "vcs '+v2k' '+vc' '-sverilog' '+systemverilogext+sv' '-timescale=1ns/1ps' '+vcs+lic+wait' '+multisource_int_delays' '+plusarg_save' '+overlap' '-full64' '-Mupdate' '-lca' '+libext+.v+.vlib+.vh' '-cm_libs' 'yv+celldefine' '+neg_tchk' '-debug_access+all' '-debug_pp' '+noerrorIOPCWM' '+nowarnTFMPC' '+notimingcheck' '+vcs+dumparrays' '+memcbk' '../verilog/test/sys_defs.vh' '../verilog/group_scan_mem_reg_if/rwctr.sv' '../verilog/group_scan_mem_reg_if/mem_reg_mux.sv' '../verilog/group_scan_mem_reg_if/syn_pulse_gen.sv' '../verilog/group_scan_mem_reg_if/group_scan_mem_reg_if.sv' '../verilog/share/block_scan.sv' '../verilog/share/group_mux.sv' '../verilog/scan_for_test.sv' '../verilog/reg/cs_reg.sv' '../verilog/sram/spram.sv' '../verilog/test/test_scan.sv' '../verilog/test/CLK_GEN.sv' './tb_test_scan.sv' '-o' 'simv' 2>&1"
+311 DVDI_is_vir_unload_enabled is enable
+312 FSDB_VCS_ENABLE_NATIVE_VC is enable
+313 sps_call_fsdbDumpvars_vd_main at 0 : ./tb_test_scan.sv(105)
+314 argv[0]: (0)
+315 argv[1]: (handle) tb_test_scan
+316 argv[2]: (+struct)
+317 *Verdi* : Begin traversing the scope (tb_test_scan), layer (0).
+318 *Verdi* : Enable +struct dumping.
+319 *Verdi* : End of traversing.
+320 pliAppHDL_DumpVarComplete traverse var: profile - 
+          CPU/Mem usage: 0.080 sys,  0.200 user,  343.74M mem
+                   incr: 0.010 sys,  0.010 user,  8.50M mem
+                   accu: 0.010 sys,  0.010 user,  8.50M mem
+              accu incr: 0.010 sys,  0.010 user,  8.50M mem
 
-          Count usage: 4197 var,  3378 idcode,  604 callback
-                 incr: 4197 var,  3378 idcode,  604 callback
-                 accu: 4197 var,  3378 idcode,  604 callback
-            accu incr: 4197 var,  3378 idcode,  604 callback
-307 Elapsed time:    0:00:04    Thu Feb 12 22:18:02 2026
-308 User CPU time used: 0 seconds
-309 System CPU time used: 0 seconds
-310 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 0.100 sys,  0.270 user,  436.80M mem
+          Count usage: 244 var,  226 idcode,  79 callback
+                 incr: 244 var,  226 idcode,  79 callback
+                 accu: 244 var,  226 idcode,  79 callback
+            accu incr: 244 var,  226 idcode,  79 callback
+321 Elapsed time:    0:00:01    Sun Feb 15 21:51:29 2026
+322 User CPU time used: 0 seconds
+323 System CPU time used: 0 seconds
+324 pliAppHDL_DumpVarComplete: profile - 
+          CPU/Mem usage: 0.080 sys,  0.200 user,  344.79M mem
                    incr: 0.000 sys,  0.000 user,  1.05M mem
-                   accu: 0.010 sys,  0.020 user,  9.81M mem
+                   accu: 0.010 sys,  0.010 user,  9.55M mem
               accu incr: 0.000 sys,  0.000 user,  1.05M mem
 
-          Count usage: 4197 var,  3378 idcode,  604 callback
+          Count usage: 244 var,  226 idcode,  79 callback
                  incr: 0 var,  0 idcode,  0 callback
-                 accu: 4197 var,  3378 idcode,  604 callback
+                 accu: 244 var,  226 idcode,  79 callback
             accu incr: 0 var,  0 idcode,  0 callback
-311 Elapsed time:    0:00:04    Thu Feb 12 22:18:02 2026
-312 User CPU time used: 0 seconds
-313 System CPU time used: 0 seconds
-314 sps_call_fsdbDumpvars_vd_main at 0 : ./tb_test_scan_syn.sv(110)
-315 argv[0]: (+mda)
-316 *Verdi* : Begin traversing the scopes, layer (0).
-317 *Verdi* : Enable +mda dumping.
-318 *Verdi* : End of traversing.
-319 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 0.130 sys,  0.430 user,  438.13M mem
-                   incr: 0.030 sys,  0.160 user,  1.33M mem
-                   accu: 0.030 sys,  0.160 user,  1.33M mem
-              accu incr: 0.030 sys,  0.160 user,  1.33M mem
-
-          Count usage: 29262 var,  25245 idcode,  5542 callback
-                 incr: 25065 var,  21867 idcode,  4938 callback
-                 accu: 25065 var,  21867 idcode,  4938 callback
-            accu incr: 25065 var,  21867 idcode,  4938 callback
-320 Elapsed time:    0:00:04    Thu Feb 12 22:18:02 2026
-321 User CPU time used: 0 seconds
-322 System CPU time used: 0 seconds
-323 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 0.130 sys,  0.430 user,  438.13M mem
+325 Elapsed time:    0:00:01    Sun Feb 15 21:51:29 2026
+326 User CPU time used: 0 seconds
+327 System CPU time used: 0 seconds
+328 sps_call_fsdbDumpvars_vd_main at 0 : ./tb_test_scan.sv(106)
+329 argv[0]: (+mda)
+330 *Verdi* : Begin traversing the scopes, layer (0).
+331 *Verdi* : Enable +mda dumping.
+332 *Verdi* : End of traversing.
+333 pliAppHDL_DumpVarComplete traverse var: profile - 
+          CPU/Mem usage: 0.080 sys,  0.200 user,  344.79M mem
                    incr: 0.000 sys,  0.000 user,  0.00M mem
-                   accu: 0.030 sys,  0.160 user,  1.33M mem
+                   accu: 0.000 sys,  0.000 user,  0.00M mem
               accu incr: 0.000 sys,  0.000 user,  0.00M mem
 
-          Count usage: 29262 var,  25245 idcode,  5542 callback
+          Count usage: 491 var,  229 idcode,  82 callback
+                 incr: 247 var,  3 idcode,  3 callback
+                 accu: 247 var,  3 idcode,  3 callback
+            accu incr: 247 var,  3 idcode,  3 callback
+334 Elapsed time:    0:00:01    Sun Feb 15 21:51:29 2026
+335 User CPU time used: 0 seconds
+336 System CPU time used: 0 seconds
+337 pliAppHDL_DumpVarComplete: profile - 
+          CPU/Mem usage: 0.080 sys,  0.200 user,  344.79M mem
+                   incr: 0.000 sys,  0.000 user,  0.00M mem
+                   accu: 0.000 sys,  0.000 user,  0.00M mem
+              accu incr: 0.000 sys,  0.000 user,  0.00M mem
+
+          Count usage: 491 var,  229 idcode,  82 callback
                  incr: 0 var,  0 idcode,  0 callback
-                 accu: 25065 var,  21867 idcode,  4938 callback
+                 accu: 247 var,  3 idcode,  3 callback
             accu incr: 0 var,  0 idcode,  0 callback
-324 Elapsed time:    0:00:04    Thu Feb 12 22:18:02 2026
-325 User CPU time used: 0 seconds
-326 System CPU time used: 0 seconds
-327 End of simulation at 5000000000000
-328 Memory usage: 531.988 M
-329 Maximum resident set size: 204 MB
-330 Hard page faults: 991
-331 Soft page faults: 37768
-332 Elapsed time:    0:00:07    Thu Feb 12 22:18:05 2026
-333 User CPU time used: 3 seconds
-334 System CPU time used: 0 seconds
-335 Begin FSDB profile info:
-336 FSDB Writer : bc1(1010813) bcn(1507) mtf/stf(0/1)
-FSDB Writer elapsed time : flush(0.067293) io wait(0.000000) theadpool wait(0.000000)
+338 Elapsed time:    0:00:01    Sun Feb 15 21:51:29 2026
+339 User CPU time used: 0 seconds
+340 System CPU time used: 0 seconds
+341 End of simulation at 5000000000000
+342 Memory usage: 421.876 M
+343 Maximum resident set size: 141 MB
+344 Hard page faults: 0
+345 Soft page faults: 13737
+346 Elapsed time:    0:00:01    Sun Feb 15 21:51:29 2026
+347 User CPU time used: 0 seconds
+348 System CPU time used: 0 seconds
+349 Begin FSDB profile info:
+350 FSDB Writer : bc1(1003109) bcn(1591) mtf/stf(0/1)
+FSDB Writer elapsed time : flush(0.014822) io wait(0.000000) theadpool wait(0.000000)
 FSDB Writer cpu time : MT Compression : 0
-337 End FSDB profile info
-338 FSDB closed. Name: tb_test_scan_syn.fsdb Size: 325077
-339 Parallel profile     - ProducerThread:1 ConsumerThread:1 Buffer:64MB
-340                      - BlockUsed:14 Acquire:0 BufferUsed:27225166
-341                      - Flush:4 Expand:0 ProducerWait:0 ConsumerWait:12
-342                      - MainProducerTime:3.819513043 TotalConsumerTime:0.072519740
-343                      - ElapsedTime:3.792612000
-344 Producer   0 profile - BlockUsed:14 Acquire:0 BufferUsed:27225166
-345 Consumer   0 profile - Affinity:-1 CPUTime:0.072519740 LifeTime:2.811759034 (0.03%)
-346                      - BlockUsed:14 Acquire:0 BufferUsed:27225166
-347 SimExit
-348 Elapsed time:    0:00:07    Thu Feb 12 22:18:05 2026
-349 User CPU time used: 3 seconds
-350 System CPU time used: 0 seconds
-351 Sim process exit
+351 End FSDB profile info
+352 FSDB closed. Name: tb_test_scan.fsdb Size: 19512
+353 Parallel profile     - ProducerThread:1 ConsumerThread:1 Buffer:64MB
+354                      - BlockUsed:14 Acquire:0 BufferUsed:27241992
+355                      - Flush:4 Expand:0 ProducerWait:0 ConsumerWait:12
+356                      - MainProducerTime:0.560222026 TotalConsumerTime:0.069837357
+357                      - ElapsedTime:0.607676000
+358 Producer   0 profile - BlockUsed:14 Acquire:0 BufferUsed:27241992
+359 Consumer   0 profile - Affinity:-1 CPUTime:0.069837357 LifeTime:0.404451191 (0.17%)
+360                      - BlockUsed:14 Acquire:0 BufferUsed:27241992
+361 SimExit
+362 Elapsed time:    0:00:02    Sun Feb 15 21:51:30 2026
+363 User CPU time used: 0 seconds
+364 System CPU time used: 0 seconds
+365 Sim process exit

@@ -1,9 +1,0 @@
-{"vcs1":{"timestamp_begin":1770952659.615696202, "rt":13.93, "ut":7.32, "st":1.16}}
-{"vcselab":{"timestamp_begin":1770952673.588374534, "rt":2.41, "ut":0.41, "st":0.18}}
-{"link":{"timestamp_begin":1770952676.073139813, "rt":2.35, "ut":0.28, "st":0.79}}
-{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1770952658.752161455}
-{"VCS_COMP_START_TIME": 1770952658.752161455}
-{"VCS_COMP_END_TIME": 1770952678.720757615}
-{"VCS_USER_OPTIONS": "+v2k +vc -sverilog +systemverilogext+sv -timescale=1ns/1ps +vcs+lic+wait +multisource_int_delays +plusarg_save +overlap -full64 -Mupdate -lca +libext+.v+.vlib+.vh -cm_libs yv+celldefine +neg_tchk -debug_access+all -debug_pp +noerrorIOPCWM +nowarnTFMPC +notimingcheck +vcs+dumparrays +memcbk ../verilog/test/sys_defs.vh ../verilog/group_scan_mem_reg_if/group_scan_mem_reg_if.nl.v ../verilog/share/block_scan.sv ../verilog/share/group_mux.sv ../verilog/scan_for_test.sv ../verilog/reg/cs_reg.sv ../verilog/sram/spram.sv ../verilog/test/test_scan.sv ../verilog/test/CLK_GEN.sv /afs/umich.edu/class/eecs427/tsmc65/stdcells/tcbn65lp_220a/TSMCHOME/digital/Front_End/verilog/tcbn65lp_200a/tcbn65lp.v ./tb_test_scan_syn.sv -o simv"}
-{"vcs1": {"peak_mem": 408796}}
-{"vcselab": {"peak_mem": 248048}}

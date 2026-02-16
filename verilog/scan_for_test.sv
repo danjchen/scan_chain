@@ -30,7 +30,10 @@ module scan_for_test(
 
     // status register
     input  [14:0] sr_rdata,
-    input  reg_ready  
+    input  reg_ready,
+
+    output [1:0] seg_id,
+    output id_sel 
 );
     // block_scan
     reg static_wen;
@@ -116,6 +119,9 @@ module scan_for_test(
         .cr_rdata    (cr_rdata),
         .sr_rdata    (sr_rdata),
         .reg_ready   (reg_ready)
+
+        .seg_id      (seg_id),
+        .id_sel      (id_sel)
   );
 
 endmodule 

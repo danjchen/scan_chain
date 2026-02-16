@@ -8,7 +8,7 @@ module rwctr(
    // scan
    input          static_wen,
    input          static_ren,
-   input  [15:0]  static_addr, // changed to fit our design
+   input  [14:0]  static_addr, // changed to fit our design
    input  [31:0]  static_wdata,
    output reg     static_ready,
    output reg [31:0] static_rdata,
@@ -16,7 +16,7 @@ module rwctr(
    // mem_reg_mux
    output reg   scan_wen,
    output reg   scan_ren,
-   output reg [15:0]  scan_addr, // changed to fit our design
+   output reg [13:0]  scan_addr, // changed to fit our design
    output reg [31:0]  scan_wdata,
    input  [31:0]  scan_rdata,
    input  scan_ready
@@ -29,7 +29,7 @@ module rwctr(
    reg request_finish;
    reg static_ready_w;
    reg scan_wen_w, scan_ren_w;
-   reg [15:0] scan_addr_w;
+   reg [14:0] scan_addr_w;
    reg [31:0] static_rdata_w, scan_wdata_w;
 
    // Generate a pulse during write and read operation

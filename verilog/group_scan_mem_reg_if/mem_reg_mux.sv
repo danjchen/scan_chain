@@ -6,7 +6,7 @@ module mem_reg_mux (
     // to scan_syn_ctr
     input  scan_ren,
     input  scan_wen,
-    input  [15:0] scan_addr,// changed to 16 bits for our design
+    input  [14:0] scan_addr,// changed to 16 bits for our design
     input  [31:0] scan_wdata,
     output reg [31:0] scan_rdata,  
     output reg scan_ready,
@@ -14,7 +14,7 @@ module mem_reg_mux (
     // to sram
     output reg sram_ren,
     output reg sram_wen,
-    output reg [10:0] sram_addr, // changed to 16 bits for our design
+    output reg [10:0] sram_addr, 
     output reg [31:0] sram_wdata,
     input [31:0] sram_rdata,
     input sram_ready,
@@ -31,10 +31,8 @@ module mem_reg_mux (
     input  [14:0] sr_rdata,
     input  reg_ready,
 
-    output reg [3:0] seg_id, 
+    output reg [1:0] seg_id, 
     output reg id_sel
-
-    
 );
 
 // TODO: do we have to modify wdata and rdata? 
@@ -45,21 +43,21 @@ module mem_reg_mux (
     end
 
     always @* begin 
-        id_sel = scan_addr[14]; 
-        seg_id = scan_addr[13:11]; 
+        id_sel = scan_addr[13]; 
+        seg_id = scan_addr[12:11]; 
     end 
 
     always @* begin
-        reg_wen    =  scan_addr[15] ? scan_wen : 0;
-        reg_ren    =  scan_addr[15] ? scan_ren : 0;
-        sram_wen   = !scan_addr[15] ? scan_wen : 0;
-        sram_ren   = !scan_addr[15] ? scan_ren : 0;
+        reg_wen    =  scan_addr[14] ? scan_wen : 0;
+        reg_ren    =  scan_addr[14] ? scan_ren : 0;
+        sram_wen   = !scan_addr[14] ? scan_wen : 0;
+        sram_ren   = !scan_addr[14] ? scan_ren : 0;
     end
 
     always @* begin
-        cr_wdata     =  scan_addr[15] ? scan_wdata[31:15] : 0;
-        sram_wdata   = !scan_addr[15] ? scan_wdata        : 0;
-        sram_addr    = !scan_addr[15] ? scan_addr[10:0]   : 0;
+        cr_wdata     =  scan_addr[14] ? scan_wdata[31:15] : 0;
+        sram_wdata   = !scan_addr[14] ? scan_wdata        : 0;
+        sram_addr    = !scan_addr[14] ? scan_addr[10:0]   : 0;
     end
 
 endmodule

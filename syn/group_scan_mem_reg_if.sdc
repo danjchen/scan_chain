@@ -1,6 +1,6 @@
 ###################################################################
 
-# Created by write_sdc on Thu Feb 12 21:29:36 2026
+# Created by write_sdc on Sun Feb 15 20:51:27 2026
 
 ###################################################################
 set sdc_version 2.1
@@ -107,6 +107,11 @@ set_load -pin_load 0.01 [get_ports {cr_wdata[3]}]
 set_load -pin_load 0.01 [get_ports {cr_wdata[2]}]
 set_load -pin_load 0.01 [get_ports {cr_wdata[1]}]
 set_load -pin_load 0.01 [get_ports {cr_wdata[0]}]
+set_load -pin_load 0.01 [get_ports {seg_id[3]}]
+set_load -pin_load 0.01 [get_ports {seg_id[2]}]
+set_load -pin_load 0.01 [get_ports {seg_id[1]}]
+set_load -pin_load 0.01 [get_ports {seg_id[0]}]
+set_load -pin_load 0.01 [get_ports id_sel]
 set_ideal_network [get_ports rst_n]
 create_clock [get_ports clk]  -period 2  -waveform {0 1}
 set_clock_uncertainty 0.2  [get_clocks clk]
@@ -114,67 +119,6 @@ set_clock_transition -max -rise 0.2 [get_clocks clk]
 set_clock_transition -max -fall 0.2 [get_clocks clk]
 set_clock_transition -min -rise 0.2 [get_clocks clk]
 set_clock_transition -min -fall 0.2 [get_clocks clk]
-set_false_path   -through [list [get_ports rst_n]]
-set_false_path   -through [list [get_ports static_wen_group_mux]]
-set_false_path   -through [list [get_ports static_ren_group_mux]]
-set_false_path   -through [list [get_ports {static_addr_group_mux[19]}] [get_ports             \
-{static_addr_group_mux[18]}] [get_ports {static_addr_group_mux[17]}]           \
-[get_ports {static_addr_group_mux[16]}] [get_ports                             \
-{static_addr_group_mux[15]}] [get_ports {static_addr_group_mux[14]}]           \
-[get_ports {static_addr_group_mux[13]}] [get_ports                             \
-{static_addr_group_mux[12]}] [get_ports {static_addr_group_mux[11]}]           \
-[get_ports {static_addr_group_mux[10]}] [get_ports {static_addr_group_mux[9]}] \
-[get_ports {static_addr_group_mux[8]}] [get_ports {static_addr_group_mux[7]}]  \
-[get_ports {static_addr_group_mux[6]}] [get_ports {static_addr_group_mux[5]}]  \
-[get_ports {static_addr_group_mux[4]}] [get_ports {static_addr_group_mux[3]}]  \
-[get_ports {static_addr_group_mux[2]}] [get_ports {static_addr_group_mux[1]}]  \
-[get_ports {static_addr_group_mux[0]}]]
-set_false_path   -through [list [get_ports {static_wdata_group_mux[31]}] [get_ports            \
-{static_wdata_group_mux[30]}] [get_ports {static_wdata_group_mux[29]}]         \
-[get_ports {static_wdata_group_mux[28]}] [get_ports                            \
-{static_wdata_group_mux[27]}] [get_ports {static_wdata_group_mux[26]}]         \
-[get_ports {static_wdata_group_mux[25]}] [get_ports                            \
-{static_wdata_group_mux[24]}] [get_ports {static_wdata_group_mux[23]}]         \
-[get_ports {static_wdata_group_mux[22]}] [get_ports                            \
-{static_wdata_group_mux[21]}] [get_ports {static_wdata_group_mux[20]}]         \
-[get_ports {static_wdata_group_mux[19]}] [get_ports                            \
-{static_wdata_group_mux[18]}] [get_ports {static_wdata_group_mux[17]}]         \
-[get_ports {static_wdata_group_mux[16]}] [get_ports                            \
-{static_wdata_group_mux[15]}] [get_ports {static_wdata_group_mux[14]}]         \
-[get_ports {static_wdata_group_mux[13]}] [get_ports                            \
-{static_wdata_group_mux[12]}] [get_ports {static_wdata_group_mux[11]}]         \
-[get_ports {static_wdata_group_mux[10]}] [get_ports                            \
-{static_wdata_group_mux[9]}] [get_ports {static_wdata_group_mux[8]}]           \
-[get_ports {static_wdata_group_mux[7]}] [get_ports                             \
-{static_wdata_group_mux[6]}] [get_ports {static_wdata_group_mux[5]}]           \
-[get_ports {static_wdata_group_mux[4]}] [get_ports                             \
-{static_wdata_group_mux[3]}] [get_ports {static_wdata_group_mux[2]}]           \
-[get_ports {static_wdata_group_mux[1]}] [get_ports                             \
-{static_wdata_group_mux[0]}]]
-set_false_path   -through [list [get_ports {static_rdata_group_mux[31]}] [get_ports            \
-{static_rdata_group_mux[30]}] [get_ports {static_rdata_group_mux[29]}]         \
-[get_ports {static_rdata_group_mux[28]}] [get_ports                            \
-{static_rdata_group_mux[27]}] [get_ports {static_rdata_group_mux[26]}]         \
-[get_ports {static_rdata_group_mux[25]}] [get_ports                            \
-{static_rdata_group_mux[24]}] [get_ports {static_rdata_group_mux[23]}]         \
-[get_ports {static_rdata_group_mux[22]}] [get_ports                            \
-{static_rdata_group_mux[21]}] [get_ports {static_rdata_group_mux[20]}]         \
-[get_ports {static_rdata_group_mux[19]}] [get_ports                            \
-{static_rdata_group_mux[18]}] [get_ports {static_rdata_group_mux[17]}]         \
-[get_ports {static_rdata_group_mux[16]}] [get_ports                            \
-{static_rdata_group_mux[15]}] [get_ports {static_rdata_group_mux[14]}]         \
-[get_ports {static_rdata_group_mux[13]}] [get_ports                            \
-{static_rdata_group_mux[12]}] [get_ports {static_rdata_group_mux[11]}]         \
-[get_ports {static_rdata_group_mux[10]}] [get_ports                            \
-{static_rdata_group_mux[9]}] [get_ports {static_rdata_group_mux[8]}]           \
-[get_ports {static_rdata_group_mux[7]}] [get_ports                             \
-{static_rdata_group_mux[6]}] [get_ports {static_rdata_group_mux[5]}]           \
-[get_ports {static_rdata_group_mux[4]}] [get_ports                             \
-{static_rdata_group_mux[3]}] [get_ports {static_rdata_group_mux[2]}]           \
-[get_ports {static_rdata_group_mux[1]}] [get_ports                             \
-{static_rdata_group_mux[0]}]]
-set_false_path   -through [list [get_ports static_ready_group_mux]]
-set_false_path   -through [list [get_ports scan_id_group_mux]]
 set_input_delay -clock clk  0.15  [get_ports rst_n]
 set_input_delay -clock clk  0.15  [get_ports static_wen_group_mux]
 set_input_delay -clock clk  0.15  [get_ports static_ren_group_mux]
@@ -394,3 +338,69 @@ set_output_delay -clock clk  0.1  [get_ports {cr_wdata[3]}]
 set_output_delay -clock clk  0.1  [get_ports {cr_wdata[2]}]
 set_output_delay -clock clk  0.1  [get_ports {cr_wdata[1]}]
 set_output_delay -clock clk  0.1  [get_ports {cr_wdata[0]}]
+set_output_delay -clock clk  0.1  [get_ports {seg_id[3]}]
+set_output_delay -clock clk  0.1  [get_ports {seg_id[2]}]
+set_output_delay -clock clk  0.1  [get_ports {seg_id[1]}]
+set_output_delay -clock clk  0.1  [get_ports {seg_id[0]}]
+set_output_delay -clock clk  0.1  [get_ports id_sel]
+set_false_path   -through [list [get_ports rst_n]]
+set_false_path   -through [list [get_ports static_wen_group_mux]]
+set_false_path   -through [list [get_ports static_ren_group_mux]]
+set_false_path   -through [list [get_ports {static_addr_group_mux[19]}] [get_ports             \
+{static_addr_group_mux[18]}] [get_ports {static_addr_group_mux[17]}]           \
+[get_ports {static_addr_group_mux[16]}] [get_ports                             \
+{static_addr_group_mux[15]}] [get_ports {static_addr_group_mux[14]}]           \
+[get_ports {static_addr_group_mux[13]}] [get_ports                             \
+{static_addr_group_mux[12]}] [get_ports {static_addr_group_mux[11]}]           \
+[get_ports {static_addr_group_mux[10]}] [get_ports {static_addr_group_mux[9]}] \
+[get_ports {static_addr_group_mux[8]}] [get_ports {static_addr_group_mux[7]}]  \
+[get_ports {static_addr_group_mux[6]}] [get_ports {static_addr_group_mux[5]}]  \
+[get_ports {static_addr_group_mux[4]}] [get_ports {static_addr_group_mux[3]}]  \
+[get_ports {static_addr_group_mux[2]}] [get_ports {static_addr_group_mux[1]}]  \
+[get_ports {static_addr_group_mux[0]}]]
+set_false_path   -through [list [get_ports {static_wdata_group_mux[31]}] [get_ports            \
+{static_wdata_group_mux[30]}] [get_ports {static_wdata_group_mux[29]}]         \
+[get_ports {static_wdata_group_mux[28]}] [get_ports                            \
+{static_wdata_group_mux[27]}] [get_ports {static_wdata_group_mux[26]}]         \
+[get_ports {static_wdata_group_mux[25]}] [get_ports                            \
+{static_wdata_group_mux[24]}] [get_ports {static_wdata_group_mux[23]}]         \
+[get_ports {static_wdata_group_mux[22]}] [get_ports                            \
+{static_wdata_group_mux[21]}] [get_ports {static_wdata_group_mux[20]}]         \
+[get_ports {static_wdata_group_mux[19]}] [get_ports                            \
+{static_wdata_group_mux[18]}] [get_ports {static_wdata_group_mux[17]}]         \
+[get_ports {static_wdata_group_mux[16]}] [get_ports                            \
+{static_wdata_group_mux[15]}] [get_ports {static_wdata_group_mux[14]}]         \
+[get_ports {static_wdata_group_mux[13]}] [get_ports                            \
+{static_wdata_group_mux[12]}] [get_ports {static_wdata_group_mux[11]}]         \
+[get_ports {static_wdata_group_mux[10]}] [get_ports                            \
+{static_wdata_group_mux[9]}] [get_ports {static_wdata_group_mux[8]}]           \
+[get_ports {static_wdata_group_mux[7]}] [get_ports                             \
+{static_wdata_group_mux[6]}] [get_ports {static_wdata_group_mux[5]}]           \
+[get_ports {static_wdata_group_mux[4]}] [get_ports                             \
+{static_wdata_group_mux[3]}] [get_ports {static_wdata_group_mux[2]}]           \
+[get_ports {static_wdata_group_mux[1]}] [get_ports                             \
+{static_wdata_group_mux[0]}]]
+set_false_path   -through [list [get_ports {static_rdata_group_mux[31]}] [get_ports            \
+{static_rdata_group_mux[30]}] [get_ports {static_rdata_group_mux[29]}]         \
+[get_ports {static_rdata_group_mux[28]}] [get_ports                            \
+{static_rdata_group_mux[27]}] [get_ports {static_rdata_group_mux[26]}]         \
+[get_ports {static_rdata_group_mux[25]}] [get_ports                            \
+{static_rdata_group_mux[24]}] [get_ports {static_rdata_group_mux[23]}]         \
+[get_ports {static_rdata_group_mux[22]}] [get_ports                            \
+{static_rdata_group_mux[21]}] [get_ports {static_rdata_group_mux[20]}]         \
+[get_ports {static_rdata_group_mux[19]}] [get_ports                            \
+{static_rdata_group_mux[18]}] [get_ports {static_rdata_group_mux[17]}]         \
+[get_ports {static_rdata_group_mux[16]}] [get_ports                            \
+{static_rdata_group_mux[15]}] [get_ports {static_rdata_group_mux[14]}]         \
+[get_ports {static_rdata_group_mux[13]}] [get_ports                            \
+{static_rdata_group_mux[12]}] [get_ports {static_rdata_group_mux[11]}]         \
+[get_ports {static_rdata_group_mux[10]}] [get_ports                            \
+{static_rdata_group_mux[9]}] [get_ports {static_rdata_group_mux[8]}]           \
+[get_ports {static_rdata_group_mux[7]}] [get_ports                             \
+{static_rdata_group_mux[6]}] [get_ports {static_rdata_group_mux[5]}]           \
+[get_ports {static_rdata_group_mux[4]}] [get_ports                             \
+{static_rdata_group_mux[3]}] [get_ports {static_rdata_group_mux[2]}]           \
+[get_ports {static_rdata_group_mux[1]}] [get_ports                             \
+{static_rdata_group_mux[0]}]]
+set_false_path   -through [list [get_ports static_ready_group_mux]]
+set_false_path   -through [list [get_ports scan_id_group_mux]]

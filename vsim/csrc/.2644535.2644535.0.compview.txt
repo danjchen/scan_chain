@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1771210286.171036977, "rt":0.90, "ut":0.28, "st":0.20}}
+{"vcselab":{"timestamp_begin":1771210287.250523156, "rt":0.48, "ut":0.22, "st":0.13}}
+{"link":{"timestamp_begin":1771210287.830642103, "rt":0.54, "ut":0.15, "st":0.23}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1771210284.603999022}
+{"VCS_COMP_START_TIME": 1771210284.603999022}
+{"VCS_COMP_END_TIME": 1771210288.636931987}
+{"VCS_USER_OPTIONS": "+v2k +vc -sverilog +systemverilogext+sv -timescale=1ns/1ps +vcs+lic+wait +multisource_int_delays +plusarg_save +overlap -full64 -Mupdate -lca +libext+.v+.vlib+.vh -cm_libs yv+celldefine +neg_tchk -debug_access+all -debug_pp +noerrorIOPCWM +nowarnTFMPC +notimingcheck +vcs+dumparrays +memcbk ../verilog/test/sys_defs.vh ../verilog/group_scan_mem_reg_if/rwctr.sv ../verilog/group_scan_mem_reg_if/mem_reg_mux.sv ../verilog/group_scan_mem_reg_if/syn_pulse_gen.sv ../verilog/group_scan_mem_reg_if/group_scan_mem_reg_if.sv ../verilog/share/block_scan.sv ../verilog/share/group_mux.sv ../verilog/scan_for_test.sv ../verilog/reg/cs_reg.sv ../verilog/sram/spram.sv ../verilog/test/test_scan.sv ../verilog/test/CLK_GEN.sv ./tb_test_scan.sv -o simv"}
+{"vcs1": {"peak_mem": 303804}}
+{"vcselab": {"peak_mem": 181740}}

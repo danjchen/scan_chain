@@ -1,3 +1,2 @@
 Command Line: /usr/caen/verdi-2023.12-SP2-1/platform/LINUXAMD64/bin/Novas -sverilog -2012 -autoalias +define_FSDB_DUMP ../verilog/test/sys_defs.vh ../verilog/group_scan_mem_reg_if/rwctr.sv ../verilog/group_scan_mem_reg_if/mem_reg_mux.sv ../verilog/group_scan_mem_reg_if/syn_pulse_gen.sv ../verilog/group_scan_mem_reg_if/group_scan_mem_reg_if.sv ../verilog/share/block_scan.sv ../verilog/share/group_mux.sv ../verilog/scan_for_test.sv ../verilog/reg/cs_reg.sv ../verilog/sram/spram.sv ../verilog/test/test_scan.sv ../verilog/test/CLK_GEN.sv ./tb_test_scan.sv -top tb_test_scan -ssf ./tb_test_scan.fsdb
-uname(Linux vlsipool-k12 3.10.0-1160.102.1.el7.x86_64 #1 SMP Mon Sep 25 05:00:52 EDT 2023 x86_64)
-au time 2101.313397 36.439748 23.494984 delta 357826560 357826560 total 1017622528 1017622528
+uname(Linux caen-vnc-mi17.engin.umich.edu 5.14.0-611.16.1.el9_7.x86_64 #1 SMP PREEMPT_DYNAMIC Sun Dec 7 05:52:24 EST 2025 x86_64)

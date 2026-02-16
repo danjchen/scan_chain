@@ -1,6 +1,8 @@
 `timescale 1ns/1ps
 `define SCAN_DELAY #500
 
+// todo: make tests
+
 module test_scan(
    input               clk,
    input               rst_n,
@@ -81,7 +83,23 @@ module test_scan(
 
    task rotate_chain;
       
-      integer i;
+      integer i;TS1N65LPLL2048X128M4 dmem( // dmem insantiation
+    .BIST(1'b0),
+    .AWT(1'b0), 
+    .CLK(clk),
+    .CEB(!cen), 
+    .WEB(!dmem_wen)
+    .A(dmem_addr),
+    .D(),
+    .BWEB(1'b1);
+    .CEBM('0),
+    .WEBM('0),
+    .AM('0),
+    .DM('0),
+    .BWEBM('0),
+    .Q(dmem_rdata),
+    .TSEL(2'b01)
+  ); 
       
       reg [`SCAN_CHAIN_LENGTH-1:0] data_in;
       reg [`SCAN_CHAIN_LENGTH-1:0] data_out;
@@ -189,6 +207,8 @@ module test_scan(
 
       // read data from sram
       read_stuff ({2'b00,18'h00001});
+
+      $display("FINISHED"); 
    end
  
 endmodule // tbench	

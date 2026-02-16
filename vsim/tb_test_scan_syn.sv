@@ -27,6 +27,8 @@ module tb_test_scan_syn;
    logic [31:0] sram_wdata;
    logic [31:0] sram_rdata;
    logic sram_ready;
+   logic [1:0] seg_id; 
+   logic id_sel; 
 
     // Group registers
    logic reg_wen;
@@ -44,11 +46,13 @@ module tb_test_scan_syn;
    // Group 1
    spram s1 (.clk(clk),
                 .rst_n(rst_n), 
-                .wen(sram_wen),
+                .cen(1'b1), // todo: maybe have external signal
+                .wen(sram_wen), 
                 .ren(sram_ren),
-                .waddr(sram_addr),
-                .raddr(sram_addr),
+                .addr(sram_addr),
                 .wdata(sram_wdata), 
+                .seg_id(seg_id), 
+                .id_sel(id_sel), 
                 .rdata(sram_rdata), 
                 .ready(sram_ready)); 
 
@@ -95,7 +99,9 @@ module tb_test_scan_syn;
         .cr_wdata    (cr_wdata),
         .cr_rdata    (cr_rdata),
         .sr_rdata    (sr_rdata),
-        .reg_ready   (reg_ready)
+        .reg_ready   (reg_ready), 
+        .seg_id      (seg_id),
+        .id_sel      (id_sel)
    );
 
    // include delay (sdf) file

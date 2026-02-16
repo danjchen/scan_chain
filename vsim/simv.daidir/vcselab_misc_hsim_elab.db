@@ -1,15 +1,12 @@
 psSimBaseName                      	simv
 psLogFileName                      	NULL
-psDaiDir                           	/afs/umich.edu/group/e/ece598to/w26/tutorial/A_Team_Scan_Chain/vsim/simv.daidir
+psDaiDir                           	/afs/umich.edu/group/e/ece598to/w26/group6/A_Team_Scan_Chain/vsim/simv.daidir
 destPath                           	csrc/
 fSharedMasterElab                  	0
 fHsimPCSharedLibSpecified          	0
-hsMainFileCount                    	1
-hsMtmSpecArr_i                     	2
-hsMainFileSuffixArr_i              	csdf1.MAIN
-hsAuxFileSuffixArr_i               	csdf1.AUX
-hsOriginalSdfFileArr_i             	../syn/group_scan_mem_reg_if.syn.sdf
-fHsMultiSdfDbg                     	0
+hsMainFileCount                    	0
+hsMainFileName                     	dummy
+hsAuxFileName                      	dummy
 partitionName                      	6	MASTER
 hsimInitRegValue                   	3
 fNSParam                           	128
@@ -64,7 +61,7 @@ fCcExConfigFileFlag                	0
 fFsimForcelist                     	0
 fNewCBSemantics                    	1
 fSchedAtEnd                        	0
-fSpecifyInDesign                   	1
+fSpecifyInDesign                   	0
 fSvNettRealResType                 	0
 fFgpSched0User                     	0
 fFgpDynelabFix                     	1
@@ -103,7 +100,7 @@ fHsimICDelayCCN                    	0
 fHsimICDiag                        	0
 fHsimMsidSched                     	0
 fHsimNewCSDF                       	1
-vcselabIncrMode                    	1
+vcselabIncrMode                    	2
 fHsimMPPackDelay                   	0
 fHsimMultDriver                    	0
 fHsimPart                          	0
@@ -225,7 +222,7 @@ fHsimPcCbOpt                       	1
 fHsimAmsTunneling                  	0
 fHsimAmsTunnelingDiag              	0
 fHsimAmsNewDrs                     	0
-fHsimScUpwardXmrNoSplit            	0
+fHsimScUpwardXmrNoSplit            	1
 fHsimOrigNdbViewOnly               	0
 fHsimVcsInterface                  	1
 fHsimVcsInterfaceAlias             	1
@@ -468,7 +465,7 @@ fHsimMergeOnly                     	0
 fHsimStitchNew                     	0
 fFrcRelCbk                         	1
 fPulserrWarn                       	1
-hsMtmSpec                          	2
+hsMtmSpec                          	0
 fprofile                           	0
 fPreserveDaidir                    	1
 fElabGraphLevelize                 	0
@@ -571,7 +568,7 @@ fHsimOptMPDelayLoad                	0
 fHsimTransMPDelay                  	1
 fLargeSizeSdfTest                  	0
 fAllMtm                            	0
-fHsimDelayGateMbme                 	1
+fHsimDelayGateMbme                 	0
 fHsimDelayGateMbmeOld              	0
 fHsimNdb                           	1
 fHsimNdbDebug                      	0
@@ -650,8 +647,8 @@ dGblPeR                            	1.000000
 fNewdaidirpath                     	0
 fHsimDelayMbmeCheck                	4
 fHsimMdbPartInputLimit             	1
-fHsimSdfData                       	1
-fHsimDesignHasSdfAnnotation        	1
+fHsimSdfData                       	0
+fHsimDesignHasSdfAnnotation        	0
 fHsimDesignUsesParallelVcs         	0
 fHsimCMEnabled                     	1
 fHsimNotDelRefData                 	0
