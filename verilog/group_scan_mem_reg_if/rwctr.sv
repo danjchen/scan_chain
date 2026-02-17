@@ -16,7 +16,7 @@ module rwctr(
    // mem_reg_mux
    output reg   scan_wen,
    output reg   scan_ren,
-   output reg [13:0]  scan_addr, // changed to fit our design
+   output reg [14:0]  scan_addr, // 15 bits to match intermediate signal and mem_reg_mux
    output reg [31:0]  scan_wdata,
    input  [31:0]  scan_rdata,
    input  scan_ready
